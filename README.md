@@ -32,7 +32,7 @@ python3 -m autodyn_ev.server --port 8776
 
 Open http://127.0.0.1:8776/ in Chrome or Safari. Keep the server running. If that port is already occupied, choose another unused port. On Windows, use `python` if `python3` is unavailable.
 
-**Public demo:** not deployed. The interactive simulator requires its Python backend; copying the UI to static hosting does not provide working simulations.
+**Live simulator:** https://autodyn-ev.onrender.com/ — Python-backed, verified on Render Free. The service sleeps when idle; the first visit may take about a minute to wake. [Public verification](docs/LIVE_VERIFICATION.md).
 
 ## Verification and reproducible results
 

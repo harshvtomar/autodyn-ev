@@ -3,7 +3,7 @@
 **Title:** AutoDyn EV — Offline Vehicle Dynamics & Engineering Trade-off Laboratory  
 **Role:** Independent software-based engineering project  
 **Technology:** Python 3.10+ (standard library), classical RK4, HTML/CSS/JavaScript, Canvas2D, GitHub-ready CI workflow. Optional QA: SciPy, Chromium/Playwright.  
-**Release:** v1.0.0 local simulator; owner acceptance recorded, publication preparation corrected; public publication pending.
+**Release:** v1.0.0 published; public Python simulator verified on Render Free on 30 October 2026.
 
 ## Engineering question
 
@@ -52,4 +52,4 @@ How do changes in suspension stiffness/damping, road input and available braking
 7. **Is the regeneration figure a real EV measurement?** No. It follows an idealized torque/power/battery-acceptance model with constant efficiency.
 8. **What next for industrial credibility?** Calibrate parameters with instrumented tests; compare against real acceleration, pitch, travel, tire forces and battery/motor maps; quantify uncertainty and add tire contact/slip.
 
-**Portfolio disclosure:** This is a software simulation project. No vehicle hardware prototype, measured test track results, homologation, safety certification, or commercial deployment is claimed. **Public repository and live deployment are not yet verified.**
+**Portfolio disclosure:** This is a software simulation project. No vehicle hardware prototype, measured test track results, homologation, safety certification, or commercial deployment is claimed. **Public repository and live demo verified:** https://github.com/harshvtomar/autodyn-ev and https://autodyn-ev.onrender.com/. See LIVE_VERIFICATION.md for scope.
