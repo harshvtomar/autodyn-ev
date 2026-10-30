@@ -1,0 +1,189 @@
+{
+  "baseline": "accepted v0.9.0",
+  "new_release": "Chat 10 v1.0.0",
+  "comparison": "exact independently executed sorted serialized output JSON",
+  "count": 14,
+  "identical_count": 14,
+  "cases": [
+    {
+      "model": "quarter",
+      "scenario": {},
+      "exact_json_identical": true,
+      "bytes_before": 212927,
+      "bytes_after": 212927,
+      "before_sha256": "f59ae1509f5d3253881f3541781f683f3db3a260f9524609fd9c295c4f43ab77",
+      "after_sha256": "f59ae1509f5d3253881f3541781f683f3db3a260f9524609fd9c295c4f43ab77"
+    },
+    {
+      "model": "quarter",
+      "scenario": {
+        "road": {
+          "kind": "flat"
+        }
+      },
+      "exact_json_identical": true,
+      "bytes_before": 54765,
+      "bytes_after": 54765,
+      "before_sha256": "a7d77a2bf8fd1cbe3899fc88fee104df3964934a63ba2bcb9a10c0c3aba0ddfc",
+      "after_sha256": "a7d77a2bf8fd1cbe3899fc88fee104df3964934a63ba2bcb9a10c0c3aba0ddfc"
+    },
+    {
+      "model": "quarter",
+      "scenario": {
+        "vehicle": {
+          "damping_n_s_m": 2300
+        },
+        "road": {
+          "kind": "sine"
+        }
+      },
+      "exact_json_identical": true,
+      "bytes_before": 212410,
+      "bytes_after": 212410,
+      "before_sha256": "670466b93975b7d050d9f940e47635206d41ed8a672c9c9bb995ceb9ab17e10e",
+      "after_sha256": "670466b93975b7d050d9f940e47635206d41ed8a672c9c9bb995ceb9ab17e10e"
+    },
+    {
+      "model": "quarter",
+      "scenario": {
+        "road": {
+          "kind": "pothole"
+        },
+        "settings": {
+          "dt_s": 0.01
+        }
+      },
+      "exact_json_identical": true,
+      "bytes_before": 107915,
+      "bytes_after": 107915,
+      "before_sha256": "b455ebd6050cae3325fa538943cc516a626bb178157b86d36f3154724be0c2bb",
+      "after_sha256": "b455ebd6050cae3325fa538943cc516a626bb178157b86d36f3154724be0c2bb"
+    },
+    {
+      "model": "half",
+      "scenario": {},
+      "exact_json_identical": true,
+      "bytes_before": 420861,
+      "bytes_after": 420861,
+      "before_sha256": "4ac9ae161ff7fe0ee6d81e622d4bf4fd4b045403409682c020c15a97fdfd2f3f",
+      "after_sha256": "4ac9ae161ff7fe0ee6d81e622d4bf4fd4b045403409682c020c15a97fdfd2f3f"
+    },
+    {
+      "model": "half",
+      "scenario": {
+        "road": {
+          "kind": "double_bump"
+        },
+        "vehicle": {
+          "pitch_inertia_kg_m2": 2000
+        }
+      },
+      "exact_json_identical": true,
+      "bytes_before": 416821,
+      "bytes_after": 416821,
+      "before_sha256": "422236f7545c2600564fc2c757f3ff52e0244196677383fc118d470cc2aeea47",
+      "after_sha256": "422236f7545c2600564fc2c757f3ff52e0244196677383fc118d470cc2aeea47"
+    },
+    {
+      "model": "half",
+      "scenario": {
+        "road": {
+          "kind": "sine"
+        },
+        "settings": {
+          "dt_s": 0.01
+        }
+      },
+      "exact_json_identical": true,
+      "bytes_before": 210947,
+      "bytes_after": 210947,
+      "before_sha256": "29d410e0f966fbcafce04c4575c559395cd890cf33947e181e5ddae5d6278b3d",
+      "after_sha256": "29d410e0f966fbcafce04c4575c559395cd890cf33947e181e5ddae5d6278b3d"
+    },
+    {
+      "model": "braking",
+      "scenario": {},
+      "exact_json_identical": true,
+      "bytes_before": 23446,
+      "bytes_after": 23446,
+      "before_sha256": "30af39a894d4815def0e4a29792575f94e84929eca919533a33cefb173f3f69b",
+      "after_sha256": "30af39a894d4815def0e4a29792575f94e84929eca919533a33cefb173f3f69b"
+    },
+    {
+      "model": "braking",
+      "scenario": {
+        "scenario": {
+          "profile": "ramp",
+          "ramp_s": 1
+        }
+      },
+      "exact_json_identical": true,
+      "bytes_before": 28724,
+      "bytes_after": 28724,
+      "before_sha256": "90099d17a179f5faad8b49e432bded7366d6a1e9be2ccb69db4c47a1e9e6db77",
+      "after_sha256": "90099d17a179f5faad8b49e432bded7366d6a1e9be2ccb69db4c47a1e9e6db77"
+    },
+    {
+      "model": "braking",
+      "scenario": {
+        "scenario": {
+          "friction_coefficient": 0.3
+        }
+      },
+      "exact_json_identical": true,
+      "bytes_before": 41415,
+      "bytes_after": 41415,
+      "before_sha256": "cefe398e7bc513fe3af02e78d8f75c4143e01a40a47ecf9a2da101c0bd403f62",
+      "after_sha256": "cefe398e7bc513fe3af02e78d8f75c4143e01a40a47ecf9a2da101c0bd403f62"
+    },
+    {
+      "model": "regen",
+      "scenario": {},
+      "exact_json_identical": true,
+      "bytes_before": 67700,
+      "bytes_after": 67700,
+      "before_sha256": "6d43c958ab3833877f7e5b278657cab49c7b852bc01b913b0b74de053c7de2db",
+      "after_sha256": "6d43c958ab3833877f7e5b278657cab49c7b852bc01b913b0b74de053c7de2db"
+    },
+    {
+      "model": "regen",
+      "scenario": {
+        "scenario": {
+          "motor_max_torque_nm": 0
+        }
+      },
+      "exact_json_identical": true,
+      "bytes_before": 47858,
+      "bytes_after": 47858,
+      "before_sha256": "f69e20c58d35eb81c72a8d1d21964530cc50c13fe4a5a53ada158a68befbbdbd",
+      "after_sha256": "f69e20c58d35eb81c72a8d1d21964530cc50c13fe4a5a53ada158a68befbbdbd"
+    },
+    {
+      "model": "regen",
+      "scenario": {
+        "scenario": {
+          "battery_charge_limit_w": 3000
+        }
+      },
+      "exact_json_identical": true,
+      "bytes_before": 68638,
+      "bytes_after": 68638,
+      "before_sha256": "c6b3092a2ece6aac8e4d00db009ad28876f76786ffaf7510276eef43260318e0",
+      "after_sha256": "c6b3092a2ece6aac8e4d00db009ad28876f76786ffaf7510276eef43260318e0"
+    },
+    {
+      "model": "regen",
+      "scenario": {
+        "scenario": {
+          "profile": "ramp",
+          "ramp_s": 1
+        }
+      },
+      "exact_json_identical": true,
+      "bytes_before": 78765,
+      "bytes_after": 78765,
+      "before_sha256": "fba42f185b5eb015a6fe53b358744e31de9da5bdca2ba6cb2bd8ba8478b7f25a",
+      "after_sha256": "fba42f185b5eb015a6fe53b358744e31de9da5bdca2ba6cb2bd8ba8478b7f25a"
+    }
+  ]
+}

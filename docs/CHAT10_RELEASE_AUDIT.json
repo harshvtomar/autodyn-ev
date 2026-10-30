@@ -1,0 +1,35 @@
+{
+  "schema": "chat10-release-audit-1.0",
+  "release": "1.0.0",
+  "scope": "static local-file audit, not a guarantee against secrets or legal problems",
+  "files_checked": 207,
+  "source_files_checked": 62,
+  "checks": {
+    "current_pyproject_version": true,
+    "ui_version": true,
+    "keyboard_skip_link": true,
+    "no_external_script_tags": true,
+    "no_mandatory_runtime_dependencies": true,
+    "has_ci": true,
+    "has_gitignore": true,
+    "no_embedded_private_key_candidates": true,
+    "no_local_git_publication": true
+  },
+  "candidate_secret_findings": [],
+  "protected_files_sha256": {
+    "physics.py": "c42ed5515a041189aeebeb4ac04e7f2d2ae0b2732b732210528b30734f07376a",
+    "halfcar.py": "3c1eb2f689c9596aea88539ad0a96c30216ac061e6c79ce0d812eacaef413636",
+    "simulation.py": "f0fe494f1107f9b2e7e373ee8375f16588a309a188ed7f18ec0474a85ebadf31",
+    "braking.py": "fa66ebf6694de4c0510d6621be38c1849ba9c1b68f04fc6313216d5ec41c646f",
+    "regen.py": "07f0a4c517e1915d380e3ba0dcfca49cb0880895dc1b6ef706642f82cf1fb231",
+    "optimization.py": "15e9ce6cc5f69dbd56fd6761285882e978c1e48fada8e5ea848466c25c043a1e",
+    "analysis.py": "3aec4042e7bca76b9bb0c1a8d854c528623316205c7ed80449a8971f1f676846",
+    "ride.py": "62ec47532506e00dfaf26beeda60935262e728f6f304b99d39a21bd46ad07375"
+  },
+  "known_limitations": [
+    "Binary and historical archives not exhaustively inspected for credentials",
+    "No license is granted by an absent LICENSE file",
+    "No physical vehicle testing",
+    "No public deployment has been performed"
+  ]
+}

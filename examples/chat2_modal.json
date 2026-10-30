@@ -1,0 +1,57 @@
+{
+  "undamped_frequencies_hz": [
+    1.1776652681652353,
+    11.482615599497855
+  ],
+  "oscillatory_modes": [
+    {
+      "pole_real_s_inv": -2.1418607748920397,
+      "pole_imag_rad_s": 7.208533204669372,
+      "damped_frequency_hz": 1.1472736919651918,
+      "pole_magnitude_hz": 1.1968464264732759,
+      "damping_ratio": 0.28482161303116615,
+      "decay_rate_s_inv": 2.1418607748920397
+    },
+    {
+      "pole_real_s_inv": -19.108139225107756,
+      "pole_imag_rad_s": 68.37119716124843,
+      "damped_frequency_hz": 10.881613993323251,
+      "pole_magnitude_hz": 11.298590429072917,
+      "damping_ratio": 0.26916231985351946,
+      "decay_rate_s_inv": 19.108139225107756
+    }
+  ],
+  "real_nonoscillatory_poles": [],
+  "poles": [
+    {
+      "real_s_inv": -19.108139225106477,
+      "imag_rad_s": -68.37119716125008
+    },
+    {
+      "real_s_inv": -2.1418607748887104,
+      "imag_rad_s": -7.208533204669251
+    },
+    {
+      "real_s_inv": -2.1418607748920397,
+      "imag_rad_s": 7.208533204669372
+    },
+    {
+      "real_s_inv": -19.108139225107756,
+      "imag_rad_s": 68.37119716124843
+    }
+  ],
+  "interpretation": "Damped frequencies and ratios describe oscillatory state-space poles only. Real poles have decay rates, not oscillatory frequency. With non-proportional damping, mode labels are not presumed to map one-to-one to undamped body/wheel modes.",
+  "characteristic_polynomial": [
+    12000.0,
+    510000.0,
+    63120000.0,
+    285000000.0,
+    3420000000.0
+  ],
+  "provenance": {
+    "model_revision": "quarter-car-2dof-v0.2.0",
+    "method": "quartic determinant + scaled simultaneous complex pole solve",
+    "pole_units": "1/s (real), rad/s (imaginary)",
+    "damping_ratio_units": "dimensionless"
+  }
+}

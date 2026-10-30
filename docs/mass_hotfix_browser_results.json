@@ -1,0 +1,93 @@
+{
+  "environment": "Isolated Chromium with real Python API forwarded; NOT Mac Chrome acceptance",
+  "checks": [
+    {
+      "name": "1280: header confirms hotfix",
+      "passed": true
+    },
+    {
+      "name": "1280: 300kg baseline",
+      "passed": true
+    },
+    {
+      "name": "1280: old RMS blanked",
+      "passed": true
+    },
+    {
+      "name": "1280: stale status",
+      "passed": true
+    },
+    {
+      "name": "1280: exports disabled while stale",
+      "passed": true
+    },
+    {
+      "name": "1280: auto run 500kg",
+      "passed": true
+    },
+    {
+      "name": "1280: applied mass visible",
+      "passed": true
+    },
+    {
+      "name": "1280: exports reenabled",
+      "passed": true
+    },
+    {
+      "name": "1280: manual run restores 300kg",
+      "passed": true
+    },
+    {
+      "name": "1280: quarter graphs exist",
+      "passed": true
+    },
+    {
+      "name": "1280: no JS error",
+      "passed": true
+    },
+    {
+      "name": "390: header confirms hotfix",
+      "passed": true
+    },
+    {
+      "name": "390: 300kg baseline",
+      "passed": true
+    },
+    {
+      "name": "390: old RMS blanked",
+      "passed": true
+    },
+    {
+      "name": "390: stale status",
+      "passed": true
+    },
+    {
+      "name": "390: exports disabled while stale",
+      "passed": true
+    },
+    {
+      "name": "390: auto run 500kg",
+      "passed": true
+    },
+    {
+      "name": "390: applied mass visible",
+      "passed": true
+    },
+    {
+      "name": "390: exports reenabled",
+      "passed": true
+    },
+    {
+      "name": "390: manual run restores 300kg",
+      "passed": true
+    },
+    {
+      "name": "390: quarter graphs exist",
+      "passed": true
+    },
+    {
+      "name": "390: no JS error",
+      "passed": true
+    }
+  ]
+}

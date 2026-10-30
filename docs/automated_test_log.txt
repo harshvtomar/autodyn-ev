@@ -1,0 +1,75 @@
+test_bump_has_defined_end (test_physics.SimulatorTests.test_bump_has_defined_end) ... ok
+test_default_run_has_all_channels (test_physics.SimulatorTests.test_default_run_has_all_channels) ... ok
+test_initial_state_free_vibration_energy_decreases (test_physics.SimulatorTests.test_initial_state_free_vibration_energy_decreases) ... ok
+test_initial_state_nan_rejected (test_physics.SimulatorTests.test_initial_state_nan_rejected) ... ok
+test_initial_state_shape_rejected (test_physics.SimulatorTests.test_initial_state_shape_rejected) ... ok
+test_invalid_nested_payload_rejected (test_physics.SimulatorTests.test_invalid_nested_payload_rejected) ... ok
+test_invalid_road_height_rejected (test_physics.SimulatorTests.test_invalid_road_height_rejected) ... ok
+test_metrics_consistent_with_series (test_physics.SimulatorTests.test_metrics_consistent_with_series) ... ok
+test_missing_payload_uses_defaults (test_physics.SimulatorTests.test_missing_payload_uses_defaults) ... ok
+test_no_nans_in_json (test_physics.SimulatorTests.test_no_nans_in_json) ... ok
+test_no_road_no_motion (test_physics.SimulatorTests.test_no_road_no_motion) ... ok
+test_non_dict_payload_rejected (test_physics.SimulatorTests.test_non_dict_payload_rejected) ... ok
+test_rk4_refinement_on_smooth_profile (test_physics.SimulatorTests.test_rk4_refinement_on_smooth_profile) ... ok
+test_rms_less_than_peak (test_physics.SimulatorTests.test_rms_less_than_peak) ... ok
+test_sine_has_no_bump_settling_metric (test_physics.SimulatorTests.test_sine_has_no_bump_settling_metric) ... ok
+test_steady_state_of_step_approaches_height (test_physics.SimulatorTests.test_steady_state_of_step_approaches_height) ... ok
+test_undamped_free_vibration_energy_conserved (test_physics.SimulatorTests.test_undamped_free_vibration_energy_conserved) ... ok
+test_underresolved_bump_rejected (test_physics.SimulatorTests.test_underresolved_bump_rejected) ... ok
+test_underresolved_sine_rejected (test_physics.SimulatorTests.test_underresolved_sine_rejected) ... ok
+test_unknown_payload_field_rejected (test_physics.SimulatorTests.test_unknown_payload_field_rejected) ... ok
+test_unknown_vehicle_field_rejected (test_physics.SimulatorTests.test_unknown_vehicle_field_rejected) ... ok
+test_vehicle_numerical_modes_not_identical (test_physics.SimulatorTests.test_vehicle_numerical_modes_not_identical) ... ok
+test_zero_damping_has_finite_output (test_physics.SimulatorTests.test_zero_damping_has_finite_output) ... ok
+test_bad_road_kind_rejected (test_physics.VehicleTests.test_bad_road_kind_rejected) ... ok
+test_bad_time_step_rejected (test_physics.VehicleTests.test_bad_time_step_rejected) ... ok
+test_bool_not_a_mass (test_physics.VehicleTests.test_bool_not_a_mass) ... ok
+test_bump_starts_and_ends_at_zero (test_physics.VehicleTests.test_bump_starts_and_ends_at_zero) ... ok
+test_damping_opposes_relative_velocity (test_physics.VehicleTests.test_damping_opposes_relative_velocity) ... ok
+test_default_settings_valid (test_physics.VehicleTests.test_default_settings_valid) ... ok
+test_default_values_are_valid (test_physics.VehicleTests.test_default_values_are_valid) ... ok
+test_dissipation_rate_nonpositive (test_physics.VehicleTests.test_dissipation_rate_nonpositive) ... ok
+test_flat_never_moves (test_physics.VehicleTests.test_flat_never_moves) ... ok
+test_natural_modes_match_eigenvalue_invariants (test_physics.VehicleTests.test_natural_modes_match_eigenvalue_invariants) ... ok
+test_natural_modes_positive_and_ordered (test_physics.VehicleTests.test_natural_modes_positive_and_ordered) ... ok
+test_negative_damping_rejected (test_physics.VehicleTests.test_negative_damping_rejected) ... ok
+test_nonfinite_mass_rejected (test_physics.VehicleTests.test_nonfinite_mass_rejected) ... ok
+test_nonfinite_road_rejected (test_physics.VehicleTests.test_nonfinite_road_rejected) ... ok
+test_rk4_step_returns_finite_state (test_physics.VehicleTests.test_rk4_step_returns_finite_state) ... ok
+test_road_defaults_are_valid (test_physics.VehicleTests.test_road_defaults_are_valid) ... ok
+test_sine_sign_and_amplitude (test_physics.VehicleTests.test_sine_sign_and_amplitude) ... ok
+test_step_nonzero_after_start (test_physics.VehicleTests.test_step_nonzero_after_start) ... ok
+test_suspension_spring_reaction_opposite (test_physics.VehicleTests.test_suspension_spring_reaction_opposite) ... ok
+test_tire_force_changes_only_wheel_mass (test_physics.VehicleTests.test_tire_force_changes_only_wheel_mass) ... ok
+test_too_many_steps_rejected (test_physics.VehicleTests.test_too_many_steps_rejected) ... ok
+test_zero_equilibrium_rhs (test_physics.VehicleTests.test_zero_equilibrium_rhs) ... ok
+test_assets_served (test_server.TestWebServer.test_assets_served) ... 127.0.0.1 - - [29/Oct/2026 07:50:00] "GET /styles.css HTTP/1.1" 200 -
+127.0.0.1 - - [29/Oct/2026 07:50:00] "GET /app.js HTTP/1.1" 200 -
+ok
+test_bad_json_is_400 (test_server.TestWebServer.test_bad_json_is_400) ... 127.0.0.1 - - [29/Oct/2026 07:50:00] "POST /api/simulate HTTP/1.1" 400 -
+ok
+test_bad_type_is_415 (test_server.TestWebServer.test_bad_type_is_415) ... 127.0.0.1 - - [29/Oct/2026 07:50:00] "POST /api/simulate HTTP/1.1" 415 -
+ok
+test_defaults (test_server.TestWebServer.test_defaults) ... 127.0.0.1 - - [29/Oct/2026 07:50:00] "GET /api/defaults HTTP/1.1" 200 -
+ok
+test_get_health (test_server.TestWebServer.test_get_health) ... 127.0.0.1 - - [29/Oct/2026 07:50:00] "GET /api/health HTTP/1.1" 200 -
+ok
+test_invalid_fields_are_400 (test_server.TestWebServer.test_invalid_fields_are_400) ... 127.0.0.1 - - [29/Oct/2026 07:50:00] "POST /api/simulate HTTP/1.1" 400 -
+ok
+test_invalid_route_is_404 (test_server.TestWebServer.test_invalid_route_is_404) ... 127.0.0.1 - - [29/Oct/2026 07:50:00] "GET /.env HTTP/1.1" 404 -
+ok
+test_no_cors_header (test_server.TestWebServer.test_no_cors_header) ... 127.0.0.1 - - [29/Oct/2026 07:50:00] "GET /api/health HTTP/1.1" 200 -
+ok
+test_page_has_schematic (test_server.TestWebServer.test_page_has_schematic) ... 127.0.0.1 - - [29/Oct/2026 07:50:00] "GET / HTTP/1.1" 200 -
+ok
+test_road_flat_post (test_server.TestWebServer.test_road_flat_post) ... 127.0.0.1 - - [29/Oct/2026 07:50:00] "POST /api/simulate HTTP/1.1" 200 -
+ok
+test_simulation_post (test_server.TestWebServer.test_simulation_post) ... 127.0.0.1 - - [29/Oct/2026 07:50:00] "POST /api/simulate HTTP/1.1" 200 -
+ok
+test_unknown_post_route_is_404 (test_server.TestWebServer.test_unknown_post_route_is_404) ... 127.0.0.1 - - [29/Oct/2026 07:50:00] "POST /api/admin HTTP/1.1" 404 -
+ok
+
+----------------------------------------------------------------------
+Ran 57 tests in 0.661s
+
+OK

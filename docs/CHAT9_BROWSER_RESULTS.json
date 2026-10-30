@@ -1,0 +1,88 @@
+{
+  "mode": "Isolated Chromium; HTTP requests forwarded to real local API server via Python proxy",
+  "not": "direct Mac browser test or physical engineering validation",
+  "checks": [
+    {
+      "label": "1280: header v0.9",
+      "passed": true
+    },
+    {
+      "label": "1280: engineering panel",
+      "passed": true
+    },
+    {
+      "label": "1280: projected scene",
+      "passed": true
+    },
+    {
+      "label": "1280: 7-case table",
+      "passed": true
+    },
+    {
+      "label": "1280: study export enabled",
+      "passed": true
+    },
+    {
+      "label": "1280: JSON download",
+      "passed": true
+    },
+    {
+      "label": "1280: 49-case table",
+      "passed": true
+    },
+    {
+      "label": "1280: no feasible reported",
+      "passed": true
+    },
+    {
+      "label": "1280: half 49-case",
+      "passed": true
+    },
+    {
+      "label": "1280: no JS errors",
+      "passed": true
+    },
+    {
+      "label": "390: header v0.9",
+      "passed": true
+    },
+    {
+      "label": "390: engineering panel",
+      "passed": true
+    },
+    {
+      "label": "390: projected scene",
+      "passed": true
+    },
+    {
+      "label": "390: 7-case table",
+      "passed": true
+    },
+    {
+      "label": "390: study export enabled",
+      "passed": true
+    },
+    {
+      "label": "390: JSON download",
+      "passed": true
+    },
+    {
+      "label": "390: 49-case table",
+      "passed": true
+    },
+    {
+      "label": "390: no feasible reported",
+      "passed": true
+    },
+    {
+      "label": "390: half 49-case",
+      "passed": true
+    },
+    {
+      "label": "390: no JS errors",
+      "passed": true
+    }
+  ],
+  "passed": 20,
+  "total": 20
+}

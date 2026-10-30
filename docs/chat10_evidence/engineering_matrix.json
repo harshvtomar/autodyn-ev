@@ -1,0 +1,280 @@
+{
+  "schema": "chat9-evidence-1.0",
+  "software_release": "0.9.0",
+  "evidence_type": "simulation and mathematical reference, not physical calibration",
+  "cases": [
+    {
+      "id": "quarter-flat-equilibrium",
+      "passed": true,
+      "evidence": "zero initial equilibrium + flat road gives exactly zero acceleration"
+    },
+    {
+      "id": "half-flat-equilibrium",
+      "passed": true,
+      "evidence": "zero initial equilibrium + flat road gives exactly zero acceleration"
+    },
+    {
+      "model": "quarter",
+      "road_kind": "sine",
+      "duration_s": 3.0,
+      "channel": "sprung_m",
+      "reference": "same RK4 implementation, 0.0025 s numerical reference (not ground truth)",
+      "max_abs_difference_m": {
+        "0.01": 3.1271570252830883e-07,
+        "0.005": 1.71500320207121e-08
+      },
+      "fine_response_sha256": "59d316c7de7d79df853d36d84a81bc24ae1cf64afac4d4c42c53e38a828cb977",
+      "limitation": "Event boundary alignment, discontinuities and sampling can change observed error order",
+      "case_id": "quarter-sine-refinement"
+    },
+    {
+      "model": "quarter",
+      "road_kind": "bump",
+      "duration_s": 3.0,
+      "channel": "sprung_m",
+      "reference": "same RK4 implementation, 0.0025 s numerical reference (not ground truth)",
+      "max_abs_difference_m": {
+        "0.01": 8.42492168670432e-07,
+        "0.005": 4.8484149159887246e-08
+      },
+      "fine_response_sha256": "d04df0e4244eac1dcca663699c53b6ee21bf217bdfdb3afcda606a7be5bbf54a",
+      "limitation": "Event boundary alignment, discontinuities and sampling can change observed error order",
+      "case_id": "quarter-bump-refinement"
+    },
+    {
+      "model": "quarter",
+      "road_kind": "pothole",
+      "duration_s": 3.0,
+      "channel": "sprung_m",
+      "reference": "same RK4 implementation, 0.0025 s numerical reference (not ground truth)",
+      "max_abs_difference_m": {
+        "0.01": 8.42492168670432e-07,
+        "0.005": 4.8484149159887246e-08
+      },
+      "fine_response_sha256": "f4f324c6f4f4979cbb8b1624ee800224e0249d499483c5157f3db4e0965d039a",
+      "limitation": "Event boundary alignment, discontinuities and sampling can change observed error order",
+      "case_id": "quarter-pothole-refinement"
+    },
+    {
+      "model": "half",
+      "road_kind": "sine",
+      "duration_s": 3.0,
+      "channel": "body_heave_m",
+      "reference": "same RK4 implementation, 0.0025 s numerical reference (not ground truth)",
+      "max_abs_difference_m": {
+        "0.01": 1.5637631280303842e-07,
+        "0.005": 8.576220350423394e-09
+      },
+      "fine_response_sha256": "435d55bcfed4efe479976a312e9aa7648ebd9e806e1a50c3f8301a24657bc4e6",
+      "limitation": "Event boundary alignment, discontinuities and sampling can change observed error order",
+      "case_id": "half-sine-refinement"
+    },
+    {
+      "model": "half",
+      "road_kind": "bump",
+      "duration_s": 3.0,
+      "channel": "body_heave_m",
+      "reference": "same RK4 implementation, 0.0025 s numerical reference (not ground truth)",
+      "max_abs_difference_m": {
+        "0.01": 4.204144980080732e-07,
+        "0.005": 2.4204614341473418e-08
+      },
+      "fine_response_sha256": "282c04bd8adf076ae5a20b13b7b4fe82abd3ca92fd1a2f204c3f20a336e2729a",
+      "limitation": "Event boundary alignment, discontinuities and sampling can change observed error order",
+      "case_id": "half-bump-refinement"
+    },
+    {
+      "model": "half",
+      "road_kind": "pothole",
+      "duration_s": 3.0,
+      "channel": "body_heave_m",
+      "reference": "same RK4 implementation, 0.0025 s numerical reference (not ground truth)",
+      "max_abs_difference_m": {
+        "0.01": 4.204144980080732e-07,
+        "0.005": 2.4204614341473418e-08
+      },
+      "fine_response_sha256": "32f900552e4a3ae6280b073a24e5b8d2a781f46c8450493fa879d99d2d7f2aef",
+      "limitation": "Event boundary alignment, discontinuities and sampling can change observed error order",
+      "case_id": "half-pothole-refinement"
+    },
+    {
+      "id": "braking-constant",
+      "stopped": true,
+      "distance_m": 39.99999999999992,
+      "end_speed_m_s": 0.0
+    },
+    {
+      "id": "braking-ramp",
+      "stopped": true,
+      "distance_m": 49.79166666666649,
+      "end_speed_m_s": 0.0
+    },
+    {
+      "id": "braking-closed-form-constant",
+      "predicted": [
+        4.0,
+        40.0
+      ],
+      "reported": [
+        4.0,
+        39.99999999999992
+      ],
+      "passed": true
+    },
+    {
+      "id": "regen-default",
+      "energy_metrics": {
+        "initial_kinetic_energy_j": 240000.0,
+        "final_kinetic_energy_j": 0.0,
+        "kinetic_energy_reduction_j": 240000.0,
+        "battery_energy_stored_j": 76638.65546218363,
+        "energy_balance_residual_j": 0.0,
+        "max_sample_energy_balance_residual_j": 2.9103830456733704e-11,
+        "recovery_fraction_of_kinetic_reduction": 0.3193277310924318
+      },
+      "result_sha256": "6d43c958ab3833877f7e5b278657cab49c7b852bc01b913b0b74de053c7de2db"
+    }
+  ],
+  "optimization_studies": [
+    {
+      "id": "quarter-seven",
+      "case_count": 7,
+      "feasible_count": 7,
+      "pareto_count": 7,
+      "selected_id": 1,
+      "exact_replay_sha256": "cf28856ef0fa953a2e4df89c0d28fd0a21b1cebfa5d7e0966c3577bb9e8d3ebe",
+      "consistent_replay": true
+    },
+    {
+      "id": "quarter-forty_nine",
+      "case_count": 49,
+      "feasible_count": 49,
+      "pareto_count": 7,
+      "selected_id": 1,
+      "exact_replay_sha256": "9f9ecadd4fcc483803fac58cbe524964d16c6ee0b8f6eeb86f584d965f57c77f",
+      "consistent_replay": true
+    },
+    {
+      "id": "quarter-none_feasible",
+      "case_count": 7,
+      "feasible_count": 0,
+      "pareto_count": 0,
+      "selected_id": null,
+      "exact_replay_sha256": "097f92f971927c93cbfbd5f788bc10896710153bddb8a866d047cb5c4d90a58b",
+      "consistent_replay": true
+    },
+    {
+      "id": "half-seven",
+      "case_count": 7,
+      "feasible_count": 7,
+      "pareto_count": 7,
+      "selected_id": 1,
+      "exact_replay_sha256": "47c3249b98c29891e0b34622cffcb9f7aac309eba9ebf6a69e06f1e102447830",
+      "consistent_replay": true
+    },
+    {
+      "id": "half-forty_nine",
+      "case_count": 49,
+      "feasible_count": 49,
+      "pareto_count": 9,
+      "selected_id": 1,
+      "exact_replay_sha256": "5a9c388bd5e8a28d7d15d7a0b604a44205c98f66afe519873dd7b43b5bf0c3c6",
+      "consistent_replay": true
+    },
+    {
+      "id": "half-none_feasible",
+      "case_count": 7,
+      "feasible_count": 0,
+      "pareto_count": 0,
+      "selected_id": null,
+      "exact_replay_sha256": "59918689340b49f4b853132c60aed500fd847a383f0a846220793bc55c096cf9",
+      "consistent_replay": true
+    }
+  ],
+  "rank_sensitivity": [
+    {
+      "road": "bump",
+      "dt_s": 0.01,
+      "selected_id": 1,
+      "pareto_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "feasible_count": 7
+    },
+    {
+      "road": "bump",
+      "dt_s": 0.005,
+      "selected_id": 1,
+      "pareto_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "feasible_count": 7
+    },
+    {
+      "road": "sine",
+      "dt_s": 0.01,
+      "selected_id": 7,
+      "pareto_ids": [
+        7
+      ],
+      "feasible_count": 7
+    },
+    {
+      "road": "sine",
+      "dt_s": 0.005,
+      "selected_id": 7,
+      "pareto_ids": [
+        7
+      ],
+      "feasible_count": 7
+    },
+    {
+      "road": "pothole",
+      "dt_s": 0.01,
+      "selected_id": 1,
+      "pareto_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "feasible_count": 7
+    },
+    {
+      "road": "pothole",
+      "dt_s": 0.005,
+      "selected_id": 1,
+      "pareto_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "feasible_count": 7
+    }
+  ],
+  "limitations": [
+    "The finest RK4 step is a numerical reference, not a measured truth.",
+    "Braking ignores ABS, aerodynamic drag, and real road friction dynamics.",
+    "Tire-deflection proxy is not a tire-contact or road-safety measurement.",
+    "No ISO 2631 certification, globally optimal design or measured EV performance."
+  ]
+}

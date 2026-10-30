@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+.DS_Store
+*.log
+.tmp/
+
+# Local/generated release scratch (keep curated docs explicit)
+*.swp
+.env
+.env.*
+!*.env.example
+node_modules/
+dist/

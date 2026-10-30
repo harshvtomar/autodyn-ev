@@ -1,0 +1,254 @@
+{
+  "quarter:bump": {
+    "model": "quarter",
+    "road": "bump",
+    "metrics": {
+      "body_acceleration_rms_si": 0.9065346660721217,
+      "body_acceleration_peak_abs_si": 5.220637377665748,
+      "body_acceleration_peak_to_peak_si": 9.398464656238517,
+      "suspension_travel_rms_si": 0.010087609570966624,
+      "suspension_travel_peak_abs_si": 0.04806427089675365,
+      "suspension_travel_peak_to_peak_si": 0.087931700290579,
+      "tire_deflection_rms_si": 0.0014609883004254314,
+      "tire_deflection_peak_abs_si": 0.008113585145130768,
+      "tire_deflection_peak_to_peak_si": 0.015563191162256603,
+      "settling_after_last_excitation_s": 1.575
+    },
+    "windows": {
+      "full": {
+        "start_s": 0.0,
+        "end_s": 5.0
+      },
+      "post_event": {
+        "start_s": 0.8,
+        "end_s": 5.0
+      }
+    },
+    "data_kind": "deterministic synthetic engineering simulation; not physical validation",
+    "release": "0.4.0"
+  },
+  "quarter:pothole": {
+    "model": "quarter",
+    "road": "pothole",
+    "metrics": {
+      "body_acceleration_rms_si": 0.9065346660721217,
+      "body_acceleration_peak_abs_si": 5.220637377665748,
+      "body_acceleration_peak_to_peak_si": 9.398464656238517,
+      "suspension_travel_rms_si": 0.010087609570966624,
+      "suspension_travel_peak_abs_si": 0.04806427089675365,
+      "suspension_travel_peak_to_peak_si": 0.087931700290579,
+      "tire_deflection_rms_si": 0.0014609883004254314,
+      "tire_deflection_peak_abs_si": 0.008113585145130768,
+      "tire_deflection_peak_to_peak_si": 0.015563191162256603,
+      "settling_after_last_excitation_s": 1.575
+    },
+    "windows": {
+      "full": {
+        "start_s": 0.0,
+        "end_s": 5.0
+      },
+      "post_event": {
+        "start_s": 0.8,
+        "end_s": 5.0
+      }
+    },
+    "data_kind": "deterministic synthetic engineering simulation; not physical validation",
+    "release": "0.4.0"
+  },
+  "quarter:double_bump": {
+    "model": "quarter",
+    "road": "double_bump",
+    "metrics": {
+      "body_acceleration_rms_si": 1.3295935593448382,
+      "body_acceleration_peak_abs_si": 5.3722762416830685,
+      "body_acceleration_peak_to_peak_si": 10.592913619348817,
+      "suspension_travel_rms_si": 0.014908993751665435,
+      "suspension_travel_peak_abs_si": 0.058146676060189126,
+      "suspension_travel_peak_to_peak_si": 0.10621094695694278,
+      "tire_deflection_rms_si": 0.0021379848829167856,
+      "tire_deflection_peak_abs_si": 0.009520482312989225,
+      "tire_deflection_peak_to_peak_si": 0.017634067458119993,
+      "settling_after_last_excitation_s": 1.5950000000000002
+    },
+    "windows": {
+      "full": {
+        "start_s": 0.0,
+        "end_s": 5.0
+      },
+      "post_event": {
+        "start_s": 1.4,
+        "end_s": 5.0
+      }
+    },
+    "data_kind": "deterministic synthetic engineering simulation; not physical validation",
+    "release": "0.4.0"
+  },
+  "quarter:chirp": {
+    "model": "quarter",
+    "road": "chirp",
+    "metrics": {
+      "body_acceleration_rms_si": 5.606949969889522,
+      "body_acceleration_peak_abs_si": 9.498684210142859,
+      "body_acceleration_peak_to_peak_si": 18.995361203733264,
+      "suspension_travel_rms_si": 0.047966938239288645,
+      "suspension_travel_peak_abs_si": 0.10070571775910961,
+      "suspension_travel_peak_to_peak_si": 0.1902245314236538,
+      "tire_deflection_rms_si": 0.008932338702700172,
+      "tire_deflection_peak_abs_si": 0.015449056216449791,
+      "tire_deflection_peak_to_peak_si": 0.030891077822093008,
+      "settling_after_last_excitation_s": null
+    },
+    "windows": {
+      "full": {
+        "start_s": 0.0,
+        "end_s": 5.0
+      }
+    },
+    "data_kind": "deterministic synthetic engineering simulation; not physical validation",
+    "release": "0.4.0"
+  },
+  "half:bump": {
+    "model": "half",
+    "road": "bump",
+    "metrics": {
+      "body_acceleration_rms_si": 0.623761648878077,
+      "body_acceleration_peak_abs_si": 2.735498852471157,
+      "body_acceleration_peak_to_peak_si": 5.328826581643444,
+      "front_suspension_travel_rms_si": 0.01020037153483856,
+      "front_suspension_travel_peak_abs_si": 0.0471743747239823,
+      "front_suspension_travel_peak_to_peak_si": 0.08784958679299004,
+      "rear_suspension_travel_rms_si": 0.010339079769843917,
+      "rear_suspension_travel_peak_abs_si": 0.04899945312651264,
+      "rear_suspension_travel_peak_to_peak_si": 0.08952436715372641,
+      "front_tire_deflection_rms_si": 0.0014527616167332265,
+      "front_tire_deflection_peak_abs_si": 0.007926062393770493,
+      "front_tire_deflection_peak_to_peak_si": 0.015393415867578473,
+      "rear_tire_deflection_rms_si": 0.001486614550595263,
+      "rear_tire_deflection_peak_abs_si": 0.008232428404233088,
+      "rear_tire_deflection_peak_to_peak_si": 0.01576704286524557,
+      "body_pitch_rms_si": 0.007446691537687177,
+      "body_pitch_peak_abs_si": 0.028660443554829187,
+      "body_pitch_peak_to_peak_si": 0.048675839231935566,
+      "settling_after_last_excitation_s": 1.4000000000000001
+    },
+    "windows": {
+      "full": {
+        "start_s": 0.0,
+        "end_s": 5.0
+      },
+      "post_event": {
+        "start_s": 1.3,
+        "end_s": 5.0
+      }
+    },
+    "data_kind": "deterministic synthetic engineering simulation; not physical validation",
+    "release": "0.4.0"
+  },
+  "half:pothole": {
+    "model": "half",
+    "road": "pothole",
+    "metrics": {
+      "body_acceleration_rms_si": 0.623761648878077,
+      "body_acceleration_peak_abs_si": 2.735498852471157,
+      "body_acceleration_peak_to_peak_si": 5.328826581643444,
+      "front_suspension_travel_rms_si": 0.01020037153483856,
+      "front_suspension_travel_peak_abs_si": 0.0471743747239823,
+      "front_suspension_travel_peak_to_peak_si": 0.08784958679299004,
+      "rear_suspension_travel_rms_si": 0.010339079769843917,
+      "rear_suspension_travel_peak_abs_si": 0.04899945312651264,
+      "rear_suspension_travel_peak_to_peak_si": 0.08952436715372641,
+      "front_tire_deflection_rms_si": 0.0014527616167332265,
+      "front_tire_deflection_peak_abs_si": 0.007926062393770493,
+      "front_tire_deflection_peak_to_peak_si": 0.015393415867578473,
+      "rear_tire_deflection_rms_si": 0.001486614550595263,
+      "rear_tire_deflection_peak_abs_si": 0.008232428404233088,
+      "rear_tire_deflection_peak_to_peak_si": 0.01576704286524557,
+      "body_pitch_rms_si": 0.007446691537687177,
+      "body_pitch_peak_abs_si": 0.028660443554829187,
+      "body_pitch_peak_to_peak_si": 0.048675839231935566,
+      "settling_after_last_excitation_s": 1.4000000000000001
+    },
+    "windows": {
+      "full": {
+        "start_s": 0.0,
+        "end_s": 5.0
+      },
+      "post_event": {
+        "start_s": 1.3,
+        "end_s": 5.0
+      }
+    },
+    "data_kind": "deterministic synthetic engineering simulation; not physical validation",
+    "release": "0.4.0"
+  },
+  "half:double_bump": {
+    "model": "half",
+    "road": "double_bump",
+    "metrics": {
+      "body_acceleration_rms_si": 0.9184558325978079,
+      "body_acceleration_peak_abs_si": 3.1177189067769815,
+      "body_acceleration_peak_to_peak_si": 6.192958108686193,
+      "front_suspension_travel_rms_si": 0.01462146121843669,
+      "front_suspension_travel_peak_abs_si": 0.058556616076647985,
+      "front_suspension_travel_peak_to_peak_si": 0.10573099080063028,
+      "rear_suspension_travel_rms_si": 0.015331861366572263,
+      "rear_suspension_travel_peak_abs_si": 0.059328560271384036,
+      "rear_suspension_travel_peak_to_peak_si": 0.10914573595225417,
+      "front_tire_deflection_rms_si": 0.0020825103648326048,
+      "front_tire_deflection_peak_abs_si": 0.009488514386663734,
+      "front_tire_deflection_peak_to_peak_si": 0.017414576780434225,
+      "rear_tire_deflection_rms_si": 0.0021838186094814776,
+      "rear_tire_deflection_peak_abs_si": 0.009663022000905405,
+      "rear_tire_deflection_peak_to_peak_si": 0.017983787455337866,
+      "body_pitch_rms_si": 0.0079693566346617,
+      "body_pitch_peak_abs_si": 0.024142639860461296,
+      "body_pitch_peak_to_peak_si": 0.044158035537567676,
+      "settling_after_last_excitation_s": 1.4100000000000001
+    },
+    "windows": {
+      "full": {
+        "start_s": 0.0,
+        "end_s": 5.0
+      },
+      "post_event": {
+        "start_s": 1.9,
+        "end_s": 5.0
+      }
+    },
+    "data_kind": "deterministic synthetic engineering simulation; not physical validation",
+    "release": "0.4.0"
+  },
+  "half:chirp": {
+    "model": "half",
+    "road": "chirp",
+    "metrics": {
+      "body_acceleration_rms_si": 4.591154153588031,
+      "body_acceleration_peak_abs_si": 9.495687061640504,
+      "body_acceleration_peak_to_peak_si": 18.989165807639885,
+      "front_suspension_travel_rms_si": 0.04756080840905175,
+      "front_suspension_travel_peak_abs_si": 0.10004004445448196,
+      "front_suspension_travel_peak_to_peak_si": 0.18417554166318445,
+      "rear_suspension_travel_rms_si": 0.04575896872896904,
+      "rear_suspension_travel_peak_abs_si": 0.10187917430791667,
+      "rear_suspension_travel_peak_to_peak_si": 0.1908652149346462,
+      "front_tire_deflection_rms_si": 0.008809463937164754,
+      "front_tire_deflection_peak_abs_si": 0.015327879045227356,
+      "front_tire_deflection_peak_to_peak_si": 0.030655027343278816,
+      "rear_tire_deflection_rms_si": 0.008296178292443676,
+      "rear_tire_deflection_peak_abs_si": 0.015574538548499323,
+      "rear_tire_deflection_peak_to_peak_si": 0.03114104781264831,
+      "body_pitch_rms_si": 0.011572530571577701,
+      "body_pitch_peak_abs_si": 0.03531108927598913,
+      "body_pitch_peak_to_peak_si": 0.060084725763004734,
+      "settling_after_last_excitation_s": null
+    },
+    "windows": {
+      "full": {
+        "start_s": 0.0,
+        "end_s": 5.0
+      }
+    },
+    "data_kind": "deterministic synthetic engineering simulation; not physical validation",
+    "release": "0.4.0"
+  }
+}

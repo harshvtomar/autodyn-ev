@@ -1,0 +1,152 @@
+{
+  "type": "Isolated Chromium with real precomputed study outputs and mocked API responses, not live localhost or Mac browser acceptance",
+  "passed": 36,
+  "total": 36,
+  "errors": [],
+  "checks": [
+    {
+      "name": "1280: active version",
+      "passed": true
+    },
+    {
+      "name": "1280: optimization controls",
+      "passed": true
+    },
+    {
+      "name": "1280: seven rows",
+      "passed": true
+    },
+    {
+      "name": "1280: chart rendered",
+      "passed": true
+    },
+    {
+      "name": "1280: feasible status",
+      "passed": true
+    },
+    {
+      "name": "1280: selection visible",
+      "passed": true
+    },
+    {
+      "name": "1280: 49 rows",
+      "passed": true
+    },
+    {
+      "name": "1280: selectable table",
+      "passed": true
+    },
+    {
+      "name": "1280: csv provenance",
+      "passed": true
+    },
+    {
+      "name": "1280: json provenance",
+      "passed": true
+    },
+    {
+      "name": "1280: text engineering report",
+      "passed": true
+    },
+    {
+      "name": "1280: no feasible",
+      "passed": true
+    },
+    {
+      "name": "1280: duplicate input rejected",
+      "passed": true
+    },
+    {
+      "name": "1280: half car 49",
+      "passed": true
+    },
+    {
+      "name": "1280: half rear inputs",
+      "passed": true
+    },
+    {
+      "name": "1280: 2d fallback",
+      "passed": true
+    },
+    {
+      "name": "1280: 3d restored",
+      "passed": true
+    },
+    {
+      "name": "1280: no overflow",
+      "passed": true
+    },
+    {
+      "name": "390: active version",
+      "passed": true
+    },
+    {
+      "name": "390: optimization controls",
+      "passed": true
+    },
+    {
+      "name": "390: seven rows",
+      "passed": true
+    },
+    {
+      "name": "390: chart rendered",
+      "passed": true
+    },
+    {
+      "name": "390: feasible status",
+      "passed": true
+    },
+    {
+      "name": "390: selection visible",
+      "passed": true
+    },
+    {
+      "name": "390: 49 rows",
+      "passed": true
+    },
+    {
+      "name": "390: selectable table",
+      "passed": true
+    },
+    {
+      "name": "390: csv provenance",
+      "passed": true
+    },
+    {
+      "name": "390: json provenance",
+      "passed": true
+    },
+    {
+      "name": "390: text engineering report",
+      "passed": true
+    },
+    {
+      "name": "390: no feasible",
+      "passed": true
+    },
+    {
+      "name": "390: duplicate input rejected",
+      "passed": true
+    },
+    {
+      "name": "390: half car 49",
+      "passed": true
+    },
+    {
+      "name": "390: half rear inputs",
+      "passed": true
+    },
+    {
+      "name": "390: 2d fallback",
+      "passed": true
+    },
+    {
+      "name": "390: 3d restored",
+      "passed": true
+    },
+    {
+      "name": "390: no overflow",
+      "passed": true
+    }
+  ]
+}

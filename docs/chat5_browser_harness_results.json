@@ -1,0 +1,166 @@
+{
+  "mode": "isolated Chromium with in-page JS and proxied local Python API; not Mac acceptance",
+  "checks": [
+    {
+      "width": 1280,
+      "check": "version",
+      "passed": true
+    },
+    {
+      "width": 1280,
+      "check": "quarter default preserved",
+      "passed": true
+    },
+    {
+      "width": 1280,
+      "check": "quarter chart rendered",
+      "passed": true
+    },
+    {
+      "width": 1280,
+      "check": "braking mode visible",
+      "passed": true
+    },
+    {
+      "width": 1280,
+      "check": "legacy hidden in braking mode",
+      "passed": true
+    },
+    {
+      "width": 1280,
+      "check": "default stop",
+      "passed": true
+    },
+    {
+      "width": 1280,
+      "check": "five charts",
+      "passed": true
+    },
+    {
+      "width": 1280,
+      "check": "friction capped status",
+      "passed": true
+    },
+    {
+      "width": 1280,
+      "check": "versioned csv",
+      "passed": true
+    },
+    {
+      "width": 1280,
+      "check": "versioned JSON",
+      "passed": true
+    },
+    {
+      "width": 1280,
+      "check": "ramp run",
+      "passed": true
+    },
+    {
+      "width": 1280,
+      "check": "invalid form prevented",
+      "passed": true
+    },
+    {
+      "width": 1280,
+      "check": "reset restores default",
+      "passed": true
+    },
+    {
+      "width": 1280,
+      "check": "halfcar mode preserved",
+      "passed": true
+    },
+    {
+      "width": 1280,
+      "check": "quarter mode return",
+      "passed": true
+    },
+    {
+      "width": 1280,
+      "check": "no horizontal overflow",
+      "passed": true
+    },
+    {
+      "width": 390,
+      "check": "version",
+      "passed": true
+    },
+    {
+      "width": 390,
+      "check": "quarter default preserved",
+      "passed": true
+    },
+    {
+      "width": 390,
+      "check": "quarter chart rendered",
+      "passed": true
+    },
+    {
+      "width": 390,
+      "check": "braking mode visible",
+      "passed": true
+    },
+    {
+      "width": 390,
+      "check": "legacy hidden in braking mode",
+      "passed": true
+    },
+    {
+      "width": 390,
+      "check": "default stop",
+      "passed": true
+    },
+    {
+      "width": 390,
+      "check": "five charts",
+      "passed": true
+    },
+    {
+      "width": 390,
+      "check": "friction capped status",
+      "passed": true
+    },
+    {
+      "width": 390,
+      "check": "versioned csv",
+      "passed": true
+    },
+    {
+      "width": 390,
+      "check": "versioned JSON",
+      "passed": true
+    },
+    {
+      "width": 390,
+      "check": "ramp run",
+      "passed": true
+    },
+    {
+      "width": 390,
+      "check": "invalid form prevented",
+      "passed": true
+    },
+    {
+      "width": 390,
+      "check": "reset restores default",
+      "passed": true
+    },
+    {
+      "width": 390,
+      "check": "halfcar mode preserved",
+      "passed": true
+    },
+    {
+      "width": 390,
+      "check": "quarter mode return",
+      "passed": true
+    },
+    {
+      "width": 390,
+      "check": "no horizontal overflow",
+      "passed": true
+    }
+  ],
+  "page_errors": []
+}

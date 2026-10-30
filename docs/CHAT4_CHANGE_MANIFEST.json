@@ -1,0 +1,156 @@
+{
+  "source_baseline": "AutoDyn_EV_Chat3_v0.3.0.zip",
+  "source_sha256": "5b325513740fd30b3a0e968a616a4b17497b59b057f5f3316cc2ac633b121b41",
+  "release": "0.4.0",
+  "inherited_tests_pre_post": "136/136 pass",
+  "total_python_tests": "188/188 pass",
+  "new_python_tests": 52,
+  "isolated_browser_checks": "24/24 pass; desktop and 390px; no page exceptions; Mac pending",
+  "modified_files": [
+    {
+      "path": "README.md",
+      "chat3_sha256": "ec1871324da093fdf6c453e15af764c9b0221199d73aedf7e7c00359046de29b",
+      "chat4_sha256": "443805545ba7c0465406a8e1a9b1f90605ea2159dee224f4233fa9ee4233e7c0"
+    },
+    {
+      "path": "autodyn_ev/__init__.py",
+      "chat3_sha256": "7cbf97c35037a3af7d8d3cd02eec32cccde6fbb95f7b2041be389ed58e59ce87",
+      "chat4_sha256": "ca8bf7cc357b0d44538879f32a9608abc2da29edc3ace9356d6479315be60075"
+    },
+    {
+      "path": "autodyn_ev/halfcar.py",
+      "chat3_sha256": "dbc02bd392829eba828f34e57fd318f50e848d13a0cca4ff42b54d5742a013a8",
+      "chat4_sha256": "3c1eb2f689c9596aea88539ad0a96c30216ac061e6c79ce0d812eacaef413636"
+    },
+    {
+      "path": "autodyn_ev/physics.py",
+      "chat3_sha256": "bb3ba8272df846eaeed2e3e50832ee3b1137de3676d3bb851e148d5c3c950f19",
+      "chat4_sha256": "c42ed5515a041189aeebeb4ac04e7f2d2ae0b2732b732210528b30734f07376a"
+    },
+    {
+      "path": "autodyn_ev/server.py",
+      "chat3_sha256": "5e19320f6450df9aba36d57e37c8c941fb4c08dd105e4800088cd097d9b9c7f3",
+      "chat4_sha256": "28fa0b411ff94d6e407d996de5c4d5bd4212516e25b9db3b6b82664aeadca2ce"
+    },
+    {
+      "path": "autodyn_ev/simulation.py",
+      "chat3_sha256": "f50c2297d8dad1d82b2bfff9b3fc7521fe6b8737f003485da53fae8fb1747c5b",
+      "chat4_sha256": "f0fe494f1107f9b2e7e373ee8375f16588a309a188ed7f18ec0474a85ebadf31"
+    },
+    {
+      "path": "web/app.js",
+      "chat3_sha256": "5e6582f6c6f1cebbf032765bf8a2b23c02650fe4f6d6659da90791ce43a02525",
+      "chat4_sha256": "9cf775417e92495c88718e8ab98b01ecaabfef24df80885f8b84e6ed817cac19"
+    },
+    {
+      "path": "web/halfcar.js",
+      "chat3_sha256": "c5477de5accd284dafc8b144ccf5a4cb01490593f3f79cf89513d470bd836738",
+      "chat4_sha256": "26d07515cd8f8c4961fd2c2f0d72f2a4bc2f6bbe59d0ee048b260341817ee806"
+    },
+    {
+      "path": "web/index.html",
+      "chat3_sha256": "1630de3bd5112f175618beb864e7e177948fe59ceb4fcaadced97e52f7448a6d",
+      "chat4_sha256": "473467618b2d8b817041c3640a8d597358bb6742718a6aef49452c5570db3548"
+    },
+    {
+      "path": "web/styles.css",
+      "chat3_sha256": "1597300393104594ea08860877d41194b260229445b9e828c833df7d703c07cd",
+      "chat4_sha256": "46136d609866412198530a16ecb186f6216154ea66deb88653ae3354040f5e96"
+    }
+  ],
+  "added_files": [
+    "autodyn_ev/ride.py",
+    "docs/CHAT4_VERIFICATION_REPORT.md",
+    "docs/CHAT5_HANDOFF.md",
+    "docs/ENGINEERING_ROAD_RIDE_CHAT4.md",
+    "docs/MAC_CHAT4_ACCEPTANCE.md",
+    "docs/chat4-dashboard-1280.png",
+    "docs/chat4-dashboard-390.png",
+    "docs/chat4_automated_test_log.txt",
+    "docs/chat4_browser_harness_results.json",
+    "docs/chat4_browser_stdout.txt",
+    "docs/chat4_reference_results.json",
+    "docs/chat4_reference_stdout.txt",
+    "examples/chat4_ride_examples.json",
+    "scripts/browser_chat4_optional.py",
+    "scripts/chat4_reference_check_optional.py",
+    "tests/test_road_ride_chat4.py",
+    "web/ride.js"
+  ],
+  "deleted_files": [],
+  "byte_identical_preserved_file_count": 64,
+  "byte_identical_preserved_files": [
+    ".github/workflows/ci.yml",
+    ".gitignore",
+    "autodyn_ev/analysis.py",
+    "docs/CHAT1_FINAL_ACCEPTANCE.md",
+    "docs/CHAT2_CHANGE_MANIFEST.md",
+    "docs/CHAT2_HANDOFF.md",
+    "docs/CHAT2_SOURCE_SHA256.txt",
+    "docs/CHAT2_VERIFICATION_REPORT.md",
+    "docs/CHAT3_CHANGE_MANIFEST.json",
+    "docs/CHAT3_HANDOFF.md",
+    "docs/CHAT3_RELEASE_NOTES.md",
+    "docs/CHAT3_SOURCE_SHA256.txt",
+    "docs/CHAT3_VERIFICATION_REPORT.md",
+    "docs/CHAT4_HANDOFF.md",
+    "docs/ENGINEERING_HALF_CAR.md",
+    "docs/ENGINEERING_MODEL.md",
+    "docs/ENGINEERING_STUDIES_CHAT2.md",
+    "docs/MAC_CHAT2_ACCEPTANCE.md",
+    "docs/MAC_CHAT3_ACCEPTANCE.md",
+    "docs/MAC_SETUP.md",
+    "docs/SESSION1_SCOPE.md",
+    "docs/SOURCE_SHA256.txt",
+    "docs/VERIFICATION_REPORT.md",
+    "docs/automated_test_log.txt",
+    "docs/browser-chat2-desktop-study.csv",
+    "docs/browser-chat2-mobile-study.csv",
+    "docs/browser_harness_results.json",
+    "docs/chat2-dashboard-desktop.png",
+    "docs/chat2-dashboard-mobile.png",
+    "docs/chat2_automated_test_log.txt",
+    "docs/chat2_browser_harness_results.json",
+    "docs/chat2_reference_results.json",
+    "docs/chat3-browser-desktop-response.csv",
+    "docs/chat3-browser-mobile-response.csv",
+    "docs/chat3-dashboard-desktop.png",
+    "docs/chat3-dashboard-mobile.png",
+    "docs/chat3_automated_test_log.txt",
+    "docs/chat3_browser_harness_results.json",
+    "docs/chat3_reference_results.json",
+    "docs/dashboard-desktop.png",
+    "docs/dashboard-mobile.png",
+    "docs/scipy_reference_results.json",
+    "examples/chat2_comparison_metrics.json",
+    "examples/chat2_convergence.json",
+    "examples/chat2_modal.json",
+    "examples/chat2_sweep.json",
+    "examples/chat3_default_halfcar_metrics.json",
+    "examples/default_bump_metrics.json",
+    "examples/default_bump_response.csv",
+    "pyproject.toml",
+    "run_mac.sh",
+    "scripts/browser_smoke_chat2_optional.py",
+    "scripts/browser_smoke_optional.py",
+    "scripts/chat2_reference_check_optional.py",
+    "scripts/chat3_browser_harness_optional.py",
+    "scripts/chat3_reference_check_optional.py",
+    "scripts/export_example.py",
+    "scripts/scipy_reference_check.py",
+    "tests/test_analysis.py",
+    "tests/test_analysis_server.py",
+    "tests/test_halfcar.py",
+    "tests/test_halfcar_server.py",
+    "tests/test_physics.py",
+    "tests/test_server.py"
+  ],
+  "physical_model_change": "Accepted quarter/half differential equations and RK4 formulas unchanged; Road contracts and shared resolution checks extended; additive ride studies.",
+  "excluded_features": [
+    "braking",
+    "regenerative braking",
+    "Chat 5 implementation",
+    "physical vehicle calibration",
+    "ISO 2631 rating"
+  ]
+}

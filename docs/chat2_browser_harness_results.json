@@ -1,0 +1,38 @@
+{
+  "method": "isolated Chromium DOM using shipped JS and HTML; fetch bridged to real Python functions",
+  "not_verified": "actual localhost browser roundtrip on user Mac",
+  "cases": [
+    {
+      "device": "desktop",
+      "legacy_charts": 3,
+      "additional_charts": 3,
+      "modal": "pass",
+      "controlled_comparison": "pass",
+      "sweep": "pass",
+      "convergence": "pass",
+      "study_exports": "pass",
+      "provenance_export": "pass",
+      "legacy_exports": "pass",
+      "flat_road": "pass",
+      "animation": "pass",
+      "page_errors": [],
+      "screenshot": "docs/chat2-dashboard-desktop.png"
+    },
+    {
+      "device": "mobile",
+      "legacy_charts": 3,
+      "additional_charts": 3,
+      "modal": "pass",
+      "controlled_comparison": "pass",
+      "sweep": "pass",
+      "convergence": "pass",
+      "study_exports": "pass",
+      "provenance_export": "pass",
+      "legacy_exports": "pass",
+      "flat_road": "pass",
+      "animation": "pass",
+      "page_errors": [],
+      "screenshot": "docs/chat2-dashboard-mobile.png"
+    }
+  ]
+}

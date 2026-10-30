@@ -1,0 +1,103 @@
+{
+  "environment": "isolated Chromium browser+actual local Python API; NOT Mac Chrome",
+  "checks": [
+    {
+      "name": "nonempty #csv",
+      "passed": true
+    },
+    {
+      "name": "nonempty #report",
+      "passed": true
+    },
+    {
+      "name": "quarter CSV includes time channel",
+      "passed": true
+    },
+    {
+      "name": "quarter CSV 1001 rows",
+      "passed": true
+    },
+    {
+      "name": "quarter summary 300kg",
+      "passed": true
+    },
+    {
+      "name": "nonempty #quarter-ride-csv",
+      "passed": true
+    },
+    {
+      "name": "nonempty #quarter-ride-json",
+      "passed": true
+    },
+    {
+      "name": "ride csv has acceleration",
+      "passed": true
+    },
+    {
+      "name": "ride json has result",
+      "passed": true
+    },
+    {
+      "name": "nonempty #opt-csv",
+      "passed": true
+    },
+    {
+      "name": "nonempty #opt-json",
+      "passed": true
+    },
+    {
+      "name": "nonempty #opt-report",
+      "passed": true
+    },
+    {
+      "name": "opt json seven candidates",
+      "passed": true
+    },
+    {
+      "name": "opt CSV rows",
+      "passed": true
+    },
+    {
+      "name": "opt report provenance",
+      "passed": true
+    },
+    {
+      "name": "nonempty #braking-export-csv",
+      "passed": true
+    },
+    {
+      "name": "nonempty #braking-export-json",
+      "passed": true
+    },
+    {
+      "name": "braking csv has time",
+      "passed": true
+    },
+    {
+      "name": "braking json includes scenario",
+      "passed": true
+    },
+    {
+      "name": "nonempty #regen-csv",
+      "passed": true
+    },
+    {
+      "name": "nonempty #regen-json",
+      "passed": true
+    },
+    {
+      "name": "regen csv energy channels",
+      "passed": true
+    },
+    {
+      "name": "regen json scenario + channels",
+      "passed": true
+    },
+    {
+      "name": "browser no javascript exceptions",
+      "passed": true
+    }
+  ],
+  "passed": 24,
+  "total": 24
+}

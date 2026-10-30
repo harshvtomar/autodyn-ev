@@ -1,0 +1,21 @@
+name: AutoDyn EV standard-library tests
+on:
+  push:
+  pull_request:
+jobs:
+  python-tests:
+    strategy:
+      matrix:
+        python-version: ['3.10', '3.11', '3.12', '3.13']
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Compile and run engineering tests
+        run: |
+          python -m compileall -q autodyn_ev scripts tests
+          python -m unittest discover -s tests -v
+          python scripts/chat10_release_audit.py --out docs/ci_release_audit.json
+          python -m scripts.export_example

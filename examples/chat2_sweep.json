@@ -1,0 +1,141 @@
+{
+  "kind": "sweep",
+  "schema_version": "2.0",
+  "parameter": "damping_n_s_m",
+  "units": "N*s/m",
+  "reference_parameter_value": 1500.0,
+  "reference_metrics": {
+    "body_acceleration_rms_m_s2": 0.9060817384319384,
+    "body_acceleration_peak_m_s2": 5.220637377665748,
+    "suspension_travel_peak_mm": 48.06427089675365,
+    "body_displacement_peak_mm": 52.225277169749916,
+    "tire_deflection_peak_mm": 8.113585145130768,
+    "tire_force_variation_peak_n": 1541.581177574846
+  },
+  "points": [
+    {
+      "parameter_value": 900.0,
+      "metrics": {
+        "body_acceleration_rms_m_s2": 0.8722609523022815,
+        "body_acceleration_peak_m_s2": 4.055097548884365,
+        "suspension_travel_peak_mm": 50.46792126876035,
+        "body_displacement_peak_mm": 52.672943360489214,
+        "tire_deflection_peak_mm": 6.357109592096561,
+        "tire_force_variation_peak_n": 1207.8508224983466
+      },
+      "rms_delta_percent": -3.7326418462187543
+    },
+    {
+      "parameter_value": 1150.0,
+      "metrics": {
+        "body_acceleration_rms_m_s2": 0.8669404372096204,
+        "body_acceleration_peak_m_s2": 4.515692699607399,
+        "suspension_travel_peak_mm": 49.37513629430886,
+        "body_displacement_peak_mm": 52.135200755781156,
+        "tire_deflection_peak_mm": 6.805482860789212,
+        "tire_force_variation_peak_n": 1293.0417435499503
+      },
+      "rms_delta_percent": -4.319842191064986
+    },
+    {
+      "parameter_value": 1400.0,
+      "metrics": {
+        "body_acceleration_rms_m_s2": 0.8910174944581833,
+        "body_acceleration_peak_m_s2": 5.0194708244433395,
+        "suspension_travel_peak_mm": 48.4338906099846,
+        "body_displacement_peak_mm": 52.1350017251441,
+        "tire_deflection_peak_mm": 7.649031045539434,
+        "tire_force_variation_peak_n": 1453.3158986524925
+      },
+      "rms_delta_percent": -1.6625700899595635
+    },
+    {
+      "parameter_value": 1650.0,
+      "metrics": {
+        "body_acceleration_rms_m_s2": 0.93288298560553,
+        "body_acceleration_peak_m_s2": 5.537184610925407,
+        "suspension_travel_peak_mm": 47.51295766695213,
+        "body_displacement_peak_mm": 52.46019390093482,
+        "tire_deflection_peak_mm": 8.793520299526833,
+        "tire_force_variation_peak_n": 1670.7688569100983
+      },
+      "rms_delta_percent": 2.957928190890779
+    },
+    {
+      "parameter_value": 1900.0,
+      "metrics": {
+        "body_acceleration_rms_m_s2": 0.9858198243533794,
+        "body_acceleration_peak_m_s2": 6.055148301847517,
+        "suspension_travel_peak_mm": 46.6039726400366,
+        "body_displacement_peak_mm": 53.03312203394266,
+        "tire_deflection_peak_mm": 9.878655524892526,
+        "tire_force_variation_peak_n": 1876.9445497295799
+      },
+      "rms_delta_percent": 8.800319280182764
+    },
+    {
+      "parameter_value": 2150.0,
+      "metrics": {
+        "body_acceleration_rms_m_s2": 1.045715215087175,
+        "body_acceleration_peak_m_s2": 6.5668287755057255,
+        "suspension_travel_peak_mm": 45.72738451240489,
+        "body_displacement_peak_mm": 53.73121976028281,
+        "tire_deflection_peak_mm": 10.913939377574074,
+        "tire_force_variation_peak_n": 2073.648481739074
+      },
+      "rms_delta_percent": 15.410693178397533
+    },
+    {
+      "parameter_value": 2400.0,
+      "metrics": {
+        "body_acceleration_rms_m_s2": 1.1099699132507825,
+        "body_acceleration_peak_m_s2": 7.081323396557107,
+        "suspension_travel_peak_mm": 44.93440389835845,
+        "body_displacement_peak_mm": 54.51724902417079,
+        "tire_deflection_peak_mm": 11.927460132669507,
+        "tire_force_variation_peak_n": 2266.2174252072064
+      },
+      "rms_delta_percent": 22.502183431231295
+    }
+  ],
+  "interpretation": "One variable varied at a time; other vehicle, road and solver inputs fixed. Metrics are sample-based; the sweep does not optimize or certify performance.",
+  "provenance": {
+    "model_revision": "quarter-car-2dof-v0.2.0",
+    "model": "linear-2dof-quarter-car-static-equilibrium-deviations",
+    "analysis": "one-at-a-time-parameter-sweep",
+    "solver": "fixed-step-classical-RK4",
+    "coordinates": "positive-up; static-equilibrium-relative",
+    "units": {
+      "time": "s",
+      "displacement": "m",
+      "velocity": "m/s",
+      "acceleration": "m/s^2",
+      "force_variation": "N",
+      "reported_peak_displacement_and_travel": "mm",
+      "sprung_and_unsprung_mass": "kg",
+      "spring_and_tire_stiffness": "N/m",
+      "damping": "N*s/m"
+    },
+    "vehicle": {
+      "sprung_mass_kg": 300.0,
+      "unsprung_mass_kg": 40.0,
+      "suspension_stiffness_n_m": 18000.0,
+      "damping_n_s_m": 1500.0,
+      "tire_stiffness_n_m": 190000.0
+    },
+    "road": {
+      "kind": "bump",
+      "height_m": 0.06,
+      "start_s": 0.5,
+      "bump_length_m": 1.5,
+      "speed_m_s": 5.0,
+      "sine_frequency_hz": 1.5
+    },
+    "requested_settings": {
+      "duration_s": 5.0,
+      "dt_s": 0.005
+    },
+    "data_kind": "simulated; not empirical vehicle measurements",
+    "versioned_output": "2.0-additive; existing 1.0 keys preserved"
+  }
+}

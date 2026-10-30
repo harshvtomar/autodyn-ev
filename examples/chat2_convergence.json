@@ -1,0 +1,86 @@
+{
+  "kind": "convergence",
+  "schema_version": "2.0",
+  "results": [
+    {
+      "requested_dt_s": 0.01,
+      "actual_dt_s": 0.01,
+      "samples": 501,
+      "max_abs_state_error_vs_finest": {
+        "sprung_m": 8.42492168670432e-07,
+        "unsprung_m": 1.4212076385702876e-05,
+        "sprung_velocity_m_s": 6.985099882855783e-05,
+        "unsprung_velocity_m_s": 0.0008702678450156487
+      },
+      "body_acceleration_rms_m_s2": 0.90582688408191,
+      "rms_difference_vs_finest_m_s2": -0.0004702298959984308
+    },
+    {
+      "requested_dt_s": 0.005,
+      "actual_dt_s": 0.005,
+      "samples": 1001,
+      "max_abs_state_error_vs_finest": {
+        "sprung_m": 4.8484149159887246e-08,
+        "unsprung_m": 7.944490455855796e-07,
+        "sprung_velocity_m_s": 3.985744548754e-06,
+        "unsprung_velocity_m_s": 5.0912669137481714e-05
+      },
+      "body_acceleration_rms_m_s2": 0.9060817384319384,
+      "rms_difference_vs_finest_m_s2": -0.00021537554597006459
+    },
+    {
+      "requested_dt_s": 0.0025,
+      "actual_dt_s": 0.0025,
+      "samples": 2001,
+      "max_abs_state_error_vs_finest": {
+        "sprung_m": 0.0,
+        "unsprung_m": 0.0,
+        "sprung_velocity_m_s": 0.0,
+        "unsprung_velocity_m_s": 0.0
+      },
+      "body_acceleration_rms_m_s2": 0.9062971139779085,
+      "rms_difference_vs_finest_m_s2": 0.0
+    }
+  ],
+  "reference": "finest tested fixed RK4 step; not an exact or independent solution",
+  "interpretation": "Bump onset/end and step onset create derivative/discontinuity events; apparent observed convergence order may be reduced or non-monotonic when steps straddle boundaries. Numerical convergence is not a proof of physical accuracy.",
+  "provenance": {
+    "model_revision": "quarter-car-2dof-v0.2.0",
+    "model": "linear-2dof-quarter-car-static-equilibrium-deviations",
+    "analysis": "fixed-step-sensitivity",
+    "solver": "fixed-step-classical-RK4",
+    "coordinates": "positive-up; static-equilibrium-relative",
+    "units": {
+      "time": "s",
+      "displacement": "m",
+      "velocity": "m/s",
+      "acceleration": "m/s^2",
+      "force_variation": "N",
+      "reported_peak_displacement_and_travel": "mm",
+      "sprung_and_unsprung_mass": "kg",
+      "spring_and_tire_stiffness": "N/m",
+      "damping": "N*s/m"
+    },
+    "vehicle": {
+      "sprung_mass_kg": 300.0,
+      "unsprung_mass_kg": 40.0,
+      "suspension_stiffness_n_m": 18000.0,
+      "damping_n_s_m": 1500.0,
+      "tire_stiffness_n_m": 190000.0
+    },
+    "road": {
+      "kind": "bump",
+      "height_m": 0.06,
+      "start_s": 0.5,
+      "bump_length_m": 1.5,
+      "speed_m_s": 5.0,
+      "sine_frequency_hz": 1.5
+    },
+    "requested_settings": {
+      "duration_s": 5.0,
+      "dt_s": 0.005
+    },
+    "data_kind": "simulated; not empirical vehicle measurements",
+    "versioned_output": "2.0-additive; existing 1.0 keys preserved"
+  }
+}

@@ -1,0 +1,473 @@
+test_computational_limit (test_analysis.TestComparison.test_computational_limit) ... ok
+test_identical_scenarios_have_zero_deltas (test_analysis.TestComparison.test_identical_scenarios_have_zero_deltas) ... ok
+test_mass_change_alters_response (test_analysis.TestComparison.test_mass_change_alters_response) ... ok
+test_rejects_different_time_grids (test_analysis.TestComparison.test_rejects_different_time_grids) ... ok
+test_rejects_extra_keys (test_analysis.TestComparison.test_rejects_extra_keys) ... ok
+test_road_change_caution (test_analysis.TestComparison.test_road_change_caution) ... ok
+test_zero_reference_has_undefined_percentage (test_analysis.TestComparison.test_zero_reference_has_undefined_percentage) ... ok
+test_finest_reference_zero_error (test_analysis.TestConvergence.test_finest_reference_zero_error) ... ok
+test_rejects_bad_type (test_analysis.TestConvergence.test_rejects_bad_type) ... ok
+test_rejects_budget (test_analysis.TestConvergence.test_rejects_budget) ... ok
+test_rejects_duplicate (test_analysis.TestConvergence.test_rejects_duplicate) ... ok
+test_rejects_wrong_order (test_analysis.TestConvergence.test_rejects_wrong_order) ... ok
+test_sine_refinement_improves_consistently (test_analysis.TestConvergence.test_sine_refinement_improves_consistently) ... ok
+test_all_roots_satisfy_characteristic_equation (test_analysis.TestDampedModal.test_all_roots_satisfy_characteristic_equation) ... ok
+test_high_damping_shows_nonoscillatory_poles (test_analysis.TestDampedModal.test_high_damping_shows_nonoscillatory_poles) ... ok
+test_invalid_mass_is_rejected (test_analysis.TestDampedModal.test_invalid_mass_is_rejected) ... ok
+test_polynomial_coefficient_formula (test_analysis.TestDampedModal.test_polynomial_coefficient_formula) ... ok
+test_random_valid_vehicle_root_residuals (test_analysis.TestDampedModal.test_random_valid_vehicle_root_residuals) ... ok
+test_standard_damping_positive (test_analysis.TestDampedModal.test_standard_damping_positive) ... ok
+test_undamped_poles_are_imaginary (test_analysis.TestDampedModal.test_undamped_poles_are_imaginary) ... ok
+test_all_legacy_channels_and_metrics_stay_in_place (test_analysis.TestProvenance.test_all_legacy_channels_and_metrics_stay_in_place) ... ok
+test_repeatable_provenance (test_analysis.TestProvenance.test_repeatable_provenance) ... ok
+test_scenario_provenance_contains_units_and_model (test_analysis.TestProvenance.test_scenario_provenance_contains_units_and_model) ... ok
+test_budget (test_analysis.TestSweep.test_budget) ... ok
+test_canonical_reference_unchanged (test_analysis.TestSweep.test_canonical_reference_unchanged) ... ok
+test_every_parameter_has_valid_sweep (test_analysis.TestSweep.test_every_parameter_has_valid_sweep) ... ok
+test_rejects_bad_parameter (test_analysis.TestSweep.test_rejects_bad_parameter) ... ok
+test_rejects_boolean_count (test_analysis.TestSweep.test_rejects_boolean_count) ... ok
+test_rejects_excess_count (test_analysis.TestSweep.test_rejects_excess_count) ... ok
+test_rejects_invalid_bounds (test_analysis.TestSweep.test_rejects_invalid_bounds) ... ok
+test_rejects_nonfinite (test_analysis.TestSweep.test_rejects_nonfinite) ... ok
+test_single_variable_and_endpoints (test_analysis.TestSweep.test_single_variable_and_endpoints) ... ok
+test_compare (test_analysis_server.TestAnalysisAPI.test_compare) ... 127.0.0.1 - - [29/Oct/2026 13:38:55] "POST /api/compare HTTP/1.1" 200 -
+ok
+test_convergence (test_analysis_server.TestAnalysisAPI.test_convergence) ... 127.0.0.1 - - [29/Oct/2026 13:38:55] "POST /api/convergence HTTP/1.1" 200 -
+ok
+test_invalid_request_is_400 (test_analysis_server.TestAnalysisAPI.test_invalid_request_is_400) ... 127.0.0.1 - - [29/Oct/2026 13:38:55] "POST /api/sweep HTTP/1.1" 400 -
+ok
+test_massive_sweep_rejected (test_analysis_server.TestAnalysisAPI.test_massive_sweep_rejected) ... 127.0.0.1 - - [29/Oct/2026 13:38:55] "POST /api/sweep HTTP/1.1" 400 -
+ok
+test_modal (test_analysis_server.TestAnalysisAPI.test_modal) ... 127.0.0.1 - - [29/Oct/2026 13:38:55] "POST /api/modal HTTP/1.1" 200 -
+ok
+test_sweep (test_analysis_server.TestAnalysisAPI.test_sweep) ... 127.0.0.1 - - [29/Oct/2026 13:38:55] "POST /api/sweep HTTP/1.1" 200 -
+ok
+test_all_speeds_nonnegative_and_distance_monotone (test_braking_chat5.TestBrakingPhysics.test_all_speeds_nonnegative_and_distance_monotone) ... ok
+test_available_traction_bounds_actual (test_braking_chat5.TestBrakingPhysics.test_available_traction_bounds_actual) ... ok
+test_braking_front_increases_rear_decreases (test_braking_chat5.TestBrakingPhysics.test_braking_front_increases_rear_decreases) ... ok
+test_coefficient_reduces_stop (test_braking_chat5.TestBrakingPhysics.test_coefficient_reduces_stop) ... ok
+test_default_analytic_stop (test_braking_chat5.TestBrakingPhysics.test_default_analytic_stop) ... ok
+test_event_time_step_independence (test_braking_chat5.TestBrakingPhysics.test_event_time_step_independence) ... ok
+test_front_rear_normal_balance (test_braking_chat5.TestBrakingPhysics.test_front_rear_normal_balance) ... ok
+test_gravity_dependent_loads (test_braking_chat5.TestBrakingPhysics.test_gravity_dependent_loads) ... ok
+test_last_sample_load_static_after_stop (test_braking_chat5.TestBrakingPhysics.test_last_sample_load_static_after_stop) ... ok
+test_mu_g_analytic (test_braking_chat5.TestBrakingPhysics.test_mu_g_analytic) ... ok
+test_no_legacy_physics_mutation (test_braking_chat5.TestBrakingPhysics.test_no_legacy_physics_mutation) ... ok
+test_non_grid_stop_exact (test_braking_chat5.TestBrakingPhysics.test_non_grid_stop_exact) ... ok
+test_ramp_t0_zero (test_braking_chat5.TestBrakingPhysics.test_ramp_t0_zero) ... ok
+test_ramp_through_traction_saturation (test_braking_chat5.TestBrakingPhysics.test_ramp_through_traction_saturation) ... ok
+test_ramp_unlimited_analytic (test_braking_chat5.TestBrakingPhysics.test_ramp_unlimited_analytic) ... ok
+test_requested_greater_than_actual (test_braking_chat5.TestBrakingPhysics.test_requested_greater_than_actual) ... ok
+test_returned_outputs_finite (test_braking_chat5.TestBrakingPhysics.test_returned_outputs_finite) ... ok
+test_schema_version_and_provenance (test_braking_chat5.TestBrakingPhysics.test_schema_version_and_provenance) ... ok
+test_short_window_reports_not_stopped (test_braking_chat5.TestBrakingPhysics.test_short_window_reports_not_stopped) ... ok
+test_zero_braking_constant_speed (test_braking_chat5.TestBrakingPhysics.test_zero_braking_constant_speed) ... ok
+test_zero_demand_ramp (test_braking_chat5.TestBrakingPhysics.test_zero_demand_ramp) ... ok
+test_zero_height_no_transfer (test_braking_chat5.TestBrakingPhysics.test_zero_height_no_transfer) ... ok
+test_zero_initial_speed (test_braking_chat5.TestBrakingPhysics.test_zero_initial_speed) ... ok
+test_bad_number (test_braking_chat5.TestBrakingValidation.test_bad_number) ... ok
+test_bad_profile (test_braking_chat5.TestBrakingValidation.test_bad_profile) ... ok
+test_boundaries_allowed (test_braking_chat5.TestBrakingValidation.test_boundaries_allowed) ... ok
+test_defaults_mapping (test_braking_chat5.TestBrakingValidation.test_defaults_mapping) ... ok
+test_high_resolution_limit (test_braking_chat5.TestBrakingValidation.test_high_resolution_limit) ... ok
+test_invalid_range_all_fields (test_braking_chat5.TestBrakingValidation.test_invalid_range_all_fields) ... ok
+test_long_wheelbase_rejected (test_braking_chat5.TestBrakingValidation.test_long_wheelbase_rejected) ... ok
+test_nested_mapping (test_braking_chat5.TestBrakingValidation.test_nested_mapping) ... ok
+test_non_object (test_braking_chat5.TestBrakingValidation.test_non_object) ... ok
+test_rear_negative_rejected (test_braking_chat5.TestBrakingValidation.test_rear_negative_rejected) ... ok
+test_unknown_field (test_braking_chat5.TestBrakingValidation.test_unknown_field) ... ok
+test_asset_is_served (test_braking_server_chat5.TestBrakingAPI.test_asset_is_served) ... 127.0.0.1 - - [29/Oct/2026 13:38:55] "GET /braking.js HTTP/1.1" 200 -
+ok
+test_content_security (test_braking_server_chat5.TestBrakingAPI.test_content_security) ... 127.0.0.1 - - [29/Oct/2026 13:38:56] "GET / HTTP/1.1" 200 -
+ok
+test_html_contains_app (test_braking_server_chat5.TestBrakingAPI.test_html_contains_app) ... 127.0.0.1 - - [29/Oct/2026 13:38:56] "GET / HTTP/1.1" 200 -
+ok
+test_legacy_health_compatible (test_braking_server_chat5.TestBrakingAPI.test_legacy_health_compatible) ... 127.0.0.1 - - [29/Oct/2026 13:38:56] "GET /api/health HTTP/1.1" 200 -
+ok
+test_new_post (test_braking_server_chat5.TestBrakingAPI.test_new_post) ... 127.0.0.1 - - [29/Oct/2026 13:38:56] "POST /api/braking/simulate HTTP/1.1" 200 -
+ok
+test_ramp_post (test_braking_server_chat5.TestBrakingAPI.test_ramp_post) ... 127.0.0.1 - - [29/Oct/2026 13:38:56] "POST /api/braking/simulate HTTP/1.1" 200 -
+ok
+test_reject_invalid_payload (test_braking_server_chat5.TestBrakingAPI.test_reject_invalid_payload) ... 127.0.0.1 - - [29/Oct/2026 13:38:56] "POST /api/braking/simulate HTTP/1.1" 400 -
+127.0.0.1 - - [29/Oct/2026 13:38:56] "POST /api/braking/simulate HTTP/1.1" 400 -
+127.0.0.1 - - [29/Oct/2026 13:38:56] "POST /api/braking/simulate HTTP/1.1" 400 -
+127.0.0.1 - - [29/Oct/2026 13:38:56] "POST /api/braking/simulate HTTP/1.1" 400 -
+127.0.0.1 - - [29/Oct/2026 13:38:56] "POST /api/braking/simulate HTTP/1.1" 400 -
+ok
+test_reject_large_request (test_braking_server_chat5.TestBrakingAPI.test_reject_large_request) ... 127.0.0.1 - - [29/Oct/2026 13:38:56] "POST /api/braking/simulate HTTP/1.1" 413 -
+ok
+test_reject_wrong_type (test_braking_server_chat5.TestBrakingAPI.test_reject_wrong_type) ... 127.0.0.1 - - [29/Oct/2026 13:38:56] "POST /api/braking/simulate HTTP/1.1" 415 -
+ok
+test_bounds (test_halfcar.TestHalfCar.test_bounds) ... ok
+test_bump_resolution_guard (test_halfcar.TestHalfCar.test_bump_resolution_guard) ... ok
+test_default_model_properties (test_halfcar.TestHalfCar.test_default_model_properties) ... ok
+test_deterministic (test_halfcar.TestHalfCar.test_deterministic) ... ok
+test_dissipation_rate_finite_difference (test_halfcar.TestHalfCar.test_dissipation_rate_finite_difference) ... ok
+test_energy_decays_flat_road (test_halfcar.TestHalfCar.test_energy_decays_flat_road) ... ok
+test_energy_nonnegative (test_halfcar.TestHalfCar.test_energy_nonnegative) ... ok
+test_energy_rate_damped (test_halfcar.TestHalfCar.test_energy_rate_damped) ... ok
+test_energy_unforced_no_damping_conserved (test_halfcar.TestHalfCar.test_energy_unforced_no_damping_conserved) ... ok
+test_flat_static_equilibrium_zero (test_halfcar.TestHalfCar.test_flat_static_equilibrium_zero) ... ok
+test_initial_state_validation (test_halfcar.TestHalfCar.test_initial_state_validation) ... ok
+test_mapping_and_unknown_fields (test_halfcar.TestHalfCar.test_mapping_and_unknown_fields) ... ok
+test_metrics_and_schema_units (test_halfcar.TestHalfCar.test_metrics_and_schema_units) ... ok
+test_no_spurious_pitch_symmetric_vehicle_and_states (test_halfcar.TestHalfCar.test_no_spurious_pitch_symmetric_vehicle_and_states) ... ok
+test_pitch_acceleration_uses_inertia (test_halfcar.TestHalfCar.test_pitch_acceleration_uses_inertia) ... ok
+test_rear_delay_spatial (test_halfcar.TestHalfCar.test_rear_delay_spatial) ... ok
+test_refinement_order_smooth_flat_free (test_halfcar.TestHalfCar.test_refinement_order_smooth_flat_free) ... ok
+test_road_front_force_acceleration_up (test_halfcar.TestHalfCar.test_road_front_force_acceleration_up) ... ok
+test_road_profile_no_mutation (test_halfcar.TestHalfCar.test_road_profile_no_mutation) ... ok
+test_road_scenarios (test_halfcar.TestHalfCar.test_road_scenarios) ... ok
+test_road_validation (test_halfcar.TestHalfCar.test_road_validation) ... ok
+test_sine_resolution_guard (test_halfcar.TestHalfCar.test_sine_resolution_guard) ... ok
+test_spring_front_opposes_body_extension (test_halfcar.TestHalfCar.test_spring_front_opposes_body_extension) ... ok
+test_state_space_matrices_spring_consistency (test_halfcar.TestHalfCar.test_state_space_matrices_spring_consistency) ... ok
+test_step_front_rear_time_offsets (test_halfcar.TestHalfCar.test_step_front_rear_time_offsets) ... ok
+test_symmetric_road_with_zero_delay_limit_by_large_speed_not_required (test_halfcar.TestHalfCar.test_symmetric_road_with_zero_delay_limit_by_large_speed_not_required) ... ok
+test_time_axis (test_halfcar.TestHalfCar.test_time_axis) ... ok
+test_tire_force_direction_rear (test_halfcar.TestHalfCar.test_tire_force_direction_rear) ... ok
+test_torque_pitch_sign_nose_up_restored (test_halfcar.TestHalfCar.test_torque_pitch_sign_nose_up_restored) ... ok
+test_unstable_step_guard (test_halfcar.TestHalfCar.test_unstable_step_guard) ... ok
+test_variant_changes_heave (test_halfcar.TestHalfCar.test_variant_changes_heave) ... ok
+test_zero_derivative_flat (test_halfcar.TestHalfCar.test_zero_derivative_flat) ... ok
+test_bad_vehicle (test_halfcar_server.TestHalfCarAPI.test_bad_vehicle) ... 127.0.0.1 - - [29/Oct/2026 13:38:56] "POST /api/halfcar/simulate HTTP/1.1" 400 -
+127.0.0.1 - - [29/Oct/2026 13:38:56] "POST /api/halfcar/simulate HTTP/1.1" 400 -
+127.0.0.1 - - [29/Oct/2026 13:38:56] "POST /api/halfcar/simulate HTTP/1.1" 400 -
+ok
+test_half_default (test_halfcar_server.TestHalfCarAPI.test_half_default) ... 127.0.0.1 - - [29/Oct/2026 13:38:56] "POST /api/halfcar/simulate HTTP/1.1" 200 -
+ok
+test_half_road_flat (test_halfcar_server.TestHalfCarAPI.test_half_road_flat) ... 127.0.0.1 - - [29/Oct/2026 13:38:56] "POST /api/halfcar/simulate HTTP/1.1" 200 -
+ok
+test_half_static_assets (test_halfcar_server.TestHalfCarAPI.test_half_static_assets) ... 127.0.0.1 - - [29/Oct/2026 13:38:56] "GET /halfcar.js HTTP/1.1" 200 -
+127.0.0.1 - - [29/Oct/2026 13:38:56] "GET /app.js HTTP/1.1" 200 -
+127.0.0.1 - - [29/Oct/2026 13:38:56] "GET /styles.css HTTP/1.1" 200 -
+127.0.0.1 - - [29/Oct/2026 13:38:56] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [29/Oct/2026 13:38:56] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [29/Oct/2026 13:38:56] "GET / HTTP/1.1" 200 -
+ok
+test_invalid_body (test_halfcar_server.TestHalfCarAPI.test_invalid_body) ... 127.0.0.1 - - [29/Oct/2026 13:38:56] "POST /api/halfcar/simulate HTTP/1.1" 400 -
+ok
+test_invalid_dt (test_halfcar_server.TestHalfCarAPI.test_invalid_dt) ... 127.0.0.1 - - [29/Oct/2026 13:38:56] "POST /api/halfcar/simulate HTTP/1.1" 400 -
+ok
+test_invalid_zero_speed (test_halfcar_server.TestHalfCarAPI.test_invalid_zero_speed) ... 127.0.0.1 - - [29/Oct/2026 13:38:56] "POST /api/halfcar/simulate HTTP/1.1" 400 -
+ok
+test_legacy_unchanged (test_halfcar_server.TestHalfCarAPI.test_legacy_unchanged) ... 127.0.0.1 - - [29/Oct/2026 13:38:56] "POST /api/simulate HTTP/1.1" 200 -
+ok
+test_unknown_field (test_halfcar_server.TestHalfCarAPI.test_unknown_field) ... 127.0.0.1 - - [29/Oct/2026 13:38:56] "POST /api/halfcar/simulate HTTP/1.1" 400 -
+ok
+test_api_default (test_optimization_chat8.TestOptimizationAPI.test_api_default) ... 127.0.0.1 - - [29/Oct/2026 13:38:57] "POST /api/optimization/study HTTP/1.1" 200 -
+ok
+test_api_half (test_optimization_chat8.TestOptimizationAPI.test_api_half) ... 127.0.0.1 - - [29/Oct/2026 13:38:57] "POST /api/optimization/study HTTP/1.1" 200 -
+ok
+test_api_no_override (test_optimization_chat8.TestOptimizationAPI.test_api_no_override) ... 127.0.0.1 - - [29/Oct/2026 13:38:57] "GET /api/health HTTP/1.1" 200 -
+127.0.0.1 - - [29/Oct/2026 13:38:57] "GET /api/health HTTP/1.1" 200 -
+127.0.0.1 - - [29/Oct/2026 13:38:57] "POST /api/regen/simulate HTTP/1.1" 200 -
+ok
+test_api_rejects_bad_body (test_optimization_chat8.TestOptimizationAPI.test_api_rejects_bad_body) ... 127.0.0.1 - - [29/Oct/2026 13:38:57] "POST /api/optimization/study HTTP/1.1" 400 -
+ok
+test_api_rejects_excess (test_optimization_chat8.TestOptimizationAPI.test_api_rejects_excess) ... 127.0.0.1 - - [29/Oct/2026 13:38:57] "POST /api/optimization/study HTTP/1.1" 400 -
+ok
+test_api_two_parameters (test_optimization_chat8.TestOptimizationAPI.test_api_two_parameters) ... 127.0.0.1 - - [29/Oct/2026 13:38:59] "POST /api/optimization/study HTTP/1.1" 200 -
+ok
+test_api_wrong_content (test_optimization_chat8.TestOptimizationAPI.test_api_wrong_content) ... 127.0.0.1 - - [29/Oct/2026 13:38:59] "POST /api/optimization/study HTTP/1.1" 415 -
+ok
+test_assets (test_optimization_chat8.TestOptimizationAPI.test_assets) ... 127.0.0.1 - - [29/Oct/2026 13:38:59] "GET /optimization.js HTTP/1.1" 200 -
+ok
+test_legacy_api_default (test_optimization_chat8.TestOptimizationAPI.test_legacy_api_default) ... 127.0.0.1 - - [29/Oct/2026 13:38:59] "POST /api/simulate HTTP/1.1" 200 -
+127.0.0.1 - - [29/Oct/2026 13:38:59] "POST /api/halfcar/simulate HTTP/1.1" 200 -
+ok
+test_constraints_not_combined_score (test_optimization_chat8.TestOptimizationMath.test_constraints_not_combined_score) ... ok
+test_determinism (test_optimization_chat8.TestOptimizationMath.test_determinism) ... ok
+test_explicit_units (test_optimization_chat8.TestOptimizationMath.test_explicit_units) ... ok
+test_grid_clamped (test_optimization_chat8.TestOptimizationMath.test_grid_clamped) ... ok
+test_half_case_counts (test_optimization_chat8.TestOptimizationMath.test_half_case_counts) ... ok
+test_independent_pareto (test_optimization_chat8.TestOptimizationMath.test_independent_pareto) ... ok
+test_independent_tie_breaking (test_optimization_chat8.TestOptimizationMath.test_independent_tie_breaking) ... ok
+test_invalid_top_level (test_optimization_chat8.TestOptimizationMath.test_invalid_top_level) ... ok
+test_invariant_baseline (test_optimization_chat8.TestOptimizationMath.test_invariant_baseline) ... ok
+test_limits_within_feasible (test_optimization_chat8.TestOptimizationMath.test_limits_within_feasible) ... ok
+test_metric_recomputation_half (test_optimization_chat8.TestOptimizationMath.test_metric_recomputation_half) ... ok
+test_metric_recomputation_quarter (test_optimization_chat8.TestOptimizationMath.test_metric_recomputation_quarter) ... ok
+test_no_feasible (test_optimization_chat8.TestOptimizationMath.test_no_feasible) ... ok
+test_no_mutation (test_optimization_chat8.TestOptimizationMath.test_no_mutation) ... ok
+test_prescribed_grid (test_optimization_chat8.TestOptimizationMath.test_prescribed_grid) ... ok
+test_reject_bad_vehicle_or_road (test_optimization_chat8.TestOptimizationMath.test_reject_bad_vehicle_or_road) ... ok
+test_reject_excessive_duration (test_optimization_chat8.TestOptimizationMath.test_reject_excessive_duration) ... ok
+test_reject_invalid_parameter_selection (test_optimization_chat8.TestOptimizationMath.test_reject_invalid_parameter_selection) ... ok
+test_reject_nonfinite_limits (test_optimization_chat8.TestOptimizationMath.test_reject_nonfinite_limits) ... ok
+test_reject_oversized_grid (test_optimization_chat8.TestOptimizationMath.test_reject_oversized_grid) ... ok
+test_reject_unknown_constraint (test_optimization_chat8.TestOptimizationMath.test_reject_unknown_constraint) ... ok
+test_reject_wrong_model_parameter (test_optimization_chat8.TestOptimizationMath.test_reject_wrong_model_parameter) ... ok
+test_study_default (test_optimization_chat8.TestOptimizationMath.test_study_default) ... ok
+test_two_dimensional_grid (test_optimization_chat8.TestOptimizationMath.test_two_dimensional_grid) ... ok
+test_zero_damping_grid_rejected (test_optimization_chat8.TestOptimizationMath.test_zero_damping_grid_rejected) ... ok
+test_bump_has_defined_end (test_physics.SimulatorTests.test_bump_has_defined_end) ... ok
+test_default_run_has_all_channels (test_physics.SimulatorTests.test_default_run_has_all_channels) ... ok
+test_initial_state_free_vibration_energy_decreases (test_physics.SimulatorTests.test_initial_state_free_vibration_energy_decreases) ... ok
+test_initial_state_nan_rejected (test_physics.SimulatorTests.test_initial_state_nan_rejected) ... ok
+test_initial_state_shape_rejected (test_physics.SimulatorTests.test_initial_state_shape_rejected) ... ok
+test_invalid_nested_payload_rejected (test_physics.SimulatorTests.test_invalid_nested_payload_rejected) ... ok
+test_invalid_road_height_rejected (test_physics.SimulatorTests.test_invalid_road_height_rejected) ... ok
+test_metrics_consistent_with_series (test_physics.SimulatorTests.test_metrics_consistent_with_series) ... ok
+test_missing_payload_uses_defaults (test_physics.SimulatorTests.test_missing_payload_uses_defaults) ... ok
+test_no_nans_in_json (test_physics.SimulatorTests.test_no_nans_in_json) ... ok
+test_no_road_no_motion (test_physics.SimulatorTests.test_no_road_no_motion) ... ok
+test_non_dict_payload_rejected (test_physics.SimulatorTests.test_non_dict_payload_rejected) ... ok
+test_rk4_refinement_on_smooth_profile (test_physics.SimulatorTests.test_rk4_refinement_on_smooth_profile) ... ok
+test_rms_less_than_peak (test_physics.SimulatorTests.test_rms_less_than_peak) ... ok
+test_sine_has_no_bump_settling_metric (test_physics.SimulatorTests.test_sine_has_no_bump_settling_metric) ... ok
+test_steady_state_of_step_approaches_height (test_physics.SimulatorTests.test_steady_state_of_step_approaches_height) ... ok
+test_undamped_free_vibration_energy_conserved (test_physics.SimulatorTests.test_undamped_free_vibration_energy_conserved) ... ok
+test_underresolved_bump_rejected (test_physics.SimulatorTests.test_underresolved_bump_rejected) ... ok
+test_underresolved_sine_rejected (test_physics.SimulatorTests.test_underresolved_sine_rejected) ... ok
+test_unknown_payload_field_rejected (test_physics.SimulatorTests.test_unknown_payload_field_rejected) ... ok
+test_unknown_vehicle_field_rejected (test_physics.SimulatorTests.test_unknown_vehicle_field_rejected) ... ok
+test_vehicle_numerical_modes_not_identical (test_physics.SimulatorTests.test_vehicle_numerical_modes_not_identical) ... ok
+test_zero_damping_has_finite_output (test_physics.SimulatorTests.test_zero_damping_has_finite_output) ... ok
+test_bad_road_kind_rejected (test_physics.VehicleTests.test_bad_road_kind_rejected) ... ok
+test_bad_time_step_rejected (test_physics.VehicleTests.test_bad_time_step_rejected) ... ok
+test_bool_not_a_mass (test_physics.VehicleTests.test_bool_not_a_mass) ... ok
+test_bump_starts_and_ends_at_zero (test_physics.VehicleTests.test_bump_starts_and_ends_at_zero) ... ok
+test_damping_opposes_relative_velocity (test_physics.VehicleTests.test_damping_opposes_relative_velocity) ... ok
+test_default_settings_valid (test_physics.VehicleTests.test_default_settings_valid) ... ok
+test_default_values_are_valid (test_physics.VehicleTests.test_default_values_are_valid) ... ok
+test_dissipation_rate_nonpositive (test_physics.VehicleTests.test_dissipation_rate_nonpositive) ... ok
+test_flat_never_moves (test_physics.VehicleTests.test_flat_never_moves) ... ok
+test_natural_modes_match_eigenvalue_invariants (test_physics.VehicleTests.test_natural_modes_match_eigenvalue_invariants) ... ok
+test_natural_modes_positive_and_ordered (test_physics.VehicleTests.test_natural_modes_positive_and_ordered) ... ok
+test_negative_damping_rejected (test_physics.VehicleTests.test_negative_damping_rejected) ... ok
+test_nonfinite_mass_rejected (test_physics.VehicleTests.test_nonfinite_mass_rejected) ... ok
+test_nonfinite_road_rejected (test_physics.VehicleTests.test_nonfinite_road_rejected) ... ok
+test_rk4_step_returns_finite_state (test_physics.VehicleTests.test_rk4_step_returns_finite_state) ... ok
+test_road_defaults_are_valid (test_physics.VehicleTests.test_road_defaults_are_valid) ... ok
+test_sine_sign_and_amplitude (test_physics.VehicleTests.test_sine_sign_and_amplitude) ... ok
+test_step_nonzero_after_start (test_physics.VehicleTests.test_step_nonzero_after_start) ... ok
+test_suspension_spring_reaction_opposite (test_physics.VehicleTests.test_suspension_spring_reaction_opposite) ... ok
+test_tire_force_changes_only_wheel_mass (test_physics.VehicleTests.test_tire_force_changes_only_wheel_mass) ... ok
+test_too_many_steps_rejected (test_physics.VehicleTests.test_too_many_steps_rejected) ... ok
+test_zero_equilibrium_rhs (test_physics.VehicleTests.test_zero_equilibrium_rhs) ... ok
+test_allocate_force_zero (test_regen_chat6.TestMappingAndValidation.test_allocate_force_zero) ... ok
+test_allocate_split_sum (test_regen_chat6.TestMappingAndValidation.test_allocate_split_sum) ... ok
+test_allocate_zero_speed (test_regen_chat6.TestMappingAndValidation.test_allocate_zero_speed) ... ok
+test_bool_rejected (test_regen_chat6.TestMappingAndValidation.test_bool_rejected) ... ok
+test_default_mapping (test_regen_chat6.TestMappingAndValidation.test_default_mapping) ... ok
+test_each_bound_rejected (test_regen_chat6.TestMappingAndValidation.test_each_bound_rejected) ... ok
+test_invalid_mass_legacy_guard (test_regen_chat6.TestMappingAndValidation.test_invalid_mass_legacy_guard) ... ok
+test_nan_inf_rejected (test_regen_chat6.TestMappingAndValidation.test_nan_inf_rejected) ... ok
+test_negative_rear_load_rejected (test_regen_chat6.TestMappingAndValidation.test_negative_rear_load_rejected) ... ok
+test_nested_invalid_rejected (test_regen_chat6.TestMappingAndValidation.test_nested_invalid_rejected) ... ok
+test_nested_mapping (test_regen_chat6.TestMappingAndValidation.test_nested_mapping) ... ok
+test_non_object_rejected (test_regen_chat6.TestMappingAndValidation.test_non_object_rejected) ... ok
+test_unknown_field_rejected (test_regen_chat6.TestMappingAndValidation.test_unknown_field_rejected) ... ok
+test_bad_input_400 (test_regen_chat6.TestRegenAPI.test_bad_input_400) ... 127.0.0.1 - - [29/Oct/2026 13:39:05] "POST /api/regen/simulate HTTP/1.1" 400 -
+ok
+test_bad_path_404 (test_regen_chat6.TestRegenAPI.test_bad_path_404) ... 127.0.0.1 - - [29/Oct/2026 13:39:05] "POST /api/regen/unknown HTTP/1.1" 404 -
+ok
+test_invalid_json_400 (test_regen_chat6.TestRegenAPI.test_invalid_json_400) ... 127.0.0.1 - - [29/Oct/2026 13:39:05] "POST /api/regen/simulate HTTP/1.1" 400 -
+ok
+test_legacy_braking_still_responds (test_regen_chat6.TestRegenAPI.test_legacy_braking_still_responds) ... 127.0.0.1 - - [29/Oct/2026 13:39:05] "POST /api/braking/simulate HTTP/1.1" 200 -
+ok
+test_legacy_health_version_preserved (test_regen_chat6.TestRegenAPI.test_legacy_health_version_preserved) ... 127.0.0.1 - - [29/Oct/2026 13:39:05] "GET /api/health HTTP/1.1" 200 -
+ok
+test_new_endpoint (test_regen_chat6.TestRegenAPI.test_new_endpoint) ... 127.0.0.1 - - [29/Oct/2026 13:39:05] "POST /api/regen/simulate HTTP/1.1" 200 -
+ok
+test_new_js_route (test_regen_chat6.TestRegenAPI.test_new_js_route) ... 127.0.0.1 - - [29/Oct/2026 13:39:05] "GET /regen.js HTTP/1.1" 200 -
+ok
+test_page_selector (test_regen_chat6.TestRegenAPI.test_page_selector) ... 127.0.0.1 - - [29/Oct/2026 13:39:05] "GET / HTTP/1.1" 200 -
+ok
+test_braking_stopping_unchanged (test_regen_chat6.TestRegenMath.test_braking_stopping_unchanged) ... ok
+test_channel_shapes (test_regen_chat6.TestRegenMath.test_channel_shapes) ... ok
+test_charge_energy_below_power_time (test_regen_chat6.TestRegenMath.test_charge_energy_below_power_time) ... ok
+test_charge_power_limit (test_regen_chat6.TestRegenMath.test_charge_power_limit) ... ok
+test_constant_total_reduction (test_regen_chat6.TestRegenMath.test_constant_total_reduction) ... ok
+test_cutoff_reduces_recovery (test_regen_chat6.TestRegenMath.test_cutoff_reduces_recovery) ... ok
+test_defaults_valid (test_regen_chat6.TestRegenMath.test_defaults_valid) ... ok
+test_energy_below_kinetic_drop (test_regen_chat6.TestRegenMath.test_energy_below_kinetic_drop) ... ok
+test_energy_conservation_complete (test_regen_chat6.TestRegenMath.test_energy_conservation_complete) ... ok
+test_energy_conservation_incomplete (test_regen_chat6.TestRegenMath.test_energy_conservation_incomplete) ... ok
+test_energy_conservation_ramp (test_regen_chat6.TestRegenMath.test_energy_conservation_ramp) ... ok
+test_force_split_nonnegative (test_regen_chat6.TestRegenMath.test_force_split_nonnegative) ... ok
+test_full_regen_ideal (test_regen_chat6.TestRegenMath.test_full_regen_ideal) ... ok
+test_full_regen_with_losses (test_regen_chat6.TestRegenMath.test_full_regen_with_losses) ... ok
+test_grip_limit (test_regen_chat6.TestRegenMath.test_grip_limit) ... ok
+test_incomplete_warning (test_regen_chat6.TestRegenMath.test_incomplete_warning) ... ok
+test_increase_efficiency_increases_storage (test_regen_chat6.TestRegenMath.test_increase_efficiency_increases_storage) ... ok
+test_initial_kinetic_budget (test_regen_chat6.TestRegenMath.test_initial_kinetic_budget) ... ok
+test_json_serializable_finite (test_regen_chat6.TestRegenMath.test_json_serializable_finite) ... ok
+test_load_conservation (test_regen_chat6.TestRegenMath.test_load_conservation) ... ok
+test_monotonic_cumulative_energy (test_regen_chat6.TestRegenMath.test_monotonic_cumulative_energy) ... ok
+test_monotonic_distance (test_regen_chat6.TestRegenMath.test_monotonic_distance) ... ok
+test_monotonic_speed (test_regen_chat6.TestRegenMath.test_monotonic_speed) ... ok
+test_motor_power_limit (test_regen_chat6.TestRegenMath.test_motor_power_limit) ... ok
+test_no_negative_speed (test_regen_chat6.TestRegenMath.test_no_negative_speed) ... ok
+test_no_power_after_stop (test_regen_chat6.TestRegenMath.test_no_power_after_stop) ... ok
+test_no_regen_below_cutoff (test_regen_chat6.TestRegenMath.test_no_regen_below_cutoff) ... ok
+test_provenance_keys (test_regen_chat6.TestRegenMath.test_provenance_keys) ... ok
+test_ramp_does_not_change_legacy (test_regen_chat6.TestRegenMath.test_ramp_does_not_change_legacy) ... ok
+test_small_time_step_consistency (test_regen_chat6.TestRegenMath.test_small_time_step_consistency) ... ok
+test_torque_limit (test_regen_chat6.TestRegenMath.test_torque_limit) ... ok
+test_very_low_speed (test_regen_chat6.TestRegenMath.test_very_low_speed) ... ok
+test_zero_battery_power_no_regen (test_regen_chat6.TestRegenMath.test_zero_battery_power_no_regen) ... ok
+test_zero_demand (test_regen_chat6.TestRegenMath.test_zero_demand) ... ok
+test_zero_efficiency_no_regen (test_regen_chat6.TestRegenMath.test_zero_efficiency_no_regen) ... ok
+test_zero_motor_power_no_regen (test_regen_chat6.TestRegenMath.test_zero_motor_power_no_regen) ... ok
+test_zero_regen_means_all_friction (test_regen_chat6.TestRegenMath.test_zero_regen_means_all_friction) ... ok
+test_zero_speed (test_regen_chat6.TestRegenMath.test_zero_speed) ... ok
+test_zero_torque_no_regen (test_regen_chat6.TestRegenMath.test_zero_torque_no_regen) ... ok
+test_api_assets (test_road_ride_chat4.TestRideAPI.test_api_assets) ... 127.0.0.1 - - [29/Oct/2026 13:39:06] "GET /ride.js HTTP/1.1" 200 -
+127.0.0.1 - - [29/Oct/2026 13:39:06] "GET /app.js HTTP/1.1" 200 -
+127.0.0.1 - - [29/Oct/2026 13:39:06] "GET /halfcar.js HTTP/1.1" 200 -
+127.0.0.1 - - [29/Oct/2026 13:39:06] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [29/Oct/2026 13:39:06] "GET /styles.css HTTP/1.1" 200 -
+127.0.0.1 - - [29/Oct/2026 13:39:06] "GET / HTTP/1.1" 200 -
+ok
+test_api_bad_input (test_road_ride_chat4.TestRideAPI.test_api_bad_input) ... 127.0.0.1 - - [29/Oct/2026 13:39:06] "POST /api/ride/study HTTP/1.1" 400 -
+127.0.0.1 - - [29/Oct/2026 13:39:06] "POST /api/ride/study HTTP/1.1" 400 -
+127.0.0.1 - - [29/Oct/2026 13:39:06] "POST /api/ride/study HTTP/1.1" 400 -
+ok
+test_api_comparison (test_road_ride_chat4.TestRideAPI.test_api_comparison) ... 127.0.0.1 - - [29/Oct/2026 13:39:06] "POST /api/ride/study HTTP/1.1" 200 -
+ok
+test_api_content_type (test_road_ride_chat4.TestRideAPI.test_api_content_type) ... 127.0.0.1 - - [29/Oct/2026 13:39:06] "POST /api/ride/study HTTP/1.1" 415 -
+ok
+test_api_default (test_road_ride_chat4.TestRideAPI.test_api_default) ... 127.0.0.1 - - [29/Oct/2026 13:39:06] "POST /api/ride/study HTTP/1.1" 200 -
+ok
+test_api_half (test_road_ride_chat4.TestRideAPI.test_api_half) ... 127.0.0.1 - - [29/Oct/2026 13:39:06] "POST /api/ride/study HTTP/1.1" 200 -
+ok
+test_api_legacy_preserved (test_road_ride_chat4.TestRideAPI.test_api_legacy_preserved) ... 127.0.0.1 - - [29/Oct/2026 13:39:06] "POST /api/simulate HTTP/1.1" 200 -
+127.0.0.1 - - [29/Oct/2026 13:39:06] "POST /api/halfcar/simulate HTTP/1.1" 200 -
+ok
+test_api_malformed_json (test_road_ride_chat4.TestRideAPI.test_api_malformed_json) ... 127.0.0.1 - - [29/Oct/2026 13:39:06] "POST /api/ride/study HTTP/1.1" 400 -
+ok
+test_api_response_version (test_road_ride_chat4.TestRideAPI.test_api_response_version) ... 127.0.0.1 - - [29/Oct/2026 13:39:06] "GET /api/health HTTP/1.1" 200 -
+ok
+test_bad_windows (test_road_ride_chat4.TestRideMetrics.test_bad_windows) ... ok
+test_default_half (test_road_ride_chat4.TestRideMetrics.test_default_half) ... ok
+test_default_quarter (test_road_ride_chat4.TestRideMetrics.test_default_quarter) ... ok
+test_double_event_end (test_road_ride_chat4.TestRideMetrics.test_double_event_end) ... ok
+test_flat_zero_metrics (test_road_ride_chat4.TestRideMetrics.test_flat_zero_metrics) ... ok
+test_full_vs_post_window (test_road_ride_chat4.TestRideMetrics.test_full_vs_post_window) ... ok
+test_half_independent_travel_peaks (test_road_ride_chat4.TestRideMetrics.test_half_independent_travel_peaks) ... ok
+test_known_rms_trapezoid (test_road_ride_chat4.TestRideMetrics.test_known_rms_trapezoid) ... ok
+test_pitch_warning_and_provenance (test_road_ride_chat4.TestRideMetrics.test_pitch_warning_and_provenance) ... ok
+test_quarter_independent_rms_trapezoid (test_road_ride_chat4.TestRideMetrics.test_quarter_independent_rms_trapezoid) ... ok
+test_reject_cross_model (test_road_ride_chat4.TestRideMetrics.test_reject_cross_model) ... ok
+test_reject_mixed_road_comparison (test_road_ride_chat4.TestRideMetrics.test_reject_mixed_road_comparison) ... ok
+test_reject_mixed_timestep (test_road_ride_chat4.TestRideMetrics.test_reject_mixed_timestep) ... ok
+test_reject_road_field (test_road_ride_chat4.TestRideMetrics.test_reject_road_field) ... ok
+test_reject_unknown_top_level (test_road_ride_chat4.TestRideMetrics.test_reject_unknown_top_level) ... ok
+test_same_model_baseline (test_road_ride_chat4.TestRideMetrics.test_same_model_baseline) ... ok
+test_subwindow_interpolation (test_road_ride_chat4.TestRideMetrics.test_subwindow_interpolation) ... ok
+test_sustained_has_no_settling (test_road_ride_chat4.TestRideMetrics.test_sustained_has_no_settling) ... ok
+test_timesampling_refinement_half (test_road_ride_chat4.TestRideMetrics.test_timesampling_refinement_half) ... ok
+test_timesampling_refinement_quarter (test_road_ride_chat4.TestRideMetrics.test_timesampling_refinement_quarter) ... ok
+test_zero_height_chirp_is_zero (test_road_ride_chat4.TestRideMetrics.test_zero_height_chirp_is_zero) ... ok
+test_bad_kinds_and_fields (test_road_ride_chat4.TestRoadAnalytical.test_bad_kinds_and_fields) ... ok
+test_chirp_delayed_at_axles (test_road_ride_chat4.TestRoadAnalytical.test_chirp_delayed_at_axles) ... ok
+test_chirp_down_ramp_allowed (test_road_ride_chat4.TestRoadAnalytical.test_chirp_down_ramp_allowed) ... ok
+test_chirp_held_frequency_after_ramp (test_road_ride_chat4.TestRoadAnalytical.test_chirp_held_frequency_after_ramp) ... ok
+test_chirp_phase_continuous_across_ramp (test_road_ride_chat4.TestRoadAnalytical.test_chirp_phase_continuous_across_ramp) ... ok
+test_chirp_start_instantaneous_frequency (test_road_ride_chat4.TestRoadAnalytical.test_chirp_start_instantaneous_frequency) ... ok
+test_double_bump_analytical_spacing (test_road_ride_chat4.TestRoadAnalytical.test_double_bump_analytical_spacing) ... ok
+test_double_bump_custom_speed_spacing (test_road_ride_chat4.TestRoadAnalytical.test_double_bump_custom_speed_spacing) ... ok
+test_double_feature_delayed_at_axles (test_road_ride_chat4.TestRoadAnalytical.test_double_feature_delayed_at_axles) ... ok
+test_finite_road_end (test_road_ride_chat4.TestRoadAnalytical.test_finite_road_end) ... ok
+test_flat_zero_still (test_road_ride_chat4.TestRoadAnalytical.test_flat_zero_still) ... ok
+test_old_bump (test_road_ride_chat4.TestRoadAnalytical.test_old_bump) ... ok
+test_old_flat (test_road_ride_chat4.TestRoadAnalytical.test_old_flat) ... ok
+test_old_sine (test_road_ride_chat4.TestRoadAnalytical.test_old_sine) ... ok
+test_old_step (test_road_ride_chat4.TestRoadAnalytical.test_old_step) ... ok
+test_pothole_delayed_at_axles (test_road_ride_chat4.TestRoadAnalytical.test_pothole_delayed_at_axles) ... ok
+test_pothole_negative_of_bump (test_road_ride_chat4.TestRoadAnalytical.test_pothole_negative_of_bump) ... ok
+test_pothole_zero_at_endpoints (test_road_ride_chat4.TestRoadAnalytical.test_pothole_zero_at_endpoints) ... ok
+test_resolution_both_models (test_road_ride_chat4.TestRoadAnalytical.test_resolution_both_models) ... ok
+test_resolution_guard_chirp_high_end (test_road_ride_chat4.TestRoadAnalytical.test_resolution_guard_chirp_high_end) ... ok
+test_resolution_guard_new_pulse (test_road_ride_chat4.TestRoadAnalytical.test_resolution_guard_new_pulse) ... ok
+test_resolution_zero_height_exemption (test_road_ride_chat4.TestRoadAnalytical.test_resolution_zero_height_exemption) ... ok
+test_assets_served (test_server.TestWebServer.test_assets_served) ... 127.0.0.1 - - [29/Oct/2026 13:39:09] "GET /styles.css HTTP/1.1" 200 -
+127.0.0.1 - - [29/Oct/2026 13:39:09] "GET /app.js HTTP/1.1" 200 -
+ok
+test_bad_json_is_400 (test_server.TestWebServer.test_bad_json_is_400) ... 127.0.0.1 - - [29/Oct/2026 13:39:09] "POST /api/simulate HTTP/1.1" 400 -
+ok
+test_bad_type_is_415 (test_server.TestWebServer.test_bad_type_is_415) ... 127.0.0.1 - - [29/Oct/2026 13:39:09] "POST /api/simulate HTTP/1.1" 415 -
+ok
+test_defaults (test_server.TestWebServer.test_defaults) ... 127.0.0.1 - - [29/Oct/2026 13:39:09] "GET /api/defaults HTTP/1.1" 200 -
+ok
+test_get_health (test_server.TestWebServer.test_get_health) ... 127.0.0.1 - - [29/Oct/2026 13:39:09] "GET /api/health HTTP/1.1" 200 -
+ok
+test_invalid_fields_are_400 (test_server.TestWebServer.test_invalid_fields_are_400) ... 127.0.0.1 - - [29/Oct/2026 13:39:09] "POST /api/simulate HTTP/1.1" 400 -
+ok
+test_invalid_route_is_404 (test_server.TestWebServer.test_invalid_route_is_404) ... 127.0.0.1 - - [29/Oct/2026 13:39:09] "GET /.env HTTP/1.1" 404 -
+ok
+test_no_cors_header (test_server.TestWebServer.test_no_cors_header) ... 127.0.0.1 - - [29/Oct/2026 13:39:09] "GET /api/health HTTP/1.1" 200 -
+ok
+test_page_has_schematic (test_server.TestWebServer.test_page_has_schematic) ... 127.0.0.1 - - [29/Oct/2026 13:39:09] "GET / HTTP/1.1" 200 -
+ok
+test_road_flat_post (test_server.TestWebServer.test_road_flat_post) ... 127.0.0.1 - - [29/Oct/2026 13:39:09] "POST /api/simulate HTTP/1.1" 200 -
+ok
+test_simulation_post (test_server.TestWebServer.test_simulation_post) ... 127.0.0.1 - - [29/Oct/2026 13:39:09] "POST /api/simulate HTTP/1.1" 200 -
+ok
+test_unknown_post_route_is_404 (test_server.TestWebServer.test_unknown_post_route_is_404) ... 127.0.0.1 - - [29/Oct/2026 13:39:09] "POST /api/admin HTTP/1.1" 404 -
+ok
+test_health_compatibility (test_verification_chat9.Chat9API.test_health_compatibility) ... 127.0.0.1 - - [29/Oct/2026 13:39:09] "GET /api/health HTTP/1.1" 200 -
+ok
+test_invalid_api (test_verification_chat9.Chat9API.test_invalid_api) ... 127.0.0.1 - - [29/Oct/2026 13:39:09] "POST /api/optimization/study HTTP/1.1" 400 -
+127.0.0.1 - - [29/Oct/2026 13:39:09] "POST /api/optimization/study HTTP/1.1" 400 -
+127.0.0.1 - - [29/Oct/2026 13:39:09] "POST /api/optimization/study HTTP/1.1" 400 -
+ok
+test_legacy_api_remains (test_verification_chat9.Chat9API.test_legacy_api_remains) ... 127.0.0.1 - - [29/Oct/2026 13:39:10] "POST /api/simulate HTTP/1.1" 200 -
+127.0.0.1 - - [29/Oct/2026 13:39:10] "POST /api/halfcar/simulate HTTP/1.1" 200 -
+127.0.0.1 - - [29/Oct/2026 13:39:10] "POST /api/braking/simulate HTTP/1.1" 200 -
+127.0.0.1 - - [29/Oct/2026 13:39:10] "POST /api/regen/simulate HTTP/1.1" 200 -
+ok
+test_security_headers (test_verification_chat9.Chat9API.test_security_headers) ... 127.0.0.1 - - [29/Oct/2026 13:39:10] "GET / HTTP/1.1" 200 -
+ok
+test_study_api_success (test_verification_chat9.Chat9API.test_study_api_success) ... 127.0.0.1 - - [29/Oct/2026 13:39:10] "POST /api/optimization/study HTTP/1.1" 200 -
+ok
+test_unknown_endpoint (test_verification_chat9.Chat9API.test_unknown_endpoint) ... 127.0.0.1 - - [29/Oct/2026 13:39:10] "POST /api/fake HTTP/1.1" 404 -
+ok
+test_half_axle_delay_exact_kinematic_relation (test_verification_chat9.Chat9Forces.test_half_axle_delay_exact_kinematic_relation) ... ok
+test_half_energy_nonnegative (test_verification_chat9.Chat9Forces.test_half_energy_nonnegative) ... ok
+test_half_nose_up_convention (test_verification_chat9.Chat9Forces.test_half_nose_up_convention) ... ok
+test_half_rear_tire_road_force (test_verification_chat9.Chat9Forces.test_half_rear_tire_road_force) ... ok
+test_half_reference_arbitrary_state (test_verification_chat9.Chat9Forces.test_half_reference_arbitrary_state) ... ok
+test_pothole_negative_at_peak (test_verification_chat9.Chat9Forces.test_pothole_negative_at_peak) ... ok
+test_quarter_free_energy_nonnegative (test_verification_chat9.Chat9Forces.test_quarter_free_energy_nonnegative) ... ok
+test_quarter_independent_upward_road (test_verification_chat9.Chat9Forces.test_quarter_independent_upward_road) ... ok
+test_quarter_mass_scaling (test_verification_chat9.Chat9Forces.test_quarter_mass_scaling) ... ok
+test_quarter_sign_damper (test_verification_chat9.Chat9Forces.test_quarter_sign_damper) ... ok
+test_quarter_sign_road (test_verification_chat9.Chat9Forces.test_quarter_sign_road) ... ok
+test_quarter_sign_spring (test_verification_chat9.Chat9Forces.test_quarter_sign_spring) ... ok
+test_zero_input_half (test_verification_chat9.Chat9Forces.test_zero_input_half) ... ok
+test_zero_input_quarter (test_verification_chat9.Chat9Forces.test_zero_input_quarter) ... ok
+test_aligned_rk4_convergence_half_sine (test_verification_chat9.Chat9Numerics.test_aligned_rk4_convergence_half_sine) ... ok
+test_aligned_rk4_convergence_quarter_sine (test_verification_chat9.Chat9Numerics.test_aligned_rk4_convergence_quarter_sine) ... ok
+test_bad_times_rejected (test_verification_chat9.Chat9Numerics.test_bad_times_rejected) ... ok
+test_braking_constant_analytic_stop (test_verification_chat9.Chat9Numerics.test_braking_constant_analytic_stop) ... ok
+test_braking_ramp_no_negative_speed (test_verification_chat9.Chat9Numerics.test_braking_ramp_no_negative_speed) ... ok
+test_braking_stop_independent_of_sample_step (test_verification_chat9.Chat9Numerics.test_braking_stop_independent_of_sample_step) ... ok
+test_incomplete_stop_not_confused_with_stopping_distance (test_verification_chat9.Chat9Numerics.test_incomplete_stop_not_confused_with_stopping_distance) ... ok
+test_independent_rms_constant (test_verification_chat9.Chat9Numerics.test_independent_rms_constant) ... ok
+test_independent_rms_trapezoids (test_verification_chat9.Chat9Numerics.test_independent_rms_trapezoids) ... ok
+test_regen_trajectory_equal_braking (test_verification_chat9.Chat9Numerics.test_regen_trajectory_equal_braking) ... ok
+test_zero_regeneration_no_battery_energy (test_verification_chat9.Chat9Numerics.test_zero_regeneration_no_battery_energy) ... ok
+test_deterministic_studies (test_verification_chat9.Chat9Optimization.test_deterministic_studies) ... ok
+test_expected_metric_independent_rms (test_verification_chat9.Chat9Optimization.test_expected_metric_independent_rms) ... ok
+test_half_grid_49 (test_verification_chat9.Chat9Optimization.test_half_grid_49) ... ok
+test_half_grid_7 (test_verification_chat9.Chat9Optimization.test_half_grid_7) ... ok
+test_independent_pareto_dominated (test_verification_chat9.Chat9Optimization.test_independent_pareto_dominated) ... ok
+test_invalid_limits_rejected (test_verification_chat9.Chat9Optimization.test_invalid_limits_rejected) ... ok
+test_no_feasible (test_verification_chat9.Chat9Optimization.test_no_feasible) ... ok
+test_quarter_grid_49 (test_verification_chat9.Chat9Optimization.test_quarter_grid_49) ... ok
+test_quarter_grid_7 (test_verification_chat9.Chat9Optimization.test_quarter_grid_7) ... ok
+test_all_live_footer_labels_fixed (test_viz_chat7.TestVisualizationIntegration.test_all_live_footer_labels_fixed) ... ok
+test_all_model_presentation_hooks (test_viz_chat7.TestVisualizationIntegration.test_all_model_presentation_hooks) ... ok
+test_js_syntax (test_viz_chat7.TestVisualizationIntegration.test_js_syntax) ... ok
+test_local_assets (test_viz_chat7.TestVisualizationIntegration.test_local_assets) ... ok
+test_no_remote_script_or_webgl_dependency (test_viz_chat7.TestVisualizationIntegration.test_no_remote_script_or_webgl_dependency) ... ok
+test_pure_presentation_math_node (test_viz_chat7.TestVisualizationIntegration.test_pure_presentation_math_node) ... ok
+test_version_current (test_viz_chat7.TestVisualizationIntegration.test_version_current) ... ok
+
+----------------------------------------------------------------------
+Ran 372 tests in 17.509s
+
+OK

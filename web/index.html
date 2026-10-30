@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Archived Chat 9 massfix acceptance label (historical test marker only): Session 09 · Mass Hotfix. -->
+  <!-- Archived v0.7 acceptance labels retained for immutable regression checks, not current UI: v0.7 · Session 07; AutoDyn EV / Chat 7 of 10; AutoDyn EV / Chat 7 of 10. -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0c1420" />
+  <title>AutoDyn EV · Vehicle Dynamics Laboratory</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <script src="/app.js" defer></script>
+  <script src="/halfcar.js" defer></script>
+  <script src="/ride.js" defer></script>
+  <script src="/braking.js" defer></script>
+  <script src="/regen.js" defer></script>
+  <script src="/viz3d_math.js" defer></script>
+  <script src="/viz3d.js" defer></script>
+  <script src="/optimization.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to simulation controls</a>
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark">A<span>↗</span></span><span><strong>AutoDyn <em>EV</em></strong><small>ENGINEERING LABORATORY</small></span></div>
+    <div class="top-right"><span class="top-dot"></span><span>Simulation environment</span><span class="version">v1.0 · Session 10</span></div>
+  </header>
+  <main class="page" id="main-content">
+    <section class="masthead">
+      <div><div class="eyebrow">VEHICLE DYNAMICS / ENGINEERING ANALYSIS</div>
+        <h1>Understand every <span>response.</span></h1>
+        <p>Explore the motion of a sprung and unsprung mass over simulated road disturbances. A physically defined model, measurable outputs, and transparent assumptions.</p>
+      </div>
+      <div class="masthead-aside"><label for="model-select">MODEL SELECTOR</label><select id="model-select" aria-label="Select vehicle dynamics model"><option value="quarter">Quarter-car · 2 DOF</option><option value="half">Half-car · 4 DOF</option><option value="braking">Braking &amp; load transfer</option><option value="regen">Regenerative braking · EV</option></select><b id="model-badge">2 DOF</b><span id="model-subtitle">Vertical suspension system</span></div>
+    </section>
+
+    <section id="visualization-lab" class="viz-panel card" aria-label="Optional interactive projected 3D engineering viewer">
+      <div class="viz-header"><div><span class="section-overline">09 / ENGINEERING VISUALIZATION · CHAT 07</span><h2>Model-aware 3D viewer</h2><p>Software-projected 3D geometry from accepted time-series only. Motion is exaggerated; no added dynamics or measured vehicle geometry.</p></div><span class="tag">Offline · no WebGL or CDN</span></div>
+      <div class="viz-controls">
+        <label for="viz-mode">Viewer mode<select id="viz-mode" aria-label="Viewer mode"><option value="3d">Projected 3D</option><option value="2d">2D fallback</option></select></label>
+        <button type="button" id="viz-play" aria-label="Play 3D animation">▶ Play</button>
+        <button type="button" id="viz-restart" aria-label="Restart 3D timeline">↺ Restart</button>
+        <label for="viz-speed">Playback speed<select id="viz-speed"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option></select></label>
+        <label for="viz-zoom">Camera zoom<input id="viz-zoom" type="range" min="60" max="155" value="100" aria-label="Camera zoom percentage"></label>
+        <button type="button" id="viz-reset-camera">Reset camera</button>
+      </div>
+      <div class="viz-viewer"><canvas id="viz-canvas" role="img" tabindex="0" aria-label="Interactive 3D vehicle geometry, drag to orbit, arrow keys to rotate"></canvas>
+      <div id="viz-fallback" class="viz-fallback" hidden><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 250" role="img" aria-label="2D fallback diagram of vehicle and wheels"><path d="M30 212H590" stroke="#fac07a" stroke-width="7"/><rect id="viz-fallback-body" x="140" y="85" width="340" height="50" rx="13" fill="#278b85" stroke="#6fe4d1" stroke-width="3"/><circle id="viz-fallback-rear" cx="200" cy="181" r="29" fill="#193548" stroke="#8ab8dc" stroke-width="9"/><circle id="viz-fallback-front" cx="420" cy="181" r="29" fill="#193548" stroke="#8ab8dc" stroke-width="9"/><text x="310" y="28" text-anchor="middle" fill="#b6d6de" font-size="17">Fallback · 2D schematic</text></svg><p>Optional 3D canvas unavailable or disabled. Original 2D diagrams and all numeric results remain available below.</p></div></div>
+      <div class="viz-bottom"><label for="viz-timeline">Simulation time<input id="viz-timeline" type="range" min="0" max="1000" value="0" aria-label="Scrub simulation time" disabled></label><output id="viz-time">No results yet</output></div>
+      <div class="viz-readings" id="viz-readings" role="status" aria-live="polite">Select a model to inspect its authoritative simulation channels.</div>
+      <p id="viz-status" class="viz-status" role="status" aria-live="polite">Waiting for simulation results. Orbit: pointer drag / arrow keys. Zoom: slider / + and −.</p>
+      <p class="viz-warning">Coordinates: forward +X, upward +Y, lateral +Z. Nose-up pitch is positive. Suspension road speed remains prescribed and independent of braking; braking view does not imply body pitch or coupled suspension. Synthetic educational model, not real-vehicle geometry or safety validation.</p>
+    </section>
+
+
+    <section class="card opt-lab" id="optimization-lab" aria-label="Chat 8 bounded engineering trade-off laboratory">
+      <div class="section-overline">10 / ENGINEERING OPTIMIZATION · CHAT 08</div>
+      <h2>Explore designs. Show the trade-offs.</h2>
+      <p>Deterministic 7-point or 7 × 7 grids using the accepted quarter-car / half-car physics. All candidates share identical road excitation and sampling. No global optimum, real-vehicle calibration or combined braking/range score.</p>
+      <div class="opt-form">
+        <label>Suspension model<select id="opt-model"><option value="quarter">Quarter-car · 2 DOF</option><option value="half">Half-car · 4 DOF</option></select></label>
+        <label>First parameter<select id="opt-p1"></select></label>
+        <label>Second parameter<select id="opt-p2"></select></label>
+        <label>Maximum body RMS (m/s²)<input id="opt-limit-rms" type="number" min="0" step="0.01" placeholder="No limit"></label>
+        <label>Maximum travel peak-to-peak (mm)<input id="opt-limit-travel" type="number" min="0" step="0.1" placeholder="No limit"></label>
+        <label>Maximum tire-deflection proxy (mm)<input id="opt-limit-tire" type="number" min="0" step="0.1" placeholder="No limit"></label>
+      </div>
+      <div class="opt-actions"><button id="opt-use-current" type="button">Use current model type</button><button id="opt-run" type="button">▶ Run bounded study</button><button id="opt-csv" disabled type="button">↓ Study CSV</button><button id="opt-json" disabled type="button">↓ Study JSON</button><button id="opt-report" disabled type="button">↓ Engineering report</button></div>
+      <p class="opt-status" id="opt-status" role="status" aria-live="polite">Select a suspension model to prepare the study.</p>
+      <div id="opt-summary" class="opt-summary"></div>
+      <div class="opt-grid"><article><h3>RMS versus travel</h3><p>Horizontal: acceleration RMS (m/s²). Vertical: suspension travel peak-to-peak (mm). Teal = nondominated, orange = inspected, grey = infeasible. No combined score.</p>
+          <canvas id="opt-plot" role="img" aria-label="Scatter plot of acceleration RMS and peak-to-peak suspension travel" width="740" height="310"></canvas></article>
+        <article><h3>Read the evidence</h3><p>Cases use ±20% of the currently configured suspension parameters, clipped to validated model bounds. Exactly 7 points per axis; at most 49 cases. Other properties and road settings stay fixed.</p><p>For half-car, travel and tire constraints use the worse of front or rear. All numerical objectives come from the unchanged physical simulation output.</p><p>No claim of ISO comfort compliance, tire contact, globally optimal suspension, road-test validity, or real vehicle safety.</p></article>
+      </div>
+      <p id="opt-selection" class="opt-selection" role="status" aria-live="polite">Run a study to inspect cases.</p>
+      <div class="opt-table-scroll"><table class="opt-table"><thead><tr><th>Case</th><th>Parameters (SI)</th><th>RMS (m/s²)</th><th>Travel P-P (mm)</th><th>Tire proxy (mm)</th><th>Constraint result</th><th>Pareto</th></tr></thead><tbody id="opt-table-body"></tbody></table></div>
+      <div class="footer-note"><span>AutoDyn EV / Chat 10 of 10 · bounded design study</span><span>Discrete simulated trade-offs · no physical validation.</span></div>
+    </section>
+
+    <section id="halfcar-lab" class="halfcar-lab" aria-label="Half-car heave and pitch laboratory" hidden>
+      <div class="half-intro"><div class="section-overline">08 / HALF-CAR ENGINEERING LABORATORY · CHAT 03</div>
+        <h2>Heave. Pitch. Front and rear response.</h2>
+        <p>Separate linear 4-DOF model of body heave, nose-up pitch, and two unsprung wheel masses. Road disturbances reach the rear axle after wheelbase ÷ speed.</p>
+      </div>
+      <form id="half-config" class="card half-form">
+        <div class="panel-heading"><div><span class="section-overline">A / HALF-CAR INPUTS</span><h2>Vehicle & suspension</h2></div><button type="button" id="half-reset" class="reset-btn">↺ Defaults</button></div>
+        <div class="half-fields">
+          <label>Sprung body mass (kg)<input name="body_mass_kg" type="number" min="200" max="2400" step="10" value="600" required></label>
+          <label>Pitch inertia (kg·m²)<input name="pitch_inertia_kg_m2" type="number" min="100" max="15000" step="10" value="1000" required></label>
+          <label>CG to front axle (m)<input name="cg_to_front_m" type="number" min="0.5" max="3" step="0.05" value="1.2" required></label>
+          <label>CG to rear axle (m)<input name="cg_to_rear_m" type="number" min="0.5" max="3" step="0.05" value="1.3" required></label>
+          <label>Front unsprung mass (kg)<input name="front_unsprung_mass_kg" type="number" min="15" max="150" step="5" value="40" required></label>
+          <label>Rear unsprung mass (kg)<input name="rear_unsprung_mass_kg" type="number" min="15" max="150" step="5" value="40" required></label>
+          <label>Front spring (N/m)<input name="front_spring_n_m" type="number" min="5000" max="120000" step="1000" value="18000" required></label>
+          <label>Rear spring (N/m)<input name="rear_spring_n_m" type="number" min="5000" max="120000" step="1000" value="18000" required></label>
+          <label>Front damper (N·s/m)<input name="front_damping_n_s_m" type="number" min="0" max="12000" step="100" value="1500" required></label>
+          <label>Rear damper (N·s/m)<input name="rear_damping_n_s_m" type="number" min="0" max="12000" step="100" value="1500" required></label>
+          <label>Front tire stiffness (N/m)<input name="front_tire_n_m" type="number" min="40000" max="500000" step="10000" value="190000" required></label>
+          <label>Rear tire stiffness (N/m)<input name="rear_tire_n_m" type="number" min="40000" max="500000" step="10000" value="190000" required></label>
+        </div>
+        <div class="group-title group-space">ROAD EXCITATION / INTEGRATION</div>
+        <div class="half-fields">
+          <label>Road profile<select id="half-road-kind"><option value="bump">Raised cosine bump</option><option value="step">Step displacement</option><option value="sine">Sinusoidal road</option><option value="flat">Flat road</option><option value="pothole">Smooth pothole (negative pulse)</option><option value="double_bump">Two smooth bumps</option><option value="chirp">Frequency chirp</option></select></label>
+          <label>Road amplitude (mm)<input id="half-height" type="number" min="0" max="150" step="5" value="60"></label>
+          <label>Bump length (m)<input id="half-bump-length" type="number" min="0.5" max="8" step="0.1" value="1.5"></label>
+          <label>Gap between bumps (m)<input id="half-bump-spacing" type="number" min="0.5" max="10" step="0.1" value="1.5"></label>
+          <label>Chirp ending frequency (Hz)<input id="half-chirp-end" type="number" min="0.2" max="5" step="0.1" value="4"></label>
+          <label>Chirp ramp duration (s)<input id="half-chirp-duration" type="number" min="0.5" max="12" step="0.5" value="3"></label>
+          <label>Vehicle speed (m/s)<input id="half-speed" type="number" min="1" max="40" step="0.5" value="5"></label>
+          <label>Sine frequency (Hz)<input id="half-sine" type="number" min="0.2" max="5" step="0.1" value="1.5"></label>
+          <label>Duration (s)<input id="half-duration" type="number" min="1" max="15" step="0.5" value="5"></label>
+          <label>Integrator step (s)<select id="half-dt"><option value="0.01">0.010</option><option value="0.005" selected>0.005 (recommended)</option><option value="0.0025">0.0025 (fine)</option></select></label>
+        </div>
+        <div class="half-actions"><button type="submit" id="half-run" class="run-btn">▶ Run half-car model</button><span id="half-status" aria-live="polite" role="status">Ready to simulate.</span></div>
+        <p class="helper">Static-equilibrium-relative displacement · no tire contact loss · small pitch angles · synthetic dynamics only.</p>
+      </form>
+      <div class="half-metrics" aria-label="Half-car engineering results">
+        <div class="metric card"><div>BODY HEAVE ACCEL. RMS</div><strong id="half-rms">—</strong><small>m/s²</small></div>
+        <div class="metric card"><div>BODY PITCH · PEAK</div><strong id="half-pitch">—</strong><small>degrees</small></div>
+        <div class="metric card"><div>FRONT/REAR TRAVEL · PEAK</div><strong id="half-travel">—</strong><small>mm / mm</small></div>
+        <div class="metric card"><div>REAR ROAD DELAY</div><strong id="half-delay">—</strong><small>seconds · wheelbase / speed</small></div>
+      </div>
+      <section class="half-visuals">
+        <article class="card half-drawing"><div class="chart-head"><div><span class="section-overline">B / MODEL ANIMATION</span><h2>Half-car side view</h2></div><span class="tag">Visually exaggerated · schematic</span></div>
+          <canvas id="half-sketch" role="img" aria-label="Animated vehicle body pitch and front rear wheels"></canvas>
+          <div class="half-timeline"><button id="half-play" type="button" aria-label="Pause half-car animation" disabled>Ⅱ</button><input type="range" id="half-scrub" min="0" max="1000" value="0" aria-label="Half-car animation time" disabled><output id="half-time">0.00 / 5.00 s</output></div>
+          <p class="lab-hint">Real simulated state channels drive motion; visual displacement and rotation are scaled for visibility, not to physical scale.</p>
+        </article>
+        <article class="card half-interpret"><div class="section-overline">C / ENGINEERING INTERPRETATION</div><h2>What does this model represent?</h2>
+          <div class="insight-row"><span>Sprung body</span><strong>Heave + pitch</strong></div>
+          <div class="insight-row"><span>Unsprung wheel masses</span><strong>Front + rear</strong></div>
+          <div class="insight-row"><span>Rear axle road excitation</span><strong>Front shifted by wheelbase ÷ speed</strong></div>
+          <div class="insight-row"><span>Solver</span><strong>Fixed-step RK4</strong></div>
+          <div class="notice">No body roll, yaw, tire separation, braking, or regeneration. Educational small-angle model, not vehicle road-test validation.</div>
+          <div class="lab-actions"><button type="button" id="half-export-csv" disabled>↓ Half-car CSV</button><button type="button" id="half-export-json" disabled>↓ Half-car JSON</button></div>
+        </article>
+        <article class="card half-chart"><div class="chart-head"><div><span class="section-overline">D / SPRUNG BODY</span><h2>Heave & pitch</h2></div><span class="chart-unit">mm, deg</span></div><div class="legend"><span>Body heave: mint</span><span>Body pitch: purple</span></div><div class="plot-wrap"><canvas id="half-body-chart" role="img" aria-label="Heave in mm and pitch in degrees versus time on common display scale"></canvas></div><p class="lab-hint">Curves share a display scale but have distinct physical units. Compare numerical values using the downloaded CSV.</p></article>
+        <article class="card half-chart"><div class="chart-head"><div><span class="section-overline">E / ROAD & WHEELS</span><h2>Front and rear axle</h2></div><span class="chart-unit">mm</span></div><div class="legend"><span>Front road: amber</span><span>Rear road: yellow</span><span>Front wheel: blue</span><span>Rear wheel: mint</span></div><div class="plot-wrap"><canvas id="half-axle-chart" role="img" aria-label="Front and rear road and wheel displacement versus time"></canvas></div></article>
+        <article class="card half-chart"><div class="chart-head"><div><span class="section-overline">F / SUSPENSION</span><h2>Front and rear travel</h2></div><span class="chart-unit">mm</span></div><div class="legend"><span>Front travel: purple</span><span>Rear travel: teal</span></div><div class="plot-wrap"><canvas id="half-travel-chart" role="img" aria-label="Front and rear suspension travel versus time"></canvas></div></article>
+        <article class="card half-chart"><div class="chart-head"><div><span class="section-overline">G / BODY RESPONSE</span><h2>Heave & pitch acceleration</h2></div><span class="chart-unit">m/s², rad/s²</span></div><div class="legend"><span>Heave: mint</span><span>Pitch: purple</span></div><div class="plot-wrap"><canvas id="half-accel-chart" role="img" aria-label="Heave and pitch acceleration versus time with distinct units"></canvas></div><p class="lab-hint">Pitch acceleration is rad/s²; heave acceleration is m/s². Shared numeric display scale is for trends only.</p></article>
+      </section>
+
+      <section class="ride-lab" id="half-ride-lab" aria-label="Half-car ride response studies">
+        <div class="section-overline">09 / ROAD EXCITATION · CHAT 04</div><h2>Road and ride-response laboratory</h2>
+        <p class="ride-caption">Same 4-DOF model; both axles follow one spatial road track with rear delay. No ISO comfort rating or tire-contact prediction.</p>
+        <div class="ride-controls"><button type="button" id="half-ride-run">Run ride study</button><button type="button" id="half-ride-save">Save model baseline</button><button type="button" id="half-ride-compare">Compare saved baseline</button><button type="button" id="half-ride-csv" disabled>↓ Ride CSV</button><button type="button" id="half-ride-json" disabled>↓ Ride JSON</button></div>
+        <div class="ride-status" role="status" aria-live="polite" id="half-ride-status">Awaiting engineering study.</div>
+        <div class="ride-summary" id="half-ride-summary"></div>
+        <div class="ride-charts">
+          <article class="card"><h3>Body acceleration</h3><p>Heave · m/s² · no ISO weighting</p><div class="plot-wrap"><canvas id="half-ride-accel" role="img" aria-label="Body heave acceleration in metres per second squared"></canvas></div></article>
+          <article class="card"><h3>Front/rear road</h3><p>Road displacement · mm</p><div class="plot-wrap"><canvas id="half-ride-road" role="img" aria-label="Front and rear road inputs in millimetres"></canvas></div></article>
+          <article class="card"><h3>Suspension travel</h3><p>Front/rear · mm</p><div class="plot-wrap"><canvas id="half-ride-travel" role="img" aria-label="Front and rear suspension travel in millimetres"></canvas></div></article>
+        </div>
+      </section>
+      <div class="footer-note"><span>AutoDyn EV / Chat 10 of 10 · 4-DOF half-car</span><span>Separate model. Inherited quarter-car preserved.</span></div>
+    </section>
+
+
+    <section id="braking-lab" class="braking-lab" aria-label="Independent longitudinal braking laboratory" hidden>
+      <div class="half-intro"><div class="section-overline">10 / CHAT 05 · INDEPENDENT BRAKING MODEL</div>
+        <h2>From speed to a controlled stop.</h2>
+        <p>Illustrative straight-line longitudinal dynamics and quasi-static load transfer. This model is <strong>separate</strong> from the constant-speed quarter- and half-car simulators. No ABS, wheel slip, tire tests, reaction distance, brake temperature or regeneration.</p></div>
+      <form id="braking-form" class="card half-form">
+        <div class="panel-heading"><div><span class="section-overline">A / BRAKING INPUTS</span><h2>Set the scenario</h2></div><button type="button" id="braking-reset" class="reset-btn">↺ Defaults</button></div>
+        <div class="half-fields">
+          <label>Vehicle mass (kg)<input name="mass_kg" type="number" min="200" max="5000" step="10" value="1200" required></label>
+          <label>CG height (m)<input name="cg_height_m" type="number" min="0" max="2" step="0.05" value="0.55" required></label>
+          <label>CG to front axle (m)<input name="cg_to_front_m" type="number" min="0.4" max="4" step="0.05" value="1.2" required></label>
+          <label>CG to rear axle (m)<input name="cg_to_rear_m" type="number" min="0.4" max="4" step="0.05" value="1.3" required></label>
+          <label>Initial speed (m/s)<input name="initial_speed_m_s" type="number" min="0" max="55" step="0.5" value="20" required></label>
+          <label>Aggregate friction μ (–)<input name="friction_coefficient" type="number" min="0.05" max="1.5" step="0.05" value="0.8" required></label>
+          <label>Requested deceleration (m/s²)<input name="demanded_decel_m_s2" type="number" min="0" max="15" step="0.5" value="5" required></label>
+          <label>Command profile<select name="profile" id="braking-profile"><option value="constant">Constant command</option><option value="ramp">Linear ramp</option></select></label>
+          <label>Command ramp time (s)<input name="ramp_s" type="number" min="0.05" max="10" step="0.05" value="1" required></label>
+          <label>Simulation duration (s)<input name="duration_s" type="number" min="1" max="40" step="1" value="12" required></label>
+          <label>Output step (s)<input name="dt_s" type="number" min="0.002" max="0.1" step="0.001" value="0.02" required></label>
+        </div>
+        <div class="half-actions"><button class="run-btn" type="submit" id="braking-run">▶ Run braking scenario</button><span id="braking-status" role="status" aria-live="polite">Ready. Default: 20 m/s, 5 m/s² command.</span></div>
+        <p class="helper">Stopping distance excludes perception and reaction travel. Flat road and constant μ; force demand is capped by μmg. Wheel-specific load-dependent grip is not modeled.</p>
+      </form>
+      <div class="braking-metrics" id="braking-metrics" aria-live="polite"></div>
+      <div class="braking-charts">
+        <article class="card"><h3>Speed</h3><p>Forward velocity · m/s</p><div class="plot-wrap"><canvas id="braking-speed" aria-label="Speed against time"></canvas></div></article>
+        <article class="card"><h3>Distance</h3><p>Travel distance · m</p><div class="plot-wrap"><canvas id="braking-distance" aria-label="Integrated distance against time"></canvas></div></article>
+        <article class="card"><h3>Deceleration</h3><p>Requested vs actual · m/s²</p><div class="plot-wrap"><canvas id="braking-decel" aria-label="Requested and actual deceleration against time"></canvas></div></article>
+        <article class="card"><h3>Normal load</h3><p>Front vs rear axle · N</p><div class="plot-wrap"><canvas id="braking-load" aria-label="Quasi-static axle normal loads against time"></canvas></div></article>
+        <article class="card"><h3>Brake force</h3><p>Requested, traction capacity and actual · N</p><div class="plot-wrap"><canvas id="braking-force" aria-label="Requested, available and actual braking forces against time"></canvas></div></article>
+      </div>
+      <div class="card braking-export"><h3>Engineering evidence &amp; limitations</h3><div class="lab-actions"><button type="button" id="braking-export-csv" disabled>↓ Braking CSV</button><button type="button" id="braking-export-json" disabled>↓ Braking JSON</button></div><div id="braking-warnings" class="braking-warnings" aria-live="polite">Run a scenario to see assumptions and warnings.</div></div>
+      <div class="footer-note"><span>AutoDyn EV / Chat 10 of 10 · independent longitudinal braking</span><span>Simulation, not safe-distance guidance.</span></div>
+    </section>
+
+    
+    <section id="regen-lab" class="braking-lab" aria-label="Regenerative braking and energy recovery laboratory" hidden>
+      <div class="half-intro"><div class="section-overline">11 / CHAT 06 · REGENERATION LABORATORY</div><h2>Recover energy. Account for every joule.</h2>
+      <p>Independent straight-line regenerative + friction brake blending. Speed and stopping distance follow the accepted Chat 5 model; motor, battery and friction constraints allocate its available brake force. This is an illustrative simulation, <strong>not</strong> an ABS, production vehicle or real battery performance model.</p></div>
+      <form id="regen-form" class="card half-form">
+        <div class="panel-heading"><div><span class="section-overline">A / REGEN SCENARIO</span><h2>Configure physical limits</h2></div><button type="button" id="regen-reset" class="reset-btn">↺ Defaults</button></div>
+        <div class="half-fields">
+          <label>Vehicle mass (kg)<input name="mass_kg" type="number" min="200" max="5000" step="10" value="1200" required></label>
+          <label>CG height (m)<input name="cg_height_m" type="number" min="0" max="2" step="0.05" value="0.55" required></label>
+          <label>CG to front axle (m)<input name="cg_to_front_m" type="number" min="0.4" max="4" step="0.05" value="1.2" required></label>
+          <label>CG to rear axle (m)<input name="cg_to_rear_m" type="number" min="0.4" max="4" step="0.05" value="1.3" required></label>
+          <label>Initial speed (m/s)<input name="initial_speed_m_s" type="number" min="0" max="55" step="0.5" value="20" required></label>
+          <label>Grip coefficient μ<input name="friction_coefficient" type="number" min="0.05" max="1.5" step="0.05" value="0.8" required></label>
+          <label>Requested deceleration (m/s²)<input name="demanded_decel_m_s2" type="number" min="0" max="15" step="0.5" value="5" required></label>
+          <label>Brake command<select name="profile"><option value="constant">Constant</option><option value="ramp">Linear ramp</option></select></label>
+          <label>Ramp time (s)<input name="ramp_s" type="number" min="0.05" max="10" step="0.05" value="1" required></label>
+          <label>Duration (s)<input name="duration_s" type="number" min="1" max="40" step="1" value="12" required></label>
+          <label>Output step (s)<input name="dt_s" type="number" min="0.002" max="0.1" step="0.001" value="0.02" required></label>
+          <label>Motor shaft max regen torque (N·m)<input name="motor_max_torque_nm" type="number" min="0" max="1500" step="10" value="140" required></label>
+          <label>Ideal gear ratio (–)<input name="gear_ratio" type="number" min="0.2" max="30" step="0.1" value="8" required></label>
+          <label>Driven wheel radius (m)<input name="driven_wheel_radius_m" type="number" min="0.1" max="1" step="0.01" value="0.32" required></label>
+          <label>Wheel mechanical regen power limit (W)<input name="motor_max_mech_power_w" type="number" min="0" max="400000" step="1000" value="40000" required></label>
+          <label>Battery charge acceptance (W)<input name="battery_charge_limit_w" type="number" min="0" max="400000" step="1000" value="24000" required></label>
+          <label>Wheel-to-battery conversion efficiency (0–1)<input name="conversion_efficiency" type="number" min="0" max="1" step="0.01" value="0.85" required></label>
+          <label>Regen cutoff below speed (m/s)<input name="low_speed_cutoff_m_s" type="number" min="0" max="10" step="0.5" value="0" required></label>
+        </div>
+        <div class="half-actions"><button class="run-btn" id="regen-run" type="submit">▶ Run energy recovery</button><span id="regen-status" role="status" aria-live="polite">Ready. Select motor and battery limits.</span></div>
+        <p class="helper">Assumed constant power caps; no calibrated battery SOC/temperature, regenerative brake control, ABS or wheel-slip physics. Ideal ratio; all conversion losses accounted by one efficiency.</p>
+      </form>
+      <div class="braking-metrics" id="regen-metrics" aria-live="polite"></div>
+      <div class="braking-charts">
+        <article class="card"><h3>Vehicle speed</h3><p>m/s</p><div class="plot-wrap"><canvas id="regen-speed" aria-label="Regenerative braking speed"></canvas></div></article>
+        <article class="card"><h3>Brake blending</h3><p>Total / regen / friction force · N</p><div class="plot-wrap"><canvas id="regen-force" aria-label="Brake force allocation"></canvas></div></article>
+        <article class="card"><h3>Energy power channels</h3><p>Motor mechanical / battery charging / friction losses · W</p><div class="plot-wrap"><canvas id="regen-power" aria-label="Motor and battery power"></canvas></div></article>
+        <article class="card"><h3>Cumulative energy</h3><p>Battery stored / friction dissipated / conversion losses · J</p><div class="plot-wrap"><canvas id="regen-energy" aria-label="Integrated energy accounting"></canvas></div></article>
+        <article class="card"><h3>Energy balance</h3><p>Kinetic energy reduction and allocated energy · J</p><div class="plot-wrap"><canvas id="regen-balance" aria-label="Kinetic energy budget"></canvas></div></article>
+        <article class="card"><h3>Normal load transfer</h3><p>Front and rear axle · N (quasi-static)</p><div class="plot-wrap"><canvas id="regen-load" aria-label="Axle loads"></canvas></div></article>
+      </div>
+      <div class="card braking-export"><h3>Reproducible energy accounting</h3><div class="lab-actions"><button type="button" id="regen-csv" disabled>↓ Regen CSV</button><button type="button" id="regen-json" disabled>↓ Regen JSON</button></div><div id="regen-warnings" class="braking-warnings">Run a scenario to inspect motor and battery limits.</div></div>
+      <div class="footer-note"><span>AutoDyn EV / Chat 10 of 10 · independent energy recovery</span><span>Research demonstration only; no road safety claims.</span></div>
+    </section>
+
+    <div class="app-grid">
+      <aside class="controls card">
+        <div class="panel-heading"><div><span class="section-overline">01 / INPUT PARAMETERS</span><h2>Configure model</h2></div><button type="button" id="reset" class="reset-btn">↺ Reset</button></div>
+        <form id="config">
+          <div class="group-title">SUSPENSION ASSEMBLY</div>
+          <div class="field"><label for="sprung_mass_kg">Sprung mass <output id="sprung_mass_kg_value">300 kg</output></label><input id="sprung_mass_kg" type="range" min="100" max="1200" step="10" value="300" /></div>
+          <div class="field"><label for="unsprung_mass_kg">Unsprung mass <output id="unsprung_mass_kg_value">40 kg</output></label><input id="unsprung_mass_kg" type="range" min="15" max="150" step="5" value="40" /></div>
+          <div class="field"><label for="suspension_stiffness_n_m">Spring stiffness <output id="suspension_stiffness_n_m_value">18,000 N/m</output></label><input id="suspension_stiffness_n_m" type="range" min="5000" max="120000" step="1000" value="18000" /></div>
+          <div class="field"><label for="damping_n_s_m">Damper coefficient <output id="damping_n_s_m_value">1,500 N·s/m</output></label><input id="damping_n_s_m" type="range" min="0" max="12000" step="100" value="1500" /></div>
+          <div class="field"><label for="tire_stiffness_n_m">Tire stiffness <output id="tire_stiffness_n_m_value">190,000 N/m</output></label><input id="tire_stiffness_n_m" type="range" min="40000" max="500000" step="10000" value="190000" /></div>
+          <div class="group-title group-space">ROAD EXCITATION</div>
+          <div class="field"><label for="road_kind">Road profile</label><select id="road_kind"><option value="bump">Raised cosine bump</option><option value="step">Step displacement</option><option value="sine">Continuous sine wave</option><option value="flat">Flat / no input</option><option value="pothole">Smooth pothole (negative pulse)</option><option value="double_bump">Two smooth bumps</option><option value="chirp">Frequency chirp</option></select></div>
+          <div class="field"><label for="height_mm">Road amplitude <output id="height_mm_value">60 mm</output></label><input id="height_mm" type="range" min="0" max="150" step="5" value="60" /></div>
+          <div class="field road-bump"><label for="bump_length_m">Bump length <output id="bump_length_m_value">1.5 m</output></label><input id="bump_length_m" type="range" min="0.5" max="8" step="0.1" value="1.5" /></div>
+          <div class="field road-ch4" id="quarter-spacing-field"><label for="bump_spacing_m">Gap between bumps <output id="bump_spacing_m_value">1.5 m</output></label><input id="bump_spacing_m" type="range" min="0.5" max="10" step="0.5" value="1.5" /></div>
+          <div class="field road-ch4" id="quarter-chirp-field"><label for="chirp_end_frequency_hz">Chirp end frequency <output id="chirp_end_frequency_hz_value">4.0 Hz</output></label><input id="chirp_end_frequency_hz" type="range" min="0.2" max="5" step="0.2" value="4" /></div>
+          <div class="field road-ch4" id="quarter-chirp-duration-field"><label for="chirp_duration_s">Chirp ramp duration <output id="chirp_duration_s_value">3.0 s</output></label><input id="chirp_duration_s" type="range" min="0.5" max="12" step="0.5" value="3" /></div>
+          <div class="field road-bump"><label for="speed_m_s">Vehicle speed <output id="speed_m_s_value">18 km/h</output></label><input id="speed_m_s" type="range" min="1" max="40" step="1" value="5" /></div>
+          <div class="field road-sine" hidden><label for="sine_frequency_hz">Sine frequency <output id="sine_frequency_hz_value">1.5 Hz</output></label><input id="sine_frequency_hz" type="range" min="0.2" max="5" step="0.1" value="1.5" /></div>
+          <div class="group-title group-space">SIMULATION SETTINGS</div>
+          <div class="field"><label for="duration_s">Duration <output id="duration_s_value">5.0 s</output></label><input id="duration_s" type="range" min="2" max="15" step="0.5" value="5" /></div>
+          <div class="field"><label for="dt_s">Integrator time step</label><select id="dt_s"><option value="0.01">0.010 s</option><option value="0.005" selected>0.005 s (recommended)</option><option value="0.002">0.002 s (fine)</option></select></div>
+          <button type="submit" class="run-btn" id="run"><span>▶</span> Run simulation</button>
+          <p class="helper">4th-order Runge–Kutta · deterministic · runs locally on your computer</p>
+        </form>
+      </aside>
+      <section class="results">
+        <div class="result-toolbar"><div class="run-status"><span id="status-light"></span><span id="status" role="status" aria-live="polite">Preparing simulation…</span></div><div class="toolbar-actions"><button id="csv" disabled>↓ Export CSV</button><button id="report" disabled>↓ Export summary</button></div></div>
+        <div class="metric-grid">
+          <div class="metric card"><div>BODY ACCELERATION · RMS</div><strong id="metric-rms">—</strong><small>m/s² · simulated response</small></div>
+          <div class="metric card"><div>PEAK BODY ACCELERATION</div><strong id="metric-accel">—</strong><small>m/s² · absolute maximum</small></div>
+          <div class="metric card"><div>SUSPENSION TRAVEL · PEAK</div><strong id="metric-travel">—</strong><small>mm · absolute maximum</small></div>
+          <div class="metric card"><div>BODY NATURAL FREQUENCY</div><strong id="metric-mode">—</strong><small>Hz · undamped first mode</small></div>
+        </div>
+        <div class="visual-row">
+          <div class="card schematic"><div class="chart-head"><div><span class="section-overline">02 / MECHANISM</span><h2>Suspension response</h2></div><span class="tag">Animated · exaggerated</span></div>
+            <div class="mechanical-stage" aria-label="Animated spring suspension schematic">
+              <div class="stage-lines"></div><div id="body-mass" class="body-mass"><span>SPRUNG BODY</span></div><div class="spring" aria-hidden="true">/\/\/\/\</div><div id="wheel" class="wheel"><div></div><span>WHEEL</span></div><div class="ground" id="ground"></div>
+            </div>
+            <div class="timeline"><button id="play" type="button" disabled aria-label="Pause animation">Ⅱ</button><div class="track"><input type="range" id="scrubber" min="0" max="1000" value="0" aria-label="Animation time" /></div><b id="clock">0.00 / 5.00 s</b></div>
+          </div>
+          <div class="card insight"><span class="section-overline">03 / MODEL INSIGHT</span><h2>Interpret the motion</h2><p>The wheel moves in response to the road input. The spring and damper transmit forces to the vehicle body and resist relative motion.</p>
+            <div class="insight-row"><span>Model</span><strong>Linear 2-DOF</strong></div><div class="insight-row"><span>Integration</span><strong>RK4 fixed step</strong></div><div class="insight-row"><span>Coordinates</span><strong>Static-equilibrium-relative</strong></div><div class="insight-row"><span>Samples</span><strong id="samples">—</strong></div>
+            <div class="notice">Educational model. Not calibrated to a real EV, not a safety-certified tool, and not a tire-contact or braking simulation.</div>
+          </div>
+        </div>
+        <div class="card chart-card"><div class="chart-head"><div><span class="section-overline">04 / TIME DOMAIN</span><h2>Vertical displacement</h2></div><span class="chart-unit">mm</span></div><div class="legend"><span><i class="road-color"></i>Road</span><span><i class="wheel-color"></i>Unsprung mass</span><span><i class="body-color"></i>Sprung mass</span></div><div class="plot-wrap"><canvas id="displacement" role="img" aria-label="Road, wheel and body displacement versus time"></canvas></div></div>
+        <div class="chart-pair">
+          <div class="card chart-card"><div class="chart-head"><div><span class="section-overline">05 / BODY RESPONSE</span><h2>Vertical acceleration</h2></div><span class="chart-unit">m/s²</span></div><div class="legend"><span><i class="body-color"></i>Sprung mass acceleration</span></div><div class="plot-wrap"><canvas id="acceleration" role="img" aria-label="Sprung mass vertical acceleration versus time"></canvas></div></div>
+          <div class="card chart-card"><div class="chart-head"><div><span class="section-overline">06 / RELATIVE MOTION</span><h2>Suspension travel</h2></div><span class="chart-unit">mm</span></div><div class="legend"><span><i class="travel-color"></i>Body minus wheel</span></div><div class="plot-wrap"><canvas id="travel" role="img" aria-label="Suspension travel versus time"></canvas></div></div>
+        </div>
+
+        <section class="analysis-lab" aria-label="Engineering analysis laboratory">
+          <div class="analysis-intro"><div><span class="section-overline">07 / ENGINEERING STUDIES</span><h2>Compare, study, verify.</h2><p>Dedicated analysis tools for the same validated 2-DOF quarter-car. Results are simulated, not vehicle test measurements.</p></div><span class="tag">CHAT 02 · v0.2</span></div>
+          <div class="lab-grid">
+            <article class="card lab-card">
+              <span class="section-overline">A / MODAL CHARACTERISTICS</span><h3>Oscillation and damping</h3>
+              <p>State-space damped poles, frequency and damping ratio. Real poles are shown as decay rates.</p>
+              <div id="modal-output" class="lab-output" aria-live="polite">Run a simulation to inspect modal characteristics.</div>
+            </article>
+            <article class="card lab-card">
+              <span class="section-overline">B / CONTROLLED COMPARISON</span><h3>Baseline vs variant</h3>
+              <p>Save a vehicle/road baseline, change the sidebar inputs, then overlay the two responses.</p>
+              <div class="lab-actions"><button type="button" id="save-baseline">Save current as baseline</button><button type="button" id="compare-run">Compare to baseline</button></div>
+              <div id="baseline-label" class="lab-hint">Baseline: Chat 1 default model</div>
+              <div id="compare-output" class="lab-output" aria-live="polite">Awaiting comparison.</div>
+              <div class="plot-wrap analysis-plot"><canvas id="compare-plot" role="img" aria-label="Overlay of baseline and variant body acceleration"></canvas></div>
+              <div class="lab-legend"><span><i style="background:#72a6ff"></i> Baseline acceleration</span><span><i style="background:#66e1cf"></i> Variant acceleration</span></div>
+            </article>
+            <article class="card lab-card">
+              <span class="section-overline">C / PARAMETER SWEEP</span><h3>One variable at a time</h3>
+              <p>Seven points over ±20% of the current setting, within validated input bounds. All other inputs stay fixed.</p>
+              <label class="lab-label" for="sweep-parameter">Parameter</label>
+              <select id="sweep-parameter" class="lab-select"><option value="damping_n_s_m">Damper coefficient (N·s/m)</option><option value="suspension_stiffness_n_m">Spring stiffness (N/m)</option><option value="sprung_mass_kg">Sprung mass (kg)</option><option value="unsprung_mass_kg">Unsprung mass (kg)</option><option value="tire_stiffness_n_m">Tire stiffness (N/m)</option></select>
+              <div class="lab-actions"><button type="button" id="sweep-run">Run 7-point study</button></div>
+              <div id="sweep-output" class="lab-output" aria-live="polite">Awaiting parameter study.</div>
+              <div class="plot-wrap analysis-plot"><canvas id="sweep-plot" role="img" aria-label="Parameter versus simulated body acceleration RMS"></canvas></div>
+              <div class="lab-hint">Y axis: acceleration RMS (m/s²). Lower RMS is not a complete suspension design objective.</div>
+            </article>
+            <article class="card lab-card">
+              <span class="section-overline">D / NUMERICAL REFINEMENT</span><h3>Time-step sensitivity</h3>
+              <p>Compare RK4 at 10, 5 and 2.5 milliseconds; finest tested result is a numerical reference, not ground truth.</p>
+              <div class="lab-actions"><button type="button" id="convergence-run">Check time-step sensitivity</button></div>
+              <div id="convergence-output" class="lab-output" aria-live="polite">Awaiting convergence check.</div>
+              <div class="plot-wrap analysis-plot"><canvas id="convergence-plot" role="img" aria-label="Maximum body displacement error versus time step"></canvas></div>
+              <div class="lab-hint">Road onset/boundary events can reduce observed convergence order.</div>
+            </article>
+          </div>
+          <div class="lab-export"><span id="analysis-status" role="status" aria-live="polite">Analysis tools ready.</span><div class="lab-actions"><button id="analysis-csv" disabled type="button">↓ Study CSV</button><button id="analysis-json" disabled type="button">↓ Study JSON</button><button id="provenance" disabled type="button">↓ Simulation provenance</button></div></div>
+        </section>
+
+        <section class="ride-lab" id="quarter-ride-lab" aria-label="Quarter-car road and ride studies">
+          <div class="section-overline">08 / ROAD EXCITATION · CHAT 04</div><h2>Road and ride-response laboratory</h2>
+          <p class="ride-caption">Time-weighted unweighted RMS, peak-to-peak travel, and bounded reproducible road excitation. Simulated responses only.</p>
+          <div class="ride-controls"><button type="button" id="quarter-ride-run">Run ride study</button><button type="button" id="quarter-ride-save">Save model baseline</button><button type="button" id="quarter-ride-compare">Compare saved baseline</button><button type="button" id="quarter-ride-csv" disabled>↓ Ride CSV</button><button type="button" id="quarter-ride-json" disabled>↓ Ride JSON</button></div>
+          <div class="ride-status" role="status" aria-live="polite" id="quarter-ride-status">Awaiting engineering study.</div>
+          <div class="ride-summary" id="quarter-ride-summary"></div>
+          <div class="ride-charts">
+            <article class="card"><h3>Body acceleration</h3><p>Vertical · m/s²</p><div class="plot-wrap"><canvas id="quarter-ride-accel" role="img" aria-label="Body acceleration in metres per second squared"></canvas></div></article>
+            <article class="card"><h3>Road input</h3><p>Surface displacement · mm</p><div class="plot-wrap"><canvas id="quarter-ride-road" role="img" aria-label="Quarter car road input in millimetres"></canvas></div></article>
+            <article class="card"><h3>Suspension travel</h3><p>Relative displacement · mm</p><div class="plot-wrap"><canvas id="quarter-ride-travel" role="img" aria-label="Suspension travel in millimetres"></canvas></div></article>
+          </div>
+        </section>
+        <div class="footer-note"><span>AutoDyn EV / Chat 10 of 10</span><span>Physics first. Evidence always.</span></div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

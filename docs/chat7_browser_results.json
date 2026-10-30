@@ -1,0 +1,148 @@
+{
+  "mode": "Isolated Chromium with generated API responses; not live localhost, not Mac user testing",
+  "total": 35,
+  "passed": 35,
+  "errors": [],
+  "checks": [
+    {
+      "check": "1280: current version",
+      "passed": true
+    },
+    {
+      "check": "1280: quarter data",
+      "passed": true
+    },
+    {
+      "check": "1280: canvas visible",
+      "passed": true
+    },
+    {
+      "check": "1280: keyboard camera orbit",
+      "passed": true
+    },
+    {
+      "check": "1280: quarter midpoint time",
+      "passed": true
+    },
+    {
+      "check": "1280: fallback available",
+      "passed": true
+    },
+    {
+      "check": "1280: 3d restored",
+      "passed": true
+    },
+    {
+      "check": "1280: half has distinct front rear",
+      "passed": true
+    },
+    {
+      "check": "1280: braking stopped",
+      "passed": true
+    },
+    {
+      "check": "1280: braking distance",
+      "passed": true
+    },
+    {
+      "check": "1280: no invented braking pitch",
+      "passed": true
+    },
+    {
+      "check": "1280: battery energy from series",
+      "passed": true
+    },
+    {
+      "check": "1280: regen stopped",
+      "passed": true
+    },
+    {
+      "check": "1280: restart returns zero",
+      "passed": true
+    },
+    {
+      "check": "1280: play advances timeline",
+      "passed": true
+    },
+    {
+      "check": "1280: footer fixed",
+      "passed": true
+    },
+    {
+      "check": "390: current version",
+      "passed": true
+    },
+    {
+      "check": "390: quarter data",
+      "passed": true
+    },
+    {
+      "check": "390: canvas visible",
+      "passed": true
+    },
+    {
+      "check": "390: keyboard camera orbit",
+      "passed": true
+    },
+    {
+      "check": "390: quarter midpoint time",
+      "passed": true
+    },
+    {
+      "check": "390: fallback available",
+      "passed": true
+    },
+    {
+      "check": "390: 3d restored",
+      "passed": true
+    },
+    {
+      "check": "390: half has distinct front rear",
+      "passed": true
+    },
+    {
+      "check": "390: braking stopped",
+      "passed": true
+    },
+    {
+      "check": "390: braking distance",
+      "passed": true
+    },
+    {
+      "check": "390: no invented braking pitch",
+      "passed": true
+    },
+    {
+      "check": "390: battery energy from series",
+      "passed": true
+    },
+    {
+      "check": "390: regen stopped",
+      "passed": true
+    },
+    {
+      "check": "390: restart returns zero",
+      "passed": true
+    },
+    {
+      "check": "390: play advances timeline",
+      "passed": true
+    },
+    {
+      "check": "390: footer fixed",
+      "passed": true
+    },
+    {
+      "check": "390: viewer width fits",
+      "passed": true
+    },
+    {
+      "check": "canvas unavailable: SVG fallback auto",
+      "passed": true
+    },
+    {
+      "check": "reduced motion: viewer starts paused",
+      "passed": true
+    }
+  ]
+}

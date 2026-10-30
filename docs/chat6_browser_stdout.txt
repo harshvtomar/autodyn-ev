@@ -1,0 +1,147 @@
+{
+  "checks": 35,
+  "passed": 35,
+  "errors": [],
+  "items": [
+    {
+      "name": "1280px homepage rendered",
+      "pass": true
+    },
+    {
+      "name": "1280px Chat6 release label",
+      "pass": true
+    },
+    {
+      "name": "1280px legacy selector has all four models",
+      "pass": true
+    },
+    {
+      "name": "1280px regen lab visible",
+      "pass": true
+    },
+    {
+      "name": "1280px metrics",
+      "pass": true
+    },
+    {
+      "name": "1280px graphs",
+      "pass": true
+    },
+    {
+      "name": "1280px initial battery recovery",
+      "pass": true
+    },
+    {
+      "name": "1280px export enabled",
+      "pass": true
+    },
+    {
+      "name": "1280px CSV export",
+      "pass": true
+    },
+    {
+      "name": "1280px JSON export",
+      "pass": true
+    },
+    {
+      "name": "1280px editable form remains valid",
+      "pass": true
+    },
+    {
+      "name": "1280px zero battery case",
+      "pass": true
+    },
+    {
+      "name": "1280px ramp controls work",
+      "pass": true
+    },
+    {
+      "name": "1280px inherited braking visible",
+      "pass": true
+    },
+    {
+      "name": "1280px inherited halfcar visible",
+      "pass": true
+    },
+    {
+      "name": "1280px quarter UI restored",
+      "pass": true
+    },
+    {
+      "name": "1280px horizontal overflow",
+      "pass": true
+    },
+    {
+      "name": "390px homepage rendered",
+      "pass": true
+    },
+    {
+      "name": "390px Chat6 release label",
+      "pass": true
+    },
+    {
+      "name": "390px legacy selector has all four models",
+      "pass": true
+    },
+    {
+      "name": "390px regen lab visible",
+      "pass": true
+    },
+    {
+      "name": "390px metrics",
+      "pass": true
+    },
+    {
+      "name": "390px graphs",
+      "pass": true
+    },
+    {
+      "name": "390px initial battery recovery",
+      "pass": true
+    },
+    {
+      "name": "390px export enabled",
+      "pass": true
+    },
+    {
+      "name": "390px CSV export",
+      "pass": true
+    },
+    {
+      "name": "390px JSON export",
+      "pass": true
+    },
+    {
+      "name": "390px editable form remains valid",
+      "pass": true
+    },
+    {
+      "name": "390px zero battery case",
+      "pass": true
+    },
+    {
+      "name": "390px ramp controls work",
+      "pass": true
+    },
+    {
+      "name": "390px inherited braking visible",
+      "pass": true
+    },
+    {
+      "name": "390px inherited halfcar visible",
+      "pass": true
+    },
+    {
+      "name": "390px quarter UI restored",
+      "pass": true
+    },
+    {
+      "name": "390px horizontal overflow",
+      "pass": true
+    },
+    {
+      "name": "no JS exceptions",
+      "pass": true
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "schema": "chat10-massfixed-release-manifest-1.0",
+  "baseline": "Chat 9 user-verified Mass Update Hotfix",
+  "baseline_sha256": "1acad1e175e021512ff077e741bd839192c4e978d6dad6e076c29c76aa2dc9b3",
+  "upstream_accepted_chat9_sha256": "d61f75865a6174611940a0789ace26402bd946be888fc867446d3a262241c7b2",
+  "file_counts": {
+    "source_baseline": 184,
+    "release": 207,
+    "added": 23,
+    "modified": 8,
+    "removed": 0
+  },
+  "unchanged_protected_modules": [
+    "analysis.py",
+    "braking.py",
+    "halfcar.py",
+    "optimization.py",
+    "physics.py",
+    "regen.py",
+    "ride.py",
+    "simulation.py"
+  ],
+  "unchanged_mass_hotfix_web_app_js": true,
+  "new_files": [
+    "LICENSE_DECISION.md",
+    "docs/CHAT10_BROWSER_RESULTS.json",
+    "docs/CHAT10_EXPORT_AUDIT.json",
+    "docs/CHAT10_MAC_ACCEPTANCE.md",
+    "docs/CHAT10_NO_DRIFT.json",
+    "docs/CHAT10_NO_DRIFT_FROM_ACCEPTED_CHAT9.json",
+    "docs/CHAT10_RELEASE_AUDIT.json",
+    "docs/CHAT10_TEST_LOG.txt",
+    "docs/CHAT10_VERIFICATION_REPORT.md",
+    "docs/FINAL_ENGINEERING_GUIDE.md",
+    "docs/KNOWN_ISSUES_CHAT10.md",
+    "docs/PORTFOLIO_CASE_STUDY.md",
+    "docs/PUBLICATION_PLAN.md",
+    "docs/RELEASE_NOTES_CHAT10.md",
+    "docs/chat10-final-1280.png",
+    "docs/chat10-final-390.png",
+    "docs/chat10_evidence/engineering_matrix.json",
+    "docs/chat10_evidence/engineering_matrix.md",
+    "scripts/chat10_browser_optional.py",
+    "scripts/chat10_export_audit_optional.py",
+    "scripts/chat10_no_drift.py",
+    "scripts/chat10_release_audit.py",
+    "tests/test_release_chat10.py"
+  ],
+  "modified_files": [
+    ".github/workflows/ci.yml",
+    ".gitignore",
+    "README.md",
+    "autodyn_ev/__init__.py",
+    "autodyn_ev/server.py",
+    "pyproject.toml",
+    "web/index.html",
+    "web/styles.css"
+  ],
+  "deleted_files": [],
+  "publication": "not performed; requires explicit user authorization"
+}

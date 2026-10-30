@@ -1,0 +1,107 @@
+{
+  "cases": [
+    {
+      "model": "quarter",
+      "scenario": {},
+      "json_identical": true,
+      "bytes_old": 212928,
+      "bytes_new": 212928
+    },
+    {
+      "model": "quarter",
+      "scenario": {
+        "vehicle": {
+          "damping_n_s_m": 3000
+        },
+        "road": {
+          "kind": "sine"
+        }
+      },
+      "json_identical": true,
+      "bytes_old": 212555,
+      "bytes_new": 212555
+    },
+    {
+      "model": "quarter",
+      "scenario": {
+        "road": {
+          "kind": "flat"
+        }
+      },
+      "json_identical": true,
+      "bytes_old": 54766,
+      "bytes_new": 54766
+    },
+    {
+      "model": "half",
+      "scenario": {},
+      "json_identical": true,
+      "bytes_old": 420862,
+      "bytes_new": 420862
+    },
+    {
+      "model": "half",
+      "scenario": {
+        "vehicle": {
+          "pitch_inertia_kg_m2": 2000
+        },
+        "road": {
+          "kind": "double_bump"
+        }
+      },
+      "json_identical": true,
+      "bytes_old": 416822,
+      "bytes_new": 416822
+    },
+    {
+      "model": "braking",
+      "scenario": {},
+      "json_identical": true,
+      "bytes_old": 23447,
+      "bytes_new": 23447
+    },
+    {
+      "model": "braking",
+      "scenario": {
+        "scenario": {
+          "profile": "ramp",
+          "ramp_s": 1.0
+        }
+      },
+      "json_identical": true,
+      "bytes_old": 28727,
+      "bytes_new": 28727
+    },
+    {
+      "model": "regen",
+      "scenario": {},
+      "json_identical": true,
+      "bytes_old": 67701,
+      "bytes_new": 67701
+    },
+    {
+      "model": "regen",
+      "scenario": {
+        "scenario": {
+          "motor_max_torque_nm": 0
+        }
+      },
+      "json_identical": true,
+      "bytes_old": 47859,
+      "bytes_new": 47859
+    },
+    {
+      "model": "regen",
+      "scenario": {
+        "scenario": {
+          "battery_charge_limit_w": 3000
+        }
+      },
+      "json_identical": true,
+      "bytes_old": 68639,
+      "bytes_new": 68639
+    }
+  ],
+  "passed": 10,
+  "total": 10
+}

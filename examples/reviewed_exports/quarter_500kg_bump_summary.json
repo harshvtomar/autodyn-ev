@@ -1,0 +1,88 @@
+{
+  "provenance": {
+    "model_revision": "quarter-car-2dof-v0.2.0",
+    "model": "linear-2dof-quarter-car-static-equilibrium-deviations",
+    "analysis": "time-domain-simulation",
+    "solver": "fixed-step-classical-RK4",
+    "coordinates": "positive-up; static-equilibrium-relative",
+    "units": {
+      "time": "s",
+      "displacement": "m",
+      "velocity": "m/s",
+      "acceleration": "m/s^2",
+      "force_variation": "N",
+      "reported_peak_displacement_and_travel": "mm",
+      "sprung_and_unsprung_mass": "kg",
+      "spring_and_tire_stiffness": "N/m",
+      "damping": "N*s/m"
+    },
+    "vehicle": {
+      "sprung_mass_kg": 500,
+      "unsprung_mass_kg": 40,
+      "suspension_stiffness_n_m": 18000,
+      "damping_n_s_m": 1500,
+      "tire_stiffness_n_m": 190000
+    },
+    "road": {
+      "kind": "bump",
+      "height_m": 0.06,
+      "start_s": 0.5,
+      "bump_length_m": 1.5,
+      "speed_m_s": 5,
+      "sine_frequency_hz": 1.5,
+      "bump_spacing_m": 1.5,
+      "chirp_end_frequency_hz": 4,
+      "chirp_duration_s": 3
+    },
+    "requested_settings": {
+      "duration_s": 5,
+      "dt_s": 0.005
+    },
+    "data_kind": "simulated; not empirical vehicle measurements",
+    "versioned_output": "2.0-additive; existing 1.0 keys preserved"
+  },
+  "schema_version": "1.0",
+  "model": "linear-two-dof-quarter-car-static-equilibrium-deviations",
+  "vehicle": {
+    "sprung_mass_kg": 500,
+    "unsprung_mass_kg": 40,
+    "suspension_stiffness_n_m": 18000,
+    "damping_n_s_m": 1500,
+    "tire_stiffness_n_m": 190000
+  },
+  "road": {
+    "kind": "bump",
+    "height_m": 0.06,
+    "start_s": 0.5,
+    "bump_length_m": 1.5,
+    "speed_m_s": 5,
+    "sine_frequency_hz": 1.5,
+    "bump_spacing_m": 1.5,
+    "chirp_end_frequency_hz": 4,
+    "chirp_duration_s": 3
+  },
+  "settings": {
+    "duration_s": 5,
+    "dt_s": 0.005
+  },
+  "samples": 1001,
+  "metrics": {
+    "body_acceleration_rms_m_s2": 0.5556923125715002,
+    "body_acceleration_peak_m_s2": 2.772153698494514,
+    "suspension_travel_peak_mm": 45.10036664715388,
+    "body_displacement_peak_mm": 41.49797654428634,
+    "tire_deflection_peak_mm": 7.555448550765528,
+    "tire_force_variation_peak_n": 1435.5352246454504,
+    "body_mode_undamped_hz": 0.9124007454006664,
+    "wheel_mode_undamped_hz": 11.480285461068137,
+    "post_bump_settling_s": 2.535
+  },
+  "assumptions": [
+    "Small-displacement linear springs and viscous suspension damping",
+    "Two vertical translational DOF; no pitch, roll, lateral dynamics, or braking",
+    "Static-equilibrium-relative coordinates, gravity canceled in equations",
+    "Tire is linear and always in contact; contact loss is not simulated",
+    "RMS values are scenario responses, not ISO 2631 ride-comfort compliance results",
+    "No physical vehicle calibration or road-test validation"
+  ]
+}

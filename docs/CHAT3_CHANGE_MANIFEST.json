@@ -1,0 +1,107 @@
+{
+  "baseline": "AutoDyn_EV_Chat2_v0.2.0.zip",
+  "baseline_sha256": "ef432705ef43f31262d0c5703d822b17ba2d04c0b92ab352478127eff67792bb",
+  "baseline_files": 53,
+  "byte_identical_count": 46,
+  "byte_identical_paths": [
+    ".github/workflows/ci.yml",
+    ".gitignore",
+    "autodyn_ev/analysis.py",
+    "autodyn_ev/physics.py",
+    "autodyn_ev/simulation.py",
+    "docs/CHAT1_FINAL_ACCEPTANCE.md",
+    "docs/CHAT2_CHANGE_MANIFEST.md",
+    "docs/CHAT2_HANDOFF.md",
+    "docs/CHAT2_SOURCE_SHA256.txt",
+    "docs/CHAT2_VERIFICATION_REPORT.md",
+    "docs/CHAT3_HANDOFF.md",
+    "docs/ENGINEERING_MODEL.md",
+    "docs/ENGINEERING_STUDIES_CHAT2.md",
+    "docs/MAC_CHAT2_ACCEPTANCE.md",
+    "docs/MAC_SETUP.md",
+    "docs/SESSION1_SCOPE.md",
+    "docs/SOURCE_SHA256.txt",
+    "docs/VERIFICATION_REPORT.md",
+    "docs/automated_test_log.txt",
+    "docs/browser-chat2-desktop-study.csv",
+    "docs/browser-chat2-mobile-study.csv",
+    "docs/browser_harness_results.json",
+    "docs/chat2-dashboard-desktop.png",
+    "docs/chat2-dashboard-mobile.png",
+    "docs/chat2_automated_test_log.txt",
+    "docs/chat2_browser_harness_results.json",
+    "docs/chat2_reference_results.json",
+    "docs/dashboard-desktop.png",
+    "docs/dashboard-mobile.png",
+    "docs/scipy_reference_results.json",
+    "examples/chat2_comparison_metrics.json",
+    "examples/chat2_convergence.json",
+    "examples/chat2_modal.json",
+    "examples/chat2_sweep.json",
+    "examples/default_bump_metrics.json",
+    "examples/default_bump_response.csv",
+    "scripts/browser_smoke_chat2_optional.py",
+    "scripts/browser_smoke_optional.py",
+    "scripts/chat2_reference_check_optional.py",
+    "scripts/export_example.py",
+    "scripts/scipy_reference_check.py",
+    "tests/test_analysis.py",
+    "tests/test_analysis_server.py",
+    "tests/test_physics.py",
+    "tests/test_server.py",
+    "web/app.js"
+  ],
+  "modified_from_baseline": [
+    {
+      "path": "README.md",
+      "status": "modified"
+    },
+    {
+      "path": "autodyn_ev/__init__.py",
+      "status": "modified"
+    },
+    {
+      "path": "autodyn_ev/server.py",
+      "status": "modified"
+    },
+    {
+      "path": "pyproject.toml",
+      "status": "modified"
+    },
+    {
+      "path": "run_mac.sh",
+      "status": "modified"
+    },
+    {
+      "path": "web/index.html",
+      "status": "modified"
+    },
+    {
+      "path": "web/styles.css",
+      "status": "modified"
+    }
+  ],
+  "added_files": [
+    "autodyn_ev/halfcar.py",
+    "docs/CHAT3_CHANGE_MANIFEST.json",
+    "docs/CHAT3_RELEASE_NOTES.md",
+    "docs/CHAT3_VERIFICATION_REPORT.md",
+    "docs/CHAT4_HANDOFF.md",
+    "docs/ENGINEERING_HALF_CAR.md",
+    "docs/MAC_CHAT3_ACCEPTANCE.md",
+    "docs/chat3-browser-desktop-response.csv",
+    "docs/chat3-browser-mobile-response.csv",
+    "docs/chat3-dashboard-desktop.png",
+    "docs/chat3-dashboard-mobile.png",
+    "docs/chat3_automated_test_log.txt",
+    "docs/chat3_browser_harness_results.json",
+    "docs/chat3_reference_results.json",
+    "examples/chat3_default_halfcar_metrics.json",
+    "scripts/chat3_browser_harness_optional.py",
+    "scripts/chat3_reference_check_optional.py",
+    "tests/test_halfcar.py",
+    "tests/test_halfcar_server.py",
+    "web/halfcar.js"
+  ],
+  "core_inherited_byte_identical": true
+}

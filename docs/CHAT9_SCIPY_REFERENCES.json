@@ -1,0 +1,116 @@
+[
+  {
+    "model": "quarter",
+    "kind": "sine",
+    "method": "independent Newton force balance + SciPy DOP853",
+    "rk4_dt_s": 0.005,
+    "rtol": 1e-11,
+    "atol": 1e-13,
+    "max_abs_state_channel_difference": {
+      "sprung_m": 1.8251329102995234e-08,
+      "unsprung_m": 2.456291787761994e-07,
+      "sprung_velocity_m_s": 1.2185662160157928e-06,
+      "unsprung_velocity_m_s": 1.8194091998866013e-05
+    },
+    "tolerance_per_channel": 0.0002,
+    "units": "m for positions, rad for angle, m/s or rad/s for rates",
+    "passed": true
+  },
+  {
+    "model": "quarter",
+    "kind": "bump",
+    "method": "independent Newton force balance + SciPy DOP853",
+    "rk4_dt_s": 0.005,
+    "rtol": 1e-11,
+    "atol": 1e-13,
+    "max_abs_state_channel_difference": {
+      "sprung_m": 8.608045988251628e-09,
+      "unsprung_m": 1.4105220930691643e-07,
+      "sprung_velocity_m_s": 7.06744028281317e-07,
+      "unsprung_velocity_m_s": 9.032954254681314e-06
+    },
+    "tolerance_per_channel": 0.0002,
+    "units": "m for positions, rad for angle, m/s or rad/s for rates",
+    "passed": true
+  },
+  {
+    "model": "quarter",
+    "kind": "pothole",
+    "method": "independent Newton force balance + SciPy DOP853",
+    "rk4_dt_s": 0.005,
+    "rtol": 1e-11,
+    "atol": 1e-13,
+    "max_abs_state_channel_difference": {
+      "sprung_m": 8.608045988251628e-09,
+      "unsprung_m": 1.4105220930691643e-07,
+      "sprung_velocity_m_s": 7.06744028281317e-07,
+      "unsprung_velocity_m_s": 9.032954254681314e-06
+    },
+    "tolerance_per_channel": 0.0002,
+    "units": "m for positions, rad for angle, m/s or rad/s for rates",
+    "passed": true
+  },
+  {
+    "model": "half",
+    "kind": "sine",
+    "method": "independent Newton force balance + SciPy DOP853",
+    "rk4_dt_s": 0.005,
+    "rtol": 1e-11,
+    "atol": 1e-13,
+    "max_abs_state_channel_difference": {
+      "body_heave_m": 9.126935998800528e-09,
+      "body_pitch_rad": 7.3352724744985e-09,
+      "front_wheel_m": 2.464283695357769e-07,
+      "rear_wheel_m": 2.4554225503195526e-07,
+      "body_heave_velocity_m_s": 6.769754519186932e-07,
+      "body_pitch_rate_rad_s": 5.186439448467972e-07,
+      "front_wheel_velocity_m_s": 1.8281300593378513e-05,
+      "rear_wheel_velocity_m_s": 1.8185745140578136e-05
+    },
+    "tolerance_per_channel": 0.0002,
+    "units": "m for positions, rad for angle, m/s or rad/s for rates",
+    "passed": true
+  },
+  {
+    "model": "half",
+    "kind": "bump",
+    "method": "independent Newton force balance + SciPy DOP853",
+    "rk4_dt_s": 0.005,
+    "rtol": 1e-11,
+    "atol": 1e-13,
+    "max_abs_state_channel_difference": {
+      "body_heave_m": 4.297344962463003e-09,
+      "body_pitch_rad": 3.4913796289823273e-09,
+      "front_wheel_m": 1.4130789284614448e-07,
+      "rear_wheel_m": 1.4101244777907883e-07,
+      "body_heave_velocity_m_s": 3.5337052220561077e-07,
+      "body_pitch_rate_rad_s": 2.872735549164229e-07,
+      "front_wheel_velocity_m_s": 9.056854158168148e-06,
+      "rear_wheel_velocity_m_s": 9.02794060497758e-06
+    },
+    "tolerance_per_channel": 0.0002,
+    "units": "m for positions, rad for angle, m/s or rad/s for rates",
+    "passed": true
+  },
+  {
+    "model": "half",
+    "kind": "pothole",
+    "method": "independent Newton force balance + SciPy DOP853",
+    "rk4_dt_s": 0.005,
+    "rtol": 1e-11,
+    "atol": 1e-13,
+    "max_abs_state_channel_difference": {
+      "body_heave_m": 4.297344962463003e-09,
+      "body_pitch_rad": 3.4913796289823273e-09,
+      "front_wheel_m": 1.4130789284614448e-07,
+      "rear_wheel_m": 1.4101244777907883e-07,
+      "body_heave_velocity_m_s": 3.5337052220561077e-07,
+      "body_pitch_rate_rad_s": 2.872735549164229e-07,
+      "front_wheel_velocity_m_s": 9.056854158168148e-06,
+      "rear_wheel_velocity_m_s": 9.02794060497758e-06
+    },
+    "tolerance_per_channel": 0.0002,
+    "units": "m for positions, rad for angle, m/s or rad/s for rates",
+    "passed": true
+  }
+]

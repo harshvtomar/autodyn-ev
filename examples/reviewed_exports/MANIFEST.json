@@ -1,0 +1,12 @@
+{
+  "origin": "user-supplied downloads, regrouped without content edits",
+  "files": {
+    "quarter_500kg_bump.csv": "autodyn-ev-session1-response (8).csv",
+    "quarter_500kg_bump_summary.json": "autodyn-ev-session1-summary (7).json",
+    "quarter_300kg_bump.csv": "autodyn-ev-session1-response (7).csv",
+    "quarter_300kg_bump_summary.json": "autodyn-ev-session1-summary (6).json",
+    "quarter_300kg_bump_provenance.json": "autodyn-ev-response-provenance (1).json",
+    "quarter_500kg_sine.csv": "autodyn-ev-session1-response.csv",
+    "quarter_500kg_sine_summary.json": "autodyn-ev-session1-summary.json"
+  }
+}

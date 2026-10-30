@@ -1,0 +1,14 @@
+{
+  "numpy_modal_max_abs_eigenvalue_error_1_per_s": 9.473576311218359e-09,
+  "checked_random_vehicle_configurations": 100,
+  "scipy_dop853_rk4_max_errors_by_channel": {
+    "sprung_m": 1.7292506055560652e-09,
+    "unsprung_m": 2.326963947051064e-08,
+    "sprung_velocity_m_s": 1.1480906932093138e-07,
+    "unsprung_velocity_m_s": 1.7505633182479663e-06
+  },
+  "damped_modal_tolerance_1_per_s": 0.0001,
+  "time_domain_max_channel_tolerance_si_units": 2e-05,
+  "result": "PASS",
+  "scope": "Independent 4x4 NumPy eigenvalues and SciPy DOP853 on sinusoidal road; does not validate real vehicle behavior"
+}

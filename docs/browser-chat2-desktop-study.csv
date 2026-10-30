@@ -1,0 +1,4 @@
+requested_dt_s,actual_dt_s,samples,max_abs_error_sprung_m,max_abs_error_unsprung_m,max_abs_error_sprung_velocity_m_s,max_abs_error_unsprung_velocity_m_s,model_revision,solver
+0.01,0.01,501,4.950085282619601e-7,0.000014359556011554753,0.00004176948392089347,0.0008885491759804687,quarter-car-2dof-v0.2.0,fixed-step-classical-RK4
+0.005,0.005,1001,2.8625421271202822e-8,8.031501094810101e-7,0.0000023910785195493944,0.000051725107606426235,quarter-car-2dof-v0.2.0,fixed-step-classical-RK4
+0.0025,0.0025,2001,0,0,0,0,quarter-car-2dof-v0.2.0,fixed-step-classical-RK4

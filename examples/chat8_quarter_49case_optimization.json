@@ -1,0 +1,811 @@
+{
+  "schema_version": "optimization-study-1.0",
+  "application_version": "0.8.0",
+  "study_type": "bounded-deterministic-parameter-grid",
+  "model": "quarter",
+  "baseline": {
+    "vehicle": {
+      "sprung_mass_kg": 300.0,
+      "unsprung_mass_kg": 40.0,
+      "suspension_stiffness_n_m": 18000.0,
+      "damping_n_s_m": 1500.0,
+      "tire_stiffness_n_m": 190000.0
+    },
+    "metrics": {
+      "body_acceleration_rms_m_s2": 0.9065346660721217,
+      "suspension_travel_peak_to_peak_mm": 87.931700290579,
+      "tire_deflection_peak_abs_mm": 8.113585145130768
+    }
+  },
+  "scenario": {
+    "road": {
+      "kind": "bump",
+      "height_m": 0.06,
+      "start_s": 0.5,
+      "bump_length_m": 1.5,
+      "speed_m_s": 5.0,
+      "sine_frequency_hz": 1.5,
+      "bump_spacing_m": 1.5,
+      "chirp_end_frequency_hz": 4.0,
+      "chirp_duration_s": 3.0
+    },
+    "settings": {
+      "duration_s": 5.0,
+      "dt_s": 0.005
+    },
+    "initial_state": "zero static-equilibrium-relative"
+  },
+  "grid": {
+    "parameters": [
+      "damping_n_s_m",
+      "suspension_stiffness_n_m"
+    ],
+    "points_per_axis": 7,
+    "values": {
+      "damping_n_s_m": [
+        1200.0,
+        1300.0,
+        1400.0,
+        1500.0,
+        1600.0,
+        1700.0,
+        1800.0
+      ],
+      "suspension_stiffness_n_m": [
+        14400.0,
+        15600.0,
+        16800.0,
+        18000.0,
+        19200.0,
+        20400.0,
+        21600.0
+      ]
+    },
+    "hard_cap": 49,
+    "run_count": 49,
+    "bounds": {
+      "damping_n_s_m": {
+        "min": 0.0,
+        "max": 12000.0,
+        "unit": "N\u00b7s/m"
+      },
+      "suspension_stiffness_n_m": {
+        "min": 5000.0,
+        "max": 120000.0,
+        "unit": "N/m"
+      }
+    }
+  },
+  "constraints": {},
+  "objectives": [
+    {
+      "key": "body_acceleration_rms_m_s2",
+      "direction": "min",
+      "unit": "m/s\u00b2",
+      "method": "trapezoidal time-weighted unweighted RMS"
+    },
+    {
+      "key": "suspension_travel_peak_to_peak_mm",
+      "direction": "min",
+      "unit": "mm",
+      "method": "sampled peak-to-peak; half-car uses worse of front and rear"
+    }
+  ],
+  "units": {
+    "body_acceleration_rms_m_s2": "m/s\u00b2",
+    "suspension_travel_peak_to_peak_mm": "mm",
+    "tire_deflection_peak_abs_mm": "mm",
+    "front_suspension_travel_peak_to_peak_mm": "mm",
+    "rear_suspension_travel_peak_to_peak_mm": "mm",
+    "front_tire_deflection_peak_abs_mm": "mm",
+    "rear_tire_deflection_peak_abs_mm": "mm",
+    "body_pitch_peak_deg": "degrees"
+  },
+  "candidates": [
+    {
+      "id": 1,
+      "parameters": {
+        "damping_n_s_m": 1200.0,
+        "suspension_stiffness_n_m": 14400.0
+      },
+      "metrics": {
+        "body_acceleration_rms_m_s2": 0.7431440607563664,
+        "suspension_travel_peak_to_peak_mm": 88.62146844892364,
+        "tire_deflection_peak_abs_mm": 6.814654732162872
+      },
+      "feasible": true,
+      "failed_constraints": []
+    },
+    {
+      "id": 2,
+      "parameters": {
+        "damping_n_s_m": 1200.0,
+        "suspension_stiffness_n_m": 15600.0
+      },
+      "metrics": {
+        "body_acceleration_rms_m_s2": 0.7836308064566988,
+        "suspension_travel_peak_to_peak_mm": 89.29626441374606,
+        "tire_deflection_peak_abs_mm": 6.839830595699843
+      },
+      "feasible": true,
+      "failed_constraints": []
+    },
+    {
+      "id": 3,
+      "parameters": {
+        "damping_n_s_m": 1200.0,
+        "suspension_stiffness_n_m": 16800.0
+      },
+      "metrics": {
+        "body_acceleration_rms_m_s2": 0.826074976646869,
+        "suspension_travel_peak_to_peak_mm": 89.89652362224248,
+        "tire_deflection_peak_abs_mm": 6.86491770599304
+      },
+      "feasible": true,
+      "failed_constraints": []
+    },
+    {
+      "id": 4,
+      "parameters": {
+        "damping_n_s_m": 1200.0,
+        "suspension_stiffness_n_m": 18000.0
+      },
+      "metrics": {
+        "body_acceleration_rms_m_s2": 0.870310653688832,
+        "suspension_travel_peak_to_peak_mm": 90.44254491909435,
+        "tire_deflection_peak_abs_mm": 6.889916364114672
+      },
+      "feasible": true,
+      "failed_constraints": []
+    },
+    {
+      "id": 5,
+      "parameters": {
+        "damping_n_s_m": 1200.0,
+        "suspension_stiffness_n_m": 19200.0
+      },
+      "metrics": {
+        "body_acceleration_rms_m_s2": 0.9161864941803665,
+        "suspension_travel_peak_to_peak_mm": 90.93040789562468,
+        "tire_deflection_peak_abs_mm": 6.918911391245008
+      },
+      "feasible": true,
+      "failed_constraints": []
+    },
+    {
+      "id": 6,
+      "parameters": {
+        "damping_n_s_m": 1200.0,
+        "suspension_stiffness_n_m": 20400.0
+      },
+      "metrics": {
+        "body_acceleration_rms_m_s2": 0.9635651752323278,
+        "suspension_travel_peak_to_peak_mm": 91.35728458767328,
+        "tire_deflection_peak_abs_mm": 7.1627809713827695
+      },
+      "feasible": true,
+      "failed_constraints": []
+    },
+    {
+      "id": 7,
+      "parameters": {
+        "damping_n_s_m": 1200.0,
+        "suspension_stiffness_n_m": 21600.0
+      },
+      "metrics": {
+        "body_acceleration_rms_m_s2": 1.0123228392299672,
+        "suspension_travel_peak_to_peak_mm": 91.73492132950972,
+        "tire_deflection_peak_abs_mm": 7.423862493456696
+      },
+      "feasible": true,
+      "failed_constraints": []
+    },
+    {
+      "id": 8,
+      "parameters": {
+        "damping_n_s_m": 1300.0,
+        "suspension_stiffness_n_m": 14400.0
+      },
+      "metrics": {
+        "body_acceleration_rms_m_s2": 0.7609378453870033,
+        "suspension_travel_peak_to_peak_mm": 87.85116678074532,
+        "tire_deflection_peak_abs_mm": 6.981192527527732
+      },
+      "feasible": true,
+      "failed_constraints": []
+    },
+    {
+      "id": 9,
+      "parameters": {
+        "damping_n_s_m": 1300.0,
+        "suspension_stiffness_n_m": 15600.0
+      },
+      "metrics": {
+        "body_acceleration_rms_m_s2": 0.7985031459814632,
+        "suspension_travel_peak_to_peak_mm": 88.49925145061607,
+        "tire_deflection_peak_abs_mm": 7.005521483897579
+      },
+      "feasible": true,
+      "failed_constraints": []
+    },
+    {
+      "id": 10,
+      "parameters": {
+        "damping_n_s_m": 1300.0,
+        "suspension_stiffness_n_m": 16800.0
+      },
+      "metrics": {
+        "body_acceleration_rms_m_s2": 0.8379697258678122,
+        "suspension_travel_peak_to_peak_mm": 89.07999024432173,
+        "tire_deflection_peak_abs_mm": 7.0297654625540495
+      },
+      "feasible": true,
+      "failed_constraints": []
+    },
+    {
+      "id": 11,
+      "parameters": {
+        "damping_n_s_m": 1300.0,
+        "suspension_stiffness_n_m": 18000.0
+      },
+      "metrics": {
+        "body_acceleration_rms_m_s2": 0.8791880258732664,
+        "suspension_travel_peak_to_peak_mm": 89.59671654078468,
+        "tire_deflection_peak_abs_mm": 7.1819065504874
+      },
+      "feasible": true,
+      "failed_constraints": []
+    },
+    {
+      "id": 12,
+      "parameters": {
+        "damping_n_s_m": 1300.0,
+        "suspension_stiffness_n_m": 19200.0
+      },
+      "metrics": {
+        "body_acceleration_rms_m_s2": 0.9220191478872156,
+        "suspension_travel_peak_to_peak_mm": 90.05260994321513,
+        "tire_deflection_peak_abs_mm": 7.388595472799561
+      },
+      "feasible": true,
+      "failed_constraints": []
+    },
+    {
+      "id": 13,
+      "parameters": {
+        "damping_n_s_m": 1300.0,
+        "suspension_stiffness_n_m": 20400.0
+      },
+      "metrics": {
+        "body_acceleration_rms_m_s2": 0.9663351913864676,
+        "suspension_travel_peak_to_peak_mm": 90.45070348704881,
+        "tire_deflection_peak_abs_mm": 7.616774017808255
+      },
+      "feasible": true,
+      "failed_constraints": []
+    },
+    {
+      "id": 14,
+      "parameters": {
+        "damping_n_s_m": 1300.0,
+        "suspension_stiffness_n_m": 21600.0
+      },
+      "metrics": {
+        "body_acceleration_rms_m_s2": 1.012019176289813,
+        "suspension_travel_peak_to_peak_mm": 90.80640238815282,
+        "tire_deflection_peak_abs_mm": 7.862999518063504
+      },
+      "feasible": true,
+      "failed_constraints": []
+    },
+    {
+      "id": 15,
+      "parameters": {
+        "damping_n_s_m": 1400.0,
+        "suspension_stiffness_n_m": 14400.0
+      },
+      "metrics": {
+        "body_acceleration_rms_m_s2": 0.7811935627325889,
+        "suspension_travel_peak_to_peak_mm": 87.12279194023505,
+        "tire_deflection_peak_abs_mm": 7.175247480647371
+      },
+      "feasible": true,
+      "failed_constraints": []
+    },
+    {
+      "id": 16,
+      "parameters": {
+        "damping_n_s_m": 1400.0,
+        "suspension_stiffness_n_m": 15600.0
+      },
+      "metrics": {
+        "body_acceleration_rms_m_s2": 0.8161579077310974,
+        "suspension_travel_peak_to_peak_mm": 87.73118350568396,
+        "tire_deflection_peak_abs_mm": 7.311998307854957
+      },
+      "feasible": true,
+      "failed_constraints": []
+    },
+    {
+      "id": 17,
+      "parameters": {
+        "damping_n_s_m": 1400.0,
+        "suspension_stiffness_n_m": 16800.0
+      },
+      "metrics": {
+        "body_acceleration_rms_m_s2": 0.8529587110430389,
+        "suspension_travel_peak_to_peak_mm": 88.27579876428274,
+        "tire_deflection_peak_abs_mm": 7.475725409186403
+      },
+      "feasible": true,
+      "failed_constraints": []
+    },
+    {
+      "id": 18,
+      "parameters": {
+        "damping_n_s_m": 1400.0,
+        "suspension_stiffness_n_m": 18000.0
+      },
+      "metrics": {
+        "body_acceleration_rms_m_s2": 0.89146289178776,
+        "suspension_travel_peak_to_peak_mm": 88.75975708715968,
+        "tire_deflection_peak_abs_mm": 7.649031045539434
+      },
+      "feasible": true,
+      "failed_constraints": []
+    },
+    {
+      "id": 19,
+      "parameters": {
+        "damping_n_s_m": 1400.0,
+        "suspension_stiffness_n_m": 19200.0
+      },
+      "metrics": {
+        "body_acceleration_rms_m_s2": 0.9315446971435428,
+        "suspension_travel_peak_to_peak_mm": 89.18603598090205,
+        "tire_deflection_peak_abs_mm": 7.853760349004986
+      },
+      "feasible": true,
+      "failed_constraints": []
+    },
+    {
+      "id": 20,
+      "parameters": {
+        "damping_n_s_m": 1400.0,
+        "suspension_stiffness_n_m": 20400.0
+      },
+      "metrics": {
+        "body_acceleration_rms_m_s2": 0.9730865707162536,
+        "suspension_travel_peak_to_peak_mm": 89.55747763173868,
+        "tire_deflection_peak_abs_mm": 8.06435568468345
+      },
+      "feasible": true,
+      "failed_constraints": []
+    },
+    {
+      "id": 21,
+      "parameters": {
+        "damping_n_s_m": 1400.0,
+        "suspension_stiffness_n_m": 21600.0
+      },
+      "metrics": {
+        "body_acceleration_rms_m_s2": 1.0159795083401488,
+        "suspension_travel_peak_to_peak_mm": 89.89149522340526,
+        "tire_deflection_peak_abs_mm": 8.301196496001959
+      },
+      "feasible": true,
+      "failed_constraints": []
+    },
+    {
+      "id": 22,
+      "parameters": {
+        "damping_n_s_m": 1500.0,
+        "suspension_stiffness_n_m": 14400.0
+      },
+      "metrics": {
+        "body_acceleration_rms_m_s2": 0.8034233400298566,
+        "suspension_travel_peak_to_peak_mm": 86.39553073291181,
+        "tire_deflection_peak_abs_mm": 7.648443628957627
+      },
+      "feasible": true,
+      "failed_constraints": []
+    },
+    {
+      "id": 23,
+      "parameters": {
+        "damping_n_s_m": 1500.0,
+        "suspension_stiffness_n_m": 15600.0
+      },
+      "metrics": {
+        "body_acceleration_rms_m_s2": 0.8360672920264977,
+        "suspension_travel_peak_to_peak_mm": 86.9670698416117,
+        "tire_deflection_peak_abs_mm": 7.780635550233006
+      },
+      "feasible": true,
+      "failed_constraints": []
+    },
+    {
+      "id": 24,
+      "parameters": {
+        "damping_n_s_m": 1500.0,
+        "suspension_stiffness_n_m": 16800.0
+      },
+      "metrics": {
+        "body_acceleration_rms_m_s2": 0.870476815645057,
+        "suspension_travel_peak_to_peak_mm": 87.47815229046954,
+        "tire_deflection_peak_abs_mm": 7.943966456019122
+      },
+      "feasible": true,
+      "failed_constraints": []
+    },
+    {
+      "id": 25,
+      "parameters": {
+        "damping_n_s_m": 1500.0,
+        "suspension_stiffness_n_m": 18000.0
+      },
+      "metrics": {
+        "body_acceleration_rms_m_s2": 0.9065346660721217,
+        "suspension_travel_peak_to_peak_mm": 87.931700290579,
+        "tire_deflection_peak_abs_mm": 8.113585145130768
+      },
+      "feasible": true,
+      "failed_constraints": []
+    },
+    {
+      "id": 26,
+      "parameters": {
+        "damping_n_s_m": 1500.0,
+        "suspension_stiffness_n_m": 19200.0
+      },
+      "metrics": {
+        "body_acceleration_rms_m_s2": 0.944128218722206,
+        "suspension_travel_peak_to_peak_mm": 88.33050502656378,
+        "tire_deflection_peak_abs_mm": 8.306384773795958
+      },
+      "feasible": true,
+      "failed_constraints": []
+    },
+    {
+      "id": 27,
+      "parameters": {
+        "damping_n_s_m": 1500.0,
+        "suspension_stiffness_n_m": 20400.0
+      },
+      "metrics": {
+        "body_acceleration_rms_m_s2": 0.983150626098351,
+        "suspension_travel_peak_to_peak_mm": 88.6772326066107,
+        "tire_deflection_peak_abs_mm": 8.514772015137853
+      },
+      "feasible": true,
+      "failed_constraints": []
+    },
+    {
+      "id": 28,
+      "parameters": {
+        "damping_n_s_m": 1500.0,
+        "suspension_stiffness_n_m": 21600.0
+      },
+      "metrics": {
+        "body_acceleration_rms_m_s2": 1.0235014797260404,
+        "suspension_travel_peak_to_peak_mm": 88.9899251851721,
+        "tire_deflection_peak_abs_mm": 8.728359110532582
+      },
+      "feasible": true,
+      "failed_constraints": []
+    },
+    {
+      "id": 29,
+      "parameters": {
+        "damping_n_s_m": 1600.0,
+        "suspension_stiffness_n_m": 14400.0
+      },
+      "metrics": {
+        "body_acceleration_rms_m_s2": 0.8272389138340721,
+        "suspension_travel_peak_to_peak_mm": 85.6702518760782,
+        "tire_deflection_peak_abs_mm": 8.11097711646673
+      },
+      "feasible": true,
+      "failed_constraints": []
+    },
+    {
+      "id": 30,
+      "parameters": {
+        "damping_n_s_m": 1600.0,
+        "suspension_stiffness_n_m": 15600.0
+      },
+      "metrics": {
+        "body_acceleration_rms_m_s2": 0.8578083205032435,
+        "suspension_travel_peak_to_peak_mm": 86.20752293495286,
+        "tire_deflection_peak_abs_mm": 8.240245579611138
+      },
+      "feasible": true,
+      "failed_constraints": []
+    },
+    {
+      "id": 31,
+      "parameters": {
+        "damping_n_s_m": 1600.0,
+        "suspension_stiffness_n_m": 16800.0
+      },
+      "metrics": {
+        "body_acceleration_rms_m_s2": 0.8900687801135332,
+        "suspension_travel_peak_to_peak_mm": 86.68742993581874,
+        "tire_deflection_peak_abs_mm": 8.400726611593912
+      },
+      "feasible": true,
+      "failed_constraints": []
+    },
+    {
+      "id": 32,
+      "parameters": {
+        "damping_n_s_m": 1600.0,
+        "suspension_stiffness_n_m": 18000.0
+      },
+      "metrics": {
+        "body_acceleration_rms_m_s2": 0.9239177650803678,
+        "suspension_travel_peak_to_peak_mm": 87.11271319492347,
+        "tire_deflection_peak_abs_mm": 8.569515305044808
+      },
+      "feasible": true,
+      "failed_constraints": []
+    },
+    {
+      "id": 33,
+      "parameters": {
+        "damping_n_s_m": 1600.0,
+        "suspension_stiffness_n_m": 19200.0
+      },
+      "metrics": {
+        "body_acceleration_rms_m_s2": 0.9592552549116014,
+        "suspension_travel_peak_to_peak_mm": 87.48599187420946,
+        "tire_deflection_peak_abs_mm": 8.747580111826913
+      },
+      "feasible": true,
+      "failed_constraints": []
+    },
+    {
+      "id": 34,
+      "parameters": {
+        "damping_n_s_m": 1600.0,
+        "suspension_stiffness_n_m": 20400.0
+      },
+      "metrics": {
+        "body_acceleration_rms_m_s2": 0.9959850137358641,
+        "suspension_travel_peak_to_peak_mm": 87.80976939877749,
+        "tire_deflection_peak_abs_mm": 8.953833492268581
+      },
+      "feasible": true,
+      "failed_constraints": []
+    },
+    {
+      "id": 35,
+      "parameters": {
+        "damping_n_s_m": 1600.0,
+        "suspension_stiffness_n_m": 21600.0
+      },
+      "metrics": {
+        "body_acceleration_rms_m_s2": 1.0340154333146951,
+        "suspension_travel_peak_to_peak_mm": 88.10156974055108,
+        "tire_deflection_peak_abs_mm": 9.164995146095478
+      },
+      "feasible": true,
+      "failed_constraints": []
+    },
+    {
+      "id": 36,
+      "parameters": {
+        "damping_n_s_m": 1700.0,
+        "suspension_stiffness_n_m": 14400.0
+      },
+      "metrics": {
+        "body_acceleration_rms_m_s2": 0.8523292286345308,
+        "suspension_travel_peak_to_peak_mm": 84.94781411860924,
+        "tire_deflection_peak_abs_mm": 8.564032412752068
+      },
+      "feasible": true,
+      "failed_constraints": []
+    },
+    {
+      "id": 37,
+      "parameters": {
+        "damping_n_s_m": 1700.0,
+        "suspension_stiffness_n_m": 15600.0
+      },
+      "metrics": {
+        "body_acceleration_rms_m_s2": 0.8810395765945177,
+        "suspension_travel_peak_to_peak_mm": 85.453173439129,
+        "tire_deflection_peak_abs_mm": 8.693643346076426
+      },
+      "feasible": true,
+      "failed_constraints": []
+    },
+    {
+      "id": 38,
+      "parameters": {
+        "damping_n_s_m": 1700.0,
+        "suspension_stiffness_n_m": 16800.0
+      },
+      "metrics": {
+        "body_acceleration_rms_m_s2": 0.9113648972341858,
+        "suspension_travel_peak_to_peak_mm": 85.90405431644267,
+        "tire_deflection_peak_abs_mm": 8.847160779403563
+      },
+      "feasible": true,
+      "failed_constraints": []
+    },
+    {
+      "id": 39,
+      "parameters": {
+        "damping_n_s_m": 1700.0,
+        "suspension_stiffness_n_m": 18000.0
+      },
+      "metrics": {
+        "body_acceleration_rms_m_s2": 0.9432160111047305,
+        "suspension_travel_peak_to_peak_mm": 86.30302903304718,
+        "tire_deflection_peak_abs_mm": 9.015055355710448
+      },
+      "feasible": true,
+      "failed_constraints": []
+    },
+    {
+      "id": 40,
+      "parameters": {
+        "damping_n_s_m": 1700.0,
+        "suspension_stiffness_n_m": 19200.0
+      },
+      "metrics": {
+        "body_acceleration_rms_m_s2": 0.9765046553423392,
+        "suspension_travel_peak_to_peak_mm": 86.65255771945593,
+        "tire_deflection_peak_abs_mm": 9.188260688987059
+      },
+      "feasible": true,
+      "failed_constraints": []
+    },
+    {
+      "id": 41,
+      "parameters": {
+        "damping_n_s_m": 1700.0,
+        "suspension_stiffness_n_m": 20400.0
+      },
+      "metrics": {
+        "body_acceleration_rms_m_s2": 1.0111447706788141,
+        "suspension_travel_peak_to_peak_mm": 86.9549932936181,
+        "tire_deflection_peak_abs_mm": 9.382482013384639
+      },
+      "feasible": true,
+      "failed_constraints": []
+    },
+    {
+      "id": 42,
+      "parameters": {
+        "damping_n_s_m": 1700.0,
+        "suspension_stiffness_n_m": 21600.0
+      },
+      "metrics": {
+        "body_acceleration_rms_m_s2": 1.0470534260876911,
+        "suspension_travel_peak_to_peak_mm": 87.22639191745391,
+        "tire_deflection_peak_abs_mm": 9.591283452341573
+      },
+      "feasible": true,
+      "failed_constraints": []
+    },
+    {
+      "id": 43,
+      "parameters": {
+        "damping_n_s_m": 1800.0,
+        "suspension_stiffness_n_m": 14400.0
+      },
+      "metrics": {
+        "body_acceleration_rms_m_s2": 0.8784436487709253,
+        "suspension_travel_peak_to_peak_mm": 84.22903178929211,
+        "tire_deflection_peak_abs_mm": 9.008571379102174
+      },
+      "feasible": true,
+      "failed_constraints": []
+    },
+    {
+      "id": 44,
+      "parameters": {
+        "damping_n_s_m": 1800.0,
+        "suspension_stiffness_n_m": 15600.0
+      },
+      "metrics": {
+        "body_acceleration_rms_m_s2": 0.9054838558579588,
+        "suspension_travel_peak_to_peak_mm": 84.70463224191305,
+        "tire_deflection_peak_abs_mm": 9.138346672923591
+      },
+      "feasible": true,
+      "failed_constraints": []
+    },
+    {
+      "id": 45,
+      "parameters": {
+        "damping_n_s_m": 1800.0,
+        "suspension_stiffness_n_m": 16800.0
+      },
+      "metrics": {
+        "body_acceleration_rms_m_s2": 0.9340630428745719,
+        "suspension_travel_peak_to_peak_mm": 85.12845059075674,
+        "tire_deflection_peak_abs_mm": 9.28423756930899
+      },
+      "feasible": true,
+      "failed_constraints": []
+    },
+    {
+      "id": 46,
+      "parameters": {
+        "damping_n_s_m": 1800.0,
+        "suspension_stiffness_n_m": 18000.0
+      },
+      "metrics": {
+        "body_acceleration_rms_m_s2": 0.9641039227301796,
+        "suspension_travel_peak_to_peak_mm": 85.5029036950282,
+        "tire_deflection_peak_abs_mm": 9.451165013112467
+      },
+      "feasible": true,
+      "failed_constraints": []
+    },
+    {
+      "id": 47,
+      "parameters": {
+        "damping_n_s_m": 1800.0,
+        "suspension_stiffness_n_m": 19200.0
+      },
+      "metrics": {
+        "body_acceleration_rms_m_s2": 0.9955289690971763,
+        "suspension_travel_peak_to_peak_mm": 85.83030448039575,
+        "tire_deflection_peak_abs_mm": 9.623119405716356
+      },
+      "feasible": true,
+      "failed_constraints": []
+    },
+    {
+      "id": 48,
+      "parameters": {
+        "damping_n_s_m": 1800.0,
+        "suspension_stiffness_n_m": 20400.0
+      },
+      "metrics": {
+        "body_acceleration_rms_m_s2": 1.0282616442987265,
+        "suspension_travel_peak_to_peak_mm": 86.11286644869551,
+        "tire_deflection_peak_abs_mm": 9.80154721482452
+      },
+      "feasible": true,
+      "failed_constraints": []
+    },
+    {
+      "id": 49,
+      "parameters": {
+        "damping_n_s_m": 1800.0,
+        "suspension_stiffness_n_m": 21600.0
+      },
+      "metrics": {
+        "body_acceleration_rms_m_s2": 1.062227334819828,
+        "suspension_travel_peak_to_peak_mm": 86.36439649158925,
+        "tire_deflection_peak_abs_mm": 10.008030367708336
+      },
+      "feasible": true,
+      "failed_constraints": []
+    }
+  ],
+  "feasible_count": 49,
+  "pareto_ids": [
+    1,
+    8,
+    15,
+    22,
+    29,
+    36,
+    43
+  ],
+  "selected_id": 1,
+  "selection_rule": "Among feasible cases: smallest RMS, then smallest peak-to-peak travel, then smallest tire proxy, then grid ID",
+  "warnings": [
+    "Discrete fixed-grid comparison only. No globally optimal or physically validated design is claimed.",
+    "Unweighted acceleration RMS is not an ISO 2631 comfort certification.",
+    "Tire deflection is a linear always-contact force-variation proxy, not a real grip or contact measurement.",
+    "No combined braking, regeneration, suspension, vehicle safety or battery range score.",
+    "All cases use identical road forcing, duration, zero initial conditions and integration settings."
+  ]
+}

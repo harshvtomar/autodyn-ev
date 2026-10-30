@@ -1,0 +1,132 @@
+{
+  "kind": "comparison",
+  "metric_deltas": {
+    "body_acceleration_rms_m_s2": {
+      "absolute": 0.17778649019494486,
+      "percent": 19.62146268421892
+    },
+    "body_acceleration_peak_m_s2": {
+      "absolute": 1.6552412108639052,
+      "percent": 31.70573037585684
+    },
+    "suspension_travel_peak_mm": {
+      "absolute": -2.814271468978774,
+      "percent": -5.8552255479420054
+    },
+    "body_displacement_peak_mm": {
+      "absolute": 1.9617655310196227,
+      "percent": 3.7563525505919624
+    },
+    "tire_deflection_peak_mm": {
+      "absolute": 3.4107218555964387,
+      "percent": 42.037173389907984
+    },
+    "tire_force_variation_peak_n": {
+      "absolute": 648.0371525633234,
+      "percent": 42.03717338990799
+    }
+  },
+  "baseline_metrics": {
+    "body_acceleration_rms_m_s2": 0.9060817384319384,
+    "body_acceleration_peak_m_s2": 5.220637377665748,
+    "suspension_travel_peak_mm": 48.06427089675365,
+    "body_displacement_peak_mm": 52.225277169749916,
+    "tire_deflection_peak_mm": 8.113585145130768,
+    "tire_force_variation_peak_n": 1541.581177574846,
+    "body_mode_undamped_hz": 1.1776652681652353,
+    "wheel_mode_undamped_hz": 11.482615599497855,
+    "post_bump_settling_s": 1.575
+  },
+  "variant_metrics": {
+    "body_acceleration_rms_m_s2": 1.0838682286268833,
+    "body_acceleration_peak_m_s2": 6.875878588529654,
+    "suspension_travel_peak_mm": 45.249999427774874,
+    "body_displacement_peak_mm": 54.18704270076954,
+    "tire_deflection_peak_mm": 11.524307000727207,
+    "tire_force_variation_peak_n": 2189.6183301381693,
+    "body_mode_undamped_hz": 1.1776652681652353,
+    "wheel_mode_undamped_hz": 11.482615599497855,
+    "post_bump_settling_s": 1.05
+  },
+  "same_road_input": true,
+  "provenance": {
+    "baseline": {
+      "model_revision": "quarter-car-2dof-v0.2.0",
+      "model": "linear-2dof-quarter-car-static-equilibrium-deviations",
+      "analysis": "baseline",
+      "solver": "fixed-step-classical-RK4",
+      "coordinates": "positive-up; static-equilibrium-relative",
+      "units": {
+        "time": "s",
+        "displacement": "m",
+        "velocity": "m/s",
+        "acceleration": "m/s^2",
+        "force_variation": "N",
+        "reported_peak_displacement_and_travel": "mm",
+        "sprung_and_unsprung_mass": "kg",
+        "spring_and_tire_stiffness": "N/m",
+        "damping": "N*s/m"
+      },
+      "vehicle": {
+        "sprung_mass_kg": 300.0,
+        "unsprung_mass_kg": 40.0,
+        "suspension_stiffness_n_m": 18000.0,
+        "damping_n_s_m": 1500.0,
+        "tire_stiffness_n_m": 190000.0
+      },
+      "road": {
+        "kind": "bump",
+        "height_m": 0.06,
+        "start_s": 0.5,
+        "bump_length_m": 1.5,
+        "speed_m_s": 5.0,
+        "sine_frequency_hz": 1.5
+      },
+      "requested_settings": {
+        "duration_s": 5.0,
+        "dt_s": 0.005
+      },
+      "data_kind": "simulated; not empirical vehicle measurements",
+      "versioned_output": "2.0-additive; existing 1.0 keys preserved"
+    },
+    "variant": {
+      "model_revision": "quarter-car-2dof-v0.2.0",
+      "model": "linear-2dof-quarter-car-static-equilibrium-deviations",
+      "analysis": "variant",
+      "solver": "fixed-step-classical-RK4",
+      "coordinates": "positive-up; static-equilibrium-relative",
+      "units": {
+        "time": "s",
+        "displacement": "m",
+        "velocity": "m/s",
+        "acceleration": "m/s^2",
+        "force_variation": "N",
+        "reported_peak_displacement_and_travel": "mm",
+        "sprung_and_unsprung_mass": "kg",
+        "spring_and_tire_stiffness": "N/m",
+        "damping": "N*s/m"
+      },
+      "vehicle": {
+        "sprung_mass_kg": 300.0,
+        "unsprung_mass_kg": 40.0,
+        "suspension_stiffness_n_m": 18000.0,
+        "damping_n_s_m": 2300.0,
+        "tire_stiffness_n_m": 190000.0
+      },
+      "road": {
+        "kind": "bump",
+        "height_m": 0.06,
+        "start_s": 0.5,
+        "bump_length_m": 1.5,
+        "speed_m_s": 5.0,
+        "sine_frequency_hz": 1.5
+      },
+      "requested_settings": {
+        "duration_s": 5.0,
+        "dt_s": 0.005
+      },
+      "data_kind": "simulated; not empirical vehicle measurements",
+      "versioned_output": "2.0-additive; existing 1.0 keys preserved"
+    }
+  }
+}

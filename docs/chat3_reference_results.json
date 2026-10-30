@@ -1,0 +1,20 @@
+{
+  "independent_reference": "NumPy direct M,C,K state assembly; SciPy DOP853 high-resolution comparison",
+  "random_cases": 150,
+  "seed": 20261029,
+  "max_matrix_acceleration_error": 1.1368683772161603e-13,
+  "max_energy_rate_error": 4.547473508864641e-13,
+  "max_abs_scipy_channel_error_SI": {
+    "body_heave_m": 3.3921774501215023e-10,
+    "body_pitch_rad": 2.717779196137471e-10,
+    "front_wheel_m": 9.223367788057865e-09,
+    "rear_wheel_m": 9.195165181575052e-09,
+    "body_heave_velocity_m_s": 2.311431645911355e-08,
+    "body_pitch_rate_rad_s": 1.8543868954279397e-08,
+    "front_wheel_velocity_m_s": 6.983001085425489e-07,
+    "rear_wheel_velocity_m_s": 6.948694395714217e-07
+  },
+  "threshold_each_channel": 2e-05,
+  "status": "PASS",
+  "scope": "smooth sinusoidal road excitation; no empirical vehicle validation"
+}

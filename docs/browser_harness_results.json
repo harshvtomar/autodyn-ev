@@ -1,0 +1,30 @@
+{
+  "method": "Chromium set_content + actual frontend code + intercepted fetch bridged to Python simulate",
+  "warning": "Isolated UI check; not an actual network navigation to localhost and not a Mac test",
+  "cases": [
+    {
+      "device": "desktop",
+      "default_rms": 0.906,
+      "chart_count": 3,
+      "change_input": "pass",
+      "flat_road": "pass",
+      "csv_download": "pass",
+      "summary_download": "pass",
+      "animation_toggle": "pass",
+      "console_errors": [],
+      "screenshot": "docs/dashboard-desktop.png"
+    },
+    {
+      "device": "mobile",
+      "default_rms": 0.906,
+      "chart_count": 3,
+      "change_input": "pass",
+      "flat_road": "pass",
+      "csv_download": "pass",
+      "summary_download": "pass",
+      "animation_toggle": "pass",
+      "console_errors": [],
+      "screenshot": "docs/dashboard-mobile.png"
+    }
+  ]
+}

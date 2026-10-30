@@ -1,0 +1,58 @@
+{
+  "model_revision": "quarter-car-2dof-v0.2.0",
+  "model": "linear-2dof-quarter-car-static-equilibrium-deviations",
+  "analysis": "time-domain-simulation",
+  "solver": "fixed-step-classical-RK4",
+  "coordinates": "positive-up; static-equilibrium-relative",
+  "units": {
+    "time": "s",
+    "displacement": "m",
+    "velocity": "m/s",
+    "acceleration": "m/s^2",
+    "force_variation": "N",
+    "reported_peak_displacement_and_travel": "mm",
+    "sprung_and_unsprung_mass": "kg",
+    "spring_and_tire_stiffness": "N/m",
+    "damping": "N*s/m"
+  },
+  "vehicle": {
+    "sprung_mass_kg": 300,
+    "unsprung_mass_kg": 40,
+    "suspension_stiffness_n_m": 18000,
+    "damping_n_s_m": 1500,
+    "tire_stiffness_n_m": 190000
+  },
+  "road": {
+    "kind": "bump",
+    "height_m": 0.06,
+    "start_s": 0.5,
+    "bump_length_m": 1.5,
+    "speed_m_s": 5,
+    "sine_frequency_hz": 1.5,
+    "bump_spacing_m": 1.5,
+    "chirp_end_frequency_hz": 4,
+    "chirp_duration_s": 3
+  },
+  "requested_settings": {
+    "duration_s": 5,
+    "dt_s": 0.005
+  },
+  "data_kind": "simulated; not empirical vehicle measurements",
+  "versioned_output": "2.0-additive; existing 1.0 keys preserved",
+  "legacy_csv_columns": [
+    "time_s",
+    "road_m",
+    "sprung_m",
+    "unsprung_m",
+    "sprung_velocity_m_s",
+    "unsprung_velocity_m_s",
+    "sprung_acceleration_m_s2",
+    "unsprung_acceleration_m_s2",
+    "suspension_travel_m",
+    "tire_deflection_m",
+    "suspension_force_n",
+    "tire_force_variation_n"
+  ],
+  "legacy_csv_filename": "autodyn-ev-session1-response.csv",
+  "csv_note": "Use together with the unchanged 12-column legacy CSV. Model/units and scenario parameters live in this sidecar."
+}

@@ -1,0 +1,10 @@
+[project]
+name = "autodyn-ev"
+version = "1.0.0"
+description = "Offline educational vehicle suspension, braking, regenerative-energy and bounded engineering study laboratory"
+requires-python = ">=3.10"
+dependencies = []
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"

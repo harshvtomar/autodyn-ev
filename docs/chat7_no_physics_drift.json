@@ -1,0 +1,69 @@
+{
+  "source": "Chat6 pristine source compared with Chat7 working source; separate Python processes, full canonical model output JSON including all channels/metrics/provenance",
+  "baseline": "/mnt/data/_autodyn7_work/original/autodyn-ev-chat6",
+  "candidate": "/mnt/data/_autodyn7_work/autodyn-ev-chat7",
+  "scenarios": {
+    "braking-default": {
+      "identical": true,
+      "baseline_sha256": "30af39a894d4815def0e4a29792575f94e84929eca919533a33cefb173f3f69b",
+      "new_sha256": "30af39a894d4815def0e4a29792575f94e84929eca919533a33cefb173f3f69b",
+      "samples": 201
+    },
+    "braking-grip": {
+      "identical": true,
+      "baseline_sha256": "cefe398e7bc513fe3af02e78d8f75c4143e01a40a47ecf9a2da101c0bd403f62",
+      "new_sha256": "cefe398e7bc513fe3af02e78d8f75c4143e01a40a47ecf9a2da101c0bd403f62",
+      "samples": 341
+    },
+    "braking-ramp": {
+      "identical": true,
+      "baseline_sha256": "f06478142c458e2898a0b7bdfb07e19aca062870d0503fdf825ab33a427c5072",
+      "new_sha256": "f06478142c458e2898a0b7bdfb07e19aca062870d0503fdf825ab33a427c5072",
+      "samples": 227
+    },
+    "half-default": {
+      "identical": true,
+      "baseline_sha256": "4ac9ae161ff7fe0ee6d81e622d4bf4fd4b045403409682c020c15a97fdfd2f3f",
+      "new_sha256": "4ac9ae161ff7fe0ee6d81e622d4bf4fd4b045403409682c020c15a97fdfd2f3f",
+      "samples": 1001
+    },
+    "half-step": {
+      "identical": true,
+      "baseline_sha256": "16ed862ab2721f928b47bad068d57089d9655e168367eaa5a9609c450cf39791",
+      "new_sha256": "16ed862ab2721f928b47bad068d57089d9655e168367eaa5a9609c450cf39791",
+      "samples": 1001
+    },
+    "quarter-default": {
+      "identical": true,
+      "baseline_sha256": "f59ae1509f5d3253881f3541781f683f3db3a260f9524609fd9c295c4f43ab77",
+      "new_sha256": "f59ae1509f5d3253881f3541781f683f3db3a260f9524609fd9c295c4f43ab77",
+      "samples": 1001
+    },
+    "quarter-sine": {
+      "identical": true,
+      "baseline_sha256": "bbc2bfca011a822281772e9b2f48cdf94410e7bcbb58aa629e5556904c2812ce",
+      "new_sha256": "bbc2bfca011a822281772e9b2f48cdf94410e7bcbb58aa629e5556904c2812ce",
+      "samples": 1001
+    },
+    "regen-default": {
+      "identical": true,
+      "baseline_sha256": "6d43c958ab3833877f7e5b278657cab49c7b852bc01b913b0b74de053c7de2db",
+      "new_sha256": "6d43c958ab3833877f7e5b278657cab49c7b852bc01b913b0b74de053c7de2db",
+      "samples": 201
+    },
+    "regen-incomplete": {
+      "identical": true,
+      "baseline_sha256": "fd2693e54b9da284fe13e9b376a021811907249549cb9426271e44cc212e71ee",
+      "new_sha256": "fd2693e54b9da284fe13e9b376a021811907249549cb9426271e44cc212e71ee",
+      "samples": 51
+    },
+    "regen-zero-charge": {
+      "identical": true,
+      "baseline_sha256": "5274971b01c881603e35624f8423da365d5f9944feaea6b03d7940a2c0eb2b11",
+      "new_sha256": "5274971b01c881603e35624f8423da365d5f9944feaea6b03d7940a2c0eb2b11",
+      "samples": 201
+    }
+  },
+  "passed": 10,
+  "total": 10
+}

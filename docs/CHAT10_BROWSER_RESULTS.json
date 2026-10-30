@@ -1,0 +1,192 @@
+{
+  "mode": "Isolated Chromium; HTTP requests forwarded to real local API server via Python proxy",
+  "not": "direct Mac browser test or physical engineering validation",
+  "checks": [
+    {
+      "label": "1280: header v1.0",
+      "passed": true
+    },
+    {
+      "label": "1280: engineering panel",
+      "passed": true
+    },
+    {
+      "label": "1280: keyboard skip link",
+      "passed": true
+    },
+    {
+      "label": "1280: skip link keyboard focus",
+      "passed": true
+    },
+    {
+      "label": "1280: final release shown",
+      "passed": true
+    },
+    {
+      "label": "1280: projected scene",
+      "passed": true
+    },
+    {
+      "label": "1280: changed quarter input flags stale",
+      "passed": true
+    },
+    {
+      "label": "1280: updated mass result",
+      "passed": true
+    },
+    {
+      "label": "1280: stale flag clears",
+      "passed": true
+    },
+    {
+      "label": "1280: input dirty state flagged",
+      "passed": true
+    },
+    {
+      "label": "1280: changed mass produces new RMS",
+      "passed": true
+    },
+    {
+      "label": "1280: response provenance visible",
+      "passed": true
+    },
+    {
+      "label": "1280: restoring mass restores RMS",
+      "passed": true
+    },
+    {
+      "label": "1280: 7-case table",
+      "passed": true
+    },
+    {
+      "label": "1280: study export enabled",
+      "passed": true
+    },
+    {
+      "label": "1280: JSON download",
+      "passed": true
+    },
+    {
+      "label": "1280: 49-case table",
+      "passed": true
+    },
+    {
+      "label": "1280: no feasible reported",
+      "passed": true
+    },
+    {
+      "label": "1280: half 49-case",
+      "passed": true
+    },
+    {
+      "label": "1280: braking view",
+      "passed": true
+    },
+    {
+      "label": "1280: regen view",
+      "passed": true
+    },
+    {
+      "label": "1280: 2D fallback",
+      "passed": true
+    },
+    {
+      "label": "1280: no JS errors",
+      "passed": true
+    },
+    {
+      "label": "390: header v1.0",
+      "passed": true
+    },
+    {
+      "label": "390: engineering panel",
+      "passed": true
+    },
+    {
+      "label": "390: keyboard skip link",
+      "passed": true
+    },
+    {
+      "label": "390: skip link keyboard focus",
+      "passed": true
+    },
+    {
+      "label": "390: final release shown",
+      "passed": true
+    },
+    {
+      "label": "390: projected scene",
+      "passed": true
+    },
+    {
+      "label": "390: changed quarter input flags stale",
+      "passed": true
+    },
+    {
+      "label": "390: updated mass result",
+      "passed": true
+    },
+    {
+      "label": "390: stale flag clears",
+      "passed": true
+    },
+    {
+      "label": "390: input dirty state flagged",
+      "passed": true
+    },
+    {
+      "label": "390: changed mass produces new RMS",
+      "passed": true
+    },
+    {
+      "label": "390: response provenance visible",
+      "passed": true
+    },
+    {
+      "label": "390: restoring mass restores RMS",
+      "passed": true
+    },
+    {
+      "label": "390: 7-case table",
+      "passed": true
+    },
+    {
+      "label": "390: study export enabled",
+      "passed": true
+    },
+    {
+      "label": "390: JSON download",
+      "passed": true
+    },
+    {
+      "label": "390: 49-case table",
+      "passed": true
+    },
+    {
+      "label": "390: no feasible reported",
+      "passed": true
+    },
+    {
+      "label": "390: half 49-case",
+      "passed": true
+    },
+    {
+      "label": "390: braking view",
+      "passed": true
+    },
+    {
+      "label": "390: regen view",
+      "passed": true
+    },
+    {
+      "label": "390: 2D fallback",
+      "passed": true
+    },
+    {
+      "label": "390: no JS errors",
+      "passed": true
+    }
+  ],
+  "passed": 46,
+  "total": 46
+}

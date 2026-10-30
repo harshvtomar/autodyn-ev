@@ -1,0 +1,13 @@
+{
+  "cases": 100,
+  "reference": "independent SciPy DOP853 ODE for speed, distance and regenerative mechanical work; bounded motor and battery outputs",
+  "max_time_error_s": 1.8224150855061794e-06,
+  "max_distance_error_m": 3.3414714337709484e-05,
+  "max_mechanical_energy_error_j": 0.08375105727827759,
+  "max_energy_residual_j": 1.1641532182693481e-10,
+  "stopped_cases": 65,
+  "ramped_cases": 50,
+  "motor_work_tolerance_j": "max(1.0, mass*initial_speed^2*2e-5) per case",
+  "time_tolerance_s": 0.0002,
+  "distance_tolerance_m": 0.002
+}

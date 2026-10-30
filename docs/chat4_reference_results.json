@@ -1,0 +1,67 @@
+{
+  "passed": true,
+  "source": "optional independent high-accuracy DOP853 numerical oracle",
+  "runtime_scipy_required": false,
+  "cases": [
+    {
+      "kind": "pothole",
+      "model": "quarter",
+      "max_absolute_error_across_selected_states": 5.4197948262890705e-05,
+      "channel_errors": {
+        "sprung_m": 5.164845912064564e-08,
+        "unsprung_m": 8.463128207524678e-07,
+        "sprung_velocity_m_s": 4.24045692364039e-06,
+        "unsprung_velocity_m_s": 5.4197948262890705e-05
+      },
+      "oracle": "SciPy DOP853 max_step=.001; independent equations and road profile",
+      "tolerance": 0.0002
+    },
+    {
+      "kind": "double_bump",
+      "model": "half",
+      "max_absolute_error_across_selected_states": 5.4341223302389885e-05,
+      "channel_errors": {
+        "body_heave_m": 3.1214411753272e-08,
+        "body_pitch_rad": 2.377195028107834e-08,
+        "front_wheel_m": 8.478476430512361e-07,
+        "rear_wheel_m": 8.460746659787882e-07,
+        "body_heave_velocity_m_s": 2.569279742958841e-06,
+        "body_pitch_rate_rad_s": 2.149822509234234e-06,
+        "front_wheel_velocity_m_s": 5.4341223302389885e-05,
+        "rear_wheel_velocity_m_s": 5.41677564505072e-05
+      },
+      "oracle": "SciPy DOP853 max_step=.001; independent equations and road profile",
+      "tolerance": 0.0002
+    },
+    {
+      "kind": "chirp",
+      "model": "quarter",
+      "max_absolute_error_across_selected_states": 0.00010950804811971082,
+      "channel_errors": {
+        "sprung_m": 1.096960283676271e-07,
+        "unsprung_m": 1.700173143645567e-06,
+        "sprung_velocity_m_s": 8.422321404411015e-06,
+        "unsprung_velocity_m_s": 0.00010950804811971082
+      },
+      "oracle": "SciPy DOP853 max_step=.001; independent equations and road profile",
+      "tolerance": 0.0002
+    },
+    {
+      "kind": "chirp",
+      "model": "half",
+      "max_absolute_error_across_selected_states": 0.00011003419289901117,
+      "channel_errors": {
+        "body_heave_m": 7.229550130077866e-08,
+        "body_pitch_rad": 4.18118330999806e-08,
+        "front_wheel_m": 1.6995813280906713e-06,
+        "rear_wheel_m": 1.700745751204158e-06,
+        "body_heave_velocity_m_s": 8.422714718070434e-06,
+        "body_pitch_rate_rad_s": 3.489723210070572e-06,
+        "front_wheel_velocity_m_s": 0.00011003419289901117,
+        "rear_wheel_velocity_m_s": 0.00010945695675634859
+      },
+      "oracle": "SciPy DOP853 max_step=.001; independent equations and road profile",
+      "tolerance": 0.0002
+    }
+  ]
+}

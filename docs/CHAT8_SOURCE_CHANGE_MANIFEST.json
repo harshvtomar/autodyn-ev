@@ -1,0 +1,37 @@
+{
+  "baseline_archive": "AutoDyn_EV_Chat7_v0.7.0.zip",
+  "baseline_sha256": "ab402d8b2bb5e213f9e6535b370cc078425e5c9a143454dc564fb7dcc664401c",
+  "baseline_files": 146,
+  "modified_paths": [
+    "README.md",
+    "autodyn_ev/__init__.py",
+    "autodyn_ev/server.py",
+    "web/index.html",
+    "web/styles.css"
+  ],
+  "added_paths": [
+    "autodyn_ev/optimization.py",
+    "docs/CHAT8_BROWSER_RESULTS.json",
+    "docs/CHAT8_CLEAN_EXTRACTION_REPORT.md",
+    "docs/CHAT8_MAC_SETUP_AND_ACCEPTANCE.md",
+    "docs/CHAT8_NO_DRIFT.json",
+    "docs/CHAT8_SOURCE_CHANGE_MANIFEST.json",
+    "docs/CHAT8_TEST_LOG.txt",
+    "docs/CHAT8_VERIFICATION_REPORT.md",
+    "docs/CHAT9_HANDOFF.md",
+    "docs/ENGINEERING_OPTIMIZATION_CHAT8.md",
+    "docs/chat8-dashboard-1280.png",
+    "docs/chat8-dashboard-390.png",
+    "examples/chat8_half_49case_optimization.json",
+    "examples/chat8_quarter_49case_optimization.json",
+    "tests/test_optimization_chat8.py",
+    "web/optimization.js"
+  ],
+  "deleted_paths": [],
+  "inherited_tests_unchanged": true,
+  "inherited_physics_modules_unchanged": true,
+  "notes": [
+    "Current release v0.8.0 is independent from legacy v0.7 package compatibility marker.",
+    "Generated manifest does not hash itself to avoid self-reference."
+  ]
+}

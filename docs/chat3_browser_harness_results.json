@@ -1,0 +1,32 @@
+{
+  "environment": "isolated Playwright Chromium; functions bridged to Python in-process",
+  "not_verified": "browser navigation to localhost, or native Mac browser",
+  "checks": [
+    {
+      "device": "desktop",
+      "model_selector": "PASS",
+      "halfcar_charts": "4 plotted charts",
+      "halfcar_schematic": "PASS",
+      "halfcar_parameter_variation": "PASS",
+      "flat_road_zero": "PASS",
+      "exports": "CSV and JSON PASS",
+      "animation_controls": "PASS",
+      "quartercar_and_chat2_studies": "PASS",
+      "javascript_page_errors": [],
+      "screenshot": "docs/chat3-dashboard-desktop.png"
+    },
+    {
+      "device": "mobile",
+      "model_selector": "PASS",
+      "halfcar_charts": "4 plotted charts",
+      "halfcar_schematic": "PASS",
+      "halfcar_parameter_variation": "PASS",
+      "flat_road_zero": "PASS",
+      "exports": "CSV and JSON PASS",
+      "animation_controls": "PASS",
+      "quartercar_and_chat2_studies": "PASS",
+      "javascript_page_errors": [],
+      "screenshot": "docs/chat3-dashboard-mobile.png"
+    }
+  ]
+}
