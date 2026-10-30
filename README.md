@@ -36,7 +36,7 @@ Open http://127.0.0.1:8776/ in Chrome or Safari. Keep the server running. If tha
 
 ## Verification and reproducible results
 
-The corrected source passes **393 automated tests**: 391 inherited tests plus two regression tests ensuring the release audit accepts Git repositories and worktrees. See [executed local test log](docs/PUBLICATION_TEST_LOG.txt) and [verification scope](docs/CHAT10_VERIFICATION_REPORT.md). Hosted workflow results are available in the repository's Actions tab once completed.
+The corrected source passes **393 automated tests**: 391 inherited tests plus two regression tests ensuring the release audit accepts Git repositories and worktrees. See [executed local test log](docs/PUBLICATION_TEST_LOG.txt) and [verification scope](docs/CHAT10_VERIFICATION_REPORT.md). Hosted CI is verified on Python 3.10, 3.11, 3.12 and 3.13: [v1.0.0 release run](https://github.com/harshvtomar/autodyn-ev/actions/runs/40986327790) and [hosting-adapter run](https://github.com/harshvtomar/autodyn-ev/actions/runs/40988190045) both passed. The hosting adapter on `main` adds three tests, bringing that branch to **396 passing tests**; it leaves the accepted physics and browser assets unchanged.
 
 | Scenario | Calculated result |
 | --- | --- |
